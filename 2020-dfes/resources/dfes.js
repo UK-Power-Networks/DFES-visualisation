@@ -504,7 +504,7 @@
 				}
 			});
 			this.map.attributionControl._attributions = {};
-			this.map.attributionControl.addAttribution('Vis: <a href="https://odileeds.org/projects/">ODI Leeds</a>, Data: <a href="https://cms.npproductionadmin.net/generation-availability-map">Northern Powergrid</a>');
+			if(this.options.map && this.options.map.attribution) this.map.attributionControl.addAttribution(this.options.map.attribution);
 
 			// Create a map label pane so labels can sit above polygons
 			this.map.createPane('labels');

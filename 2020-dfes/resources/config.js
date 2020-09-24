@@ -48,7 +48,7 @@ S(document).ready(function(){
 
 						title = (attr.properties.LAD20NM || '?');
 						dp = (typeof attr.parameter.dp==="number" ? attr.parameter.dp : 2);
-						value = '<strong>'+attr.parameter.title+' '+this.options.key+':</strong> '+(dp==0 ? Math.round(v) : v.toFixed(dp)).toLocaleString()+''+(attr.parameter.units ? '&thinsp;'+attr.parameter.units : '');
+						value = '<strong>'+attr.parameter.title+' '+this.options.key+':</strong> '+(dp==0 ? Math.round(attr.value) : attr.value.toFixed(dp)).toLocaleString()+''+(attr.parameter.units ? '&thinsp;'+attr.parameter.units : '');
 
 						// Replace values
 						return popup.replace(/\%VALUE\%/g,value).replace(/\%TITLE\%/g,title);

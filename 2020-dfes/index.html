@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>UK Power Networks Net Zero Scenarios</title>
+	<link rel="StyleSheet" href="resources/nouislider.min.css" type="text/css" />
+	<link rel="StyleSheet" href="resources/leaflet.css" type="text/css" />
+	<link rel="StyleSheet" href="resources/style.css" type="text/css" />
+	<link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<script type="text/javascript" src="resources/stuquery.js"></script>
+	<script type="text/javascript" src="resources/nouislider.min.js"></script>
+	<script type="text/javascript" src="resources/dfes.js"></script>
+	<script type="text/javascript" src="resources/config.js"></script>
+	<script type="text/javascript" src="resources/leaflet.js"></script>
+</head>
+<body>
+	<div class="c14-bg">
+		<div class="holder" style="text-align:center;padding:0.25em 0;">This tool is a proof-of-concept prototype.</div>
+	</div>
+	<header class="b1-bg">
+		<div class="b1-bg glory">
+			<div class="glory-opacity">
+				<div class="holder">
+					<a href="https://odileeds.org/" class="ODIlogo"><img alt="ODI Leeds"
+							src="https://odileeds.org/resources/images/odileeds.svg" title="ODI Leeds"></a>
+					<a href="https://www.ukpowernetworks.co.uk/"><img alt="UK Power Networks"
+							src="https://odileeds.org/dashboard/data/img/ukpn.svg" title="UK Power Networks"></a>
+					<a href="http://www.element-energy.co.uk/"><img alt="Element Energy"
+							src="https://odileeds.org/dashboard/data/img/elementenergy.svg" title="Element Energy"></a>
+				</div>
+			</div>
+		</div>
+		<div class="steady-progression title">
+			<div class="holder">
+				<h1>UKPN Future Energy Scenarios 2020</h1>
+			</div>
+		</div>
+	</header>
+
+
+	<div class="b6-bg" id="scenario">
+		<div class="holder columns">
+			<div class="left">
+				<p>UKPN's potential future scenarios as interpreted from the 2019 <a href="http://fes.nationalgrid.com/media/1409/fes-2019.pdf">National Grid Future Energy Scenarios</a>.</p>
+				<h2><label for="scenarios">Choose a scenario</label>:</h2>
+				<div id="scenario-holder"></div>
+				<h2><label for="parameters">Choose a parameter</label>:</h2>
+				<div id="parameter-holder"></div>
+				<h2><label for="views">View by</label>:</h2>
+				<div id="view-holder"></div>
+				<h2>Select year (<span class="year"></span>):</h2>
+				<div id="slider"></div>
+				<div><button id="play" class="scenario" title="Play">&#9658;</button> <button id="pause" class="scenario" title="Pause" disabled>&#10074;&#10074;</button></div>
+				<h2><label for="scale-mode">Colour scale</label>:</h2>
+				<div id="scale-holder" class="toggleinput toggler">
+					<span class="toggle-label1" title="To compare the values of different areas for the current year">In year</span>
+					<div class="toggle-bg">
+						<input type="checkbox" id="scale-mode" name="scale-mode" title="Select for an absolute scale" />
+						<span class="switch"></span>
+					</div>
+					<label class="toggle-label2" for="scale-mode" title="To compare the values of different areas across the the full range of years">By 2050</label>
+				</div>
+			</div>
+			<div class="right">
+				<div id="map">
+					<div class="spinner">
+						<img src="https://odileeds.org/resources/images/odi.svg" alt="Loading..." />
+					</div>
+				</div>
+				<div id="scale"></div>
+				<div id="issues"><a href="https://github.com/odileeds/ukpowernetworks/tree/master/2020-dfes/data/scenarios/primaries">Get the data</a> | <a href="https://github.com/odileeds/ukpowernetworks/issues/">Report any issues you find</a> with our tool</div>
+			</div>
+		</div>
+	</div>
+	<div class="scenario padded">&nbsp;</div>
+	<div class="b5-bg">
+		<div class="holder padded">
+			<h2>About this visualisation - DFES 2020</h2>
+		</div>
+	</div>
+	<div class="scenario padded">&nbsp;</div>
+	<footer>
+		<div class="holder">
+				<h3><a href="https://odileeds.org/blog/2019-12-09-visualising-future-energy-scenarios">Interactive visualisation</a></h3>
+				<p>&copy; ODI Leeds (Stuart Lowe &amp; Patrick Lake) 2020. Released under an <a href="https://github.com/odileeds/ukpowernetworks/blob/master/LICENSE">MIT licence</a>. View the <a href="https://github.com/odileeds/ukpowernetworks">repository on Github</a>.</p>
+				<h3>Energy scenario data</h3>
+				<p>&copy; UK Power Networks &amp; ElementEnergy 2020. Released under a Creative Commons Attribution Licence.</p>
+				<h3>Geographic boundaries</h3>
+				<p><a href="https://geoportal.statistics.gov.uk/datasets/local-authority-districts-april-2019-boundaries-uk-bgc">Local Authority District boundaries</a> and <a href="https://geoportal.statistics.gov.uk/datasets/output-area-december-2011-generalised-clipped-boundaries-in-england-and-wales">Output Area boundaries</a> uses data from the ONS geo service. They are <a href="https://www.ons.gov.uk/methodology/geography/licences">released under the OGL</a>:</p>
+				<ul>
+					<li>Contains National Statistics data © Crown copyright and database right 2020</li>
+					<li>Contains OS data © Crown copyright and database right 2020</li>
+				</ul>
+		</div>
+	</footer>
+</body>
+</html>

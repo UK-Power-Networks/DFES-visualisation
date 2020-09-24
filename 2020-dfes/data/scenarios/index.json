@@ -1,0 +1,41 @@
+{
+	"Steady Progression": {
+		"description": "<ul><li>Low uptake of electric vehicles</li></ul>",
+		"color": "#901320",
+		"css": "steady-progression",
+		"data": {
+			"bev": {
+				"lsoa": { "file": "lsoa/EV-BEV-Low.csv", "key": "LSOA11CD" }
+			},
+			"phev": {
+				"lsoa": { "file": "lsoa/EV-PHEV-Low.csv", "key": "LSOA11CD" }
+			}
+		}
+	},
+	"Engaged Society": {
+		"description": "<ul><li>Medium uptake of electric vehicles</li></ul>",
+		"color": "#f76100",
+		"css": "engaged-society",
+		"data": {
+			"bev": {
+				"lsoa": { "file": "lsoa/EV-BEV-Medium.csv", "key": "LSOA11CD" }
+			},
+			"phev": {
+				"lsoa": { "file": "lsoa/EV-PHEV-Medium.csv", "key": "LSOA11CD" }
+			}
+		}
+	},
+	"Green Transformation": {
+		"description": "<ul><li>High uptake of electric vehicles</li></ul>",
+		"color": "#118483",
+		"css": "green-transformation",
+		"data": {
+			"bev": {
+				"lsoa": { "file": "lsoa/EV-BEV-High.csv", "key": "LSOA11CD" }
+			},
+			"phev": {
+				"lsoa": { "file": "lsoa/EV-PHEV-High.csv", "key": "LSOA11CD" }
+			}
+		}
+	}
+}

@@ -1,0 +1,4 @@
+{
+	"phev": { "title": "Plugin Electric Hybrid Vehicles", "combine": "sum", "units":"", "dp": 0, "description": "Number of plugin electric hybrid vehicles." },
+	"bev": { "title": "Electric Vehicles (battery)", "combine": "sum", "units":"", "dp": 0, "description": "Number of battery electric vehicles." }
+}

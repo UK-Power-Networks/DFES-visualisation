@@ -206,11 +206,11 @@ h1 { line-height: 1em; font-size: 1.5em; padding: 0.5em 0; }
 }
 header .holder, .holder, footer .holder { }
 footer { padding-left: 0px; padding-right: 0px; }
-footer h3:first-child { margin-top: 0; }
+footer h2:first-child { margin-top: 0; }
 .columns { display: flex; padding-top: 2em; padding-bottom: 2em; }
 .left { width: 30%; max-width: 300px; margin-right: 2em; }
 .right { width: 70%; }
-.left h2 { font-size: 1em; }
+.left h2 { font-size: 1rem; margin-bottom:0; }
 p { margin-bottom: 1em; }
 .spinner { position: absolute; left: 50%; top: 50%; transform: translate3d(-50%,-50%,0); z-index: 1000; }
 .spinner img { width: 5em; margin: auto; }

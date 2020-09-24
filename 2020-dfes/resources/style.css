@@ -198,7 +198,7 @@ header img {
 }
 footer { padding-left: 0px; padding-right: 0px; }
 footer h2:first-child { margin-top: 0; }
-.columns { display: flex; padding-top: 2em; padding-bottom: 2em; }
+.columns { display: flex; padding-top: 3rem; padding-bottom: 3rem; }
 .left { width: 30%; max-width: 300px; margin-right: 2em; }
 .right { width: 70%; }
 .left h2 { font-size: 1rem; margin-bottom:0; }

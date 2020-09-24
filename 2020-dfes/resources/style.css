@@ -203,6 +203,7 @@ h1 { line-height: 1em; font-size: 1.5em; padding: 0.5em 0; }
 	height: 550px;
 	display: block;
 	width: 100%;
+	border: .0625rem solid #e0e0e0;
 }
 header .holder, .holder, footer .holder { }
 footer { padding-left: 0px; padding-right: 0px; }
@@ -230,6 +231,8 @@ footer ul { margin-left: 2em; }
 #scale .min { float: left; padding-left: 0.25em; }
 #scale .max { float: right; padding-right: 0.25em; }
 #scale .range { display: block; height: 1.5em; }
+#scale .bar, #scale .min, #scale .max { border-width: .0625rem!important; }
+button { border-radius: 6.25rem; }
 
 /* Bar chart */
 #barchart { height: 100px; width: 300px; margin-bottom: 0.5em!important; }

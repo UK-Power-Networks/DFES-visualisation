@@ -187,7 +187,6 @@
 	
 	FES.prototype.setScenarioColours = function(scenario){
 		var css = this.data.scenarios[scenario].css;
-		S('header .title').attr('class','title '+css);
 		if(S('#scenario-holder .about').length==0) S('#scenario-holder').append('<div class="about"></div>');
 		S('#scenario-holder .about').html(this.data.scenarios[scenario].description||'').attr('class','about '+css+'-text');
 		S('#parameter-holder .about').html(this.parameters[this.options.parameter].description||'').attr('class','about '+css+'-text');

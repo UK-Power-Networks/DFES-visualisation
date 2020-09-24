@@ -196,7 +196,6 @@ header img {
 	height: auto;
 	margin: .625rem;
 }
-
 footer { padding-left: 0px; padding-right: 0px; }
 footer h2:first-child { margin-top: 0; }
 .columns { display: flex; padding-top: 2em; padding-bottom: 2em; }

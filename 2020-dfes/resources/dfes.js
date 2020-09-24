@@ -185,16 +185,16 @@
 	
 	}
 	
-	FES.prototype.setScenarioColours = function(scenario,old){
+	FES.prototype.setScenarioColours = function(scenario){
 		var css = this.data.scenarios[scenario].css;
 		S('header .title').attr('class','title '+css);
 		if(S('#scenario-holder .about').length==0) S('#scenario-holder').append('<div class="about"></div>');
 		S('#scenario-holder .about').html(this.data.scenarios[scenario].description||'').attr('class','about '+css+'-text');
 		S('#parameter-holder .about').html(this.parameters[this.options.parameter].description||'').attr('class','about '+css+'-text');
 
-		if(old){
-			S('#scenarios').removeClass(old);
-			S('.scenario').removeClass(old);
+		for(var s in this.data.scenarios){
+			S('#scenarios').removeClass(this.data.scenarios[s].css);
+			S('.scenario').removeClass(this.data.scenarios[s].css);
 		}
 		S('#scenarios').addClass(css);
 		S('.scenario').addClass(css);
@@ -206,7 +206,6 @@
 	FES.prototype.setScenario = function(scenario){
 
 		// Set the scenario
-		var oldscenario = this.options.scenario;
 		this.options.scenario = scenario;
 
 		// Clear messages
@@ -215,7 +214,7 @@
 				
 				
 		// Update the CSS class
-		this.setScenarioColours(scenario,oldscenario);
+		this.setScenarioColours(scenario);
 
 		this.options.source = this.views[this.options.view].source;
 		if(!this.data.scenarios[scenario].data[this.options.parameter]){

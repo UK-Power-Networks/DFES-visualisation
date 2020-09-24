@@ -58,17 +58,7 @@ table {
 	font-weight: 400;
 	font-display: auto;
 }
-
-/* DFES colours */
-.steady-progression { background-color: #901320; color: white; }
-.engaged-society { background-color: #F18E0D; color: black; }
-.green-transformation { background-color: #118483; color: white; }
-.deep-electrification { background-color: #AB1236!important; color: white!important; }
-.deep-electrification-text { color: #AB1236!important; }
-.high-hydrogen { background-color: #0085CA!important; color: white!important; }
-.high-hydrogen-text { color: #0085CA!important; }
-.net-zero { background-color: #00AB84!important; color: white!important; }
-.net-zero-text { color: #00AB84!important; }
+/* End fonts */
 
 
 /* Main styling */
@@ -78,11 +68,11 @@ ol li:last-child { margin-bottom: 0px; }
 body {
 	background-color: #000000;
 	font-family: "source-sans-pro", "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	color: #efefef;
 	margin: 0px;
 	padding: 0px;
-	line-height: 1.44em;
+	line-height: 1.5em;
 }
 p, time, li, td, th, footer, div { font-weight: 300; }
 header {
@@ -94,28 +84,27 @@ header .holder { padding-left: 0px; }
 h1 { font-family: "ff-dax-pro", sans-serif; }
 .holder {
 	position: relative;
-	width: 1080px;
+	width: 1030px;
 	max-width: 100%;
 	margin: auto;
 }
-footer .holder { padding: 1em 1em; }
-.padded { padding: 1em; }
-h1, h2, h3, h4 { font-weight: 500; }
-h1 { font-size: 2em; }
-h2 { font-size: 1.7em; }
-h3 { font-size: 1.4em; }
-h4 { font-size: 1.2em; }
+.padded { padding: 1.5rem; }
+.tallpadded { padding: 3rem 1.5rem; }
+h1, h2, h3, h4 { font-weight: 400; font-family: "source-sans-pro", "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.875rem; line-height: 2.5rem; margin-bottom: .625rem; }
+h3 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: .625rem; }
+h4 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: .625rem; }
 strong { font-weight: 700; }
 em { font-style: italic; }
-button, a.button { border: 0px; font-size: 1em; background-color: #efefef; color: black; text-decoration: none!important; display: inline-block; padding: 0.5em 1em; cursor: pointer; }
+button, a.button { border: 0px; font-size: 1rem; background-color: #efefef; color: black; text-decoration: none!important; display: inline-block; padding: 0.5rem 1rem; cursor: pointer; }
 button:hover, a.button:hover { background-color: #333333!important; color: #efefef; }
-a:hover { text-decoration: underline; }
-h2 a, h3 a,p a, .left a, #issues a { text-decoration: underline; color: #ff6600; }
-h2 a:visited, h3 a:visited, p a:visited, .left a:visited, #issues a:visited { color: #ff6600; }
+a { color: #e13000; }
+a:hover { text-decoration: underline; color: #fd7e14; }
+a:visited { color: #ff6600; }
 header a { text-decoration: none; }
 footer {
 	width: 100%;
-	padding: 1em;
 	padding-bottom: 3em;
 	background: #30354a;
 	color: #fff;
@@ -215,15 +204,13 @@ h1 { line-height: 1em; font-size: 1.5em; padding: 0.5em 0; }
 	display: block;
 	width: 100%;
 }
-header .holder, .holder, footer .holder { padding-left: 1em; padding-right: 1em; }
+header .holder, .holder, footer .holder { }
 footer { padding-left: 0px; padding-right: 0px; }
+footer h3:first-child { margin-top: 0; }
 .columns { display: flex; padding-top: 2em; padding-bottom: 2em; }
 .left { width: 30%; max-width: 300px; margin-right: 2em; }
 .right { width: 70%; }
-h2 { font-size: 1.4em; font-weight: bold; margin-top: 0.5em; margin-bottom: 0.25em; }
 .left h2 { font-size: 1em; }
-footer h3 { font-size: 1.4em; margin-top: 1.5em; margin-bottom: 0.5em; }
-footer h4 { font-size: 1.2em; margin-top: 1em; margin-bottom: 0.5em; }
 p { margin-bottom: 1em; }
 .spinner { position: absolute; left: 50%; top: 50%; transform: translate3d(-50%,-50%,0); z-index: 1000; }
 .spinner img { width: 5em; margin: auto; }
@@ -308,6 +295,20 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 .leaflet-popup-content p { margin: 1em 0; }
 .leaflet-popup-content h3 + p { margin-top: 0px; }
 #issues { margin-top: 0.5em; text-align: right; }
+.line { height: 10px; }
+
+
+/* DFES colours */
+.steady-progression { background-color: #901320; color: white; }
+.engaged-society { background-color: #F18E0D; color: black; }
+.green-transformation { background-color: #118483; color: white; }
+.deep-electrification { background-color: #AB1236!important; color: white!important; }
+.deep-electrification-text { color: #AB1236!important; }
+.high-hydrogen { background-color: #0085CA!important; color: white!important; }
+.high-hydrogen-text { color: #0085CA!important; }
+.net-zero { background-color: #00AB84!important; color: white!important; }
+.net-zero-text { color: #00AB84!important; }
+.about { background: #454a60; }
 
 
 @media only screen and (max-width: 1000px) {

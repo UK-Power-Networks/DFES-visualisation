@@ -13,7 +13,7 @@
 	// Main function
 	function FES(config){
 
-		this.version = "1.2.1";
+		this.version = "1.2.2";
 		if(!config) config = {};
 		this.options = (config.options||{});
 		this.parameters = {};
@@ -185,14 +185,19 @@
 	
 	}
 	
-	FES.prototype.setScenarioColours = function(scenario){
+	FES.prototype.setScenarioColours = function(scenario,old){
 		var css = this.data.scenarios[scenario].css;
 		S('header .title').attr('class','title '+css);
 		if(S('#scenario-holder .about').length==0) S('#scenario-holder').append('<div class="about"></div>');
 		S('#scenario-holder .about').html(this.data.scenarios[scenario].description||'').attr('class','about '+css+'-text');
 		S('#parameter-holder .about').html(this.parameters[this.options.parameter].description||'').attr('class','about '+css+'-text');
-		S('#scenarios').attr('class',css);
-		S('.scenario').attr('class','scenario '+css);
+
+		if(old){
+			S('#scenarios').removeClass(old);
+			S('.scenario').removeClass(old);
+		}
+		S('#scenarios').addClass(css);
+		S('.scenario').addClass(css);
 		//S('header .ODIlogo img').attr('src','https://odileeds.org/resources/images/odileeds-'+(css.replace(/[cs]([0-9]+)-bg/,function(m,p1){ return p1; }))+'.svg');
 		S('.noUi-connect').attr('class','noUi-connect '+css);
 		return this;
@@ -201,6 +206,7 @@
 	FES.prototype.setScenario = function(scenario){
 
 		// Set the scenario
+		var oldscenario = this.options.scenario;
 		this.options.scenario = scenario;
 
 		// Clear messages
@@ -209,7 +215,7 @@
 				
 				
 		// Update the CSS class
-		this.setScenarioColours(scenario);
+		this.setScenarioColours(scenario,oldscenario);
 
 		this.options.source = this.views[this.options.view].source;
 		if(!this.data.scenarios[scenario].data[this.options.parameter]){

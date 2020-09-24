@@ -81,7 +81,6 @@ header {
 	font-size: 1.2em;
 }
 header .holder { padding-left: 0px; }
-h1 { font-family: "ff-dax-pro", sans-serif; }
 .holder {
 	position: relative;
 	width: 1030px;
@@ -182,7 +181,7 @@ a.b1-bg:hover, a.b2-bg:hover, a.b3-bg:hover, a.b4-bg:hover, a.b5-bg:hover, a.b6-
 
 
 /* DFES styles */
-h1 { line-height: 1em; font-size: 1.5em; padding: 0.5em 0; }
+h1 { font-family: "ff-dax-pro", sans-serif; line-height: 1em; font-size: 1.5em; padding: 0.5em 0; }
 #map { 
 	height: 550px;
 	display: block;
@@ -289,7 +288,7 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 .leaflet-popup-content h3 + p { margin-top: 0px; }
 #issues { margin-top: 0.5em; text-align: right; }
 .line { height: 10px; }
-
+.title { color: black; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://innovation.ukpowernetworks.co.uk/wp-content/themes/ukpn-innov-theme/assets/images/home-banner_parallax_bg_desktop.png"); }
 
 /* DFES colours */
 .steady-progression { background-color: #901320; color: white; }

@@ -9,6 +9,12 @@
 			},
 			"phev": {
 				"lsoa": { "file": "lsoa/EV-PHEV-Low.csv", "key": "LSOA11CD" }
+			},
+			"domestic-gas-non-renewable": {
+				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Gas-Boiler_Steady-Progression.csv", "key": "LSOA11CD"}
+			},
+			"domestic-oil-non-renewable": {
+				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Oil-Boiler_Steady-Progression.csv", "key": "LSOA11CD"}
 			}
 		}
 	},
@@ -22,6 +28,12 @@
 			},
 			"phev": {
 				"lsoa": { "file": "lsoa/EV-PHEV-Medium.csv", "key": "LSOA11CD" }
+			},
+			"domestic-gas-non-renewable": {
+				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Gas-Boiler_Engaged-Society.csv", "key": "LSOA11CD"}
+			},
+			"domestic-oil-non-renewable": {
+				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Oil-Boiler_Engaged-Society.csv", "key": "LSOA11CD"}
 			}
 		}
 	},
@@ -35,6 +47,12 @@
 			},
 			"phev": {
 				"lsoa": { "file": "lsoa/EV-PHEV-High.csv", "key": "LSOA11CD" }
+			},
+			"domestic-gas-non-renewable": {
+				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Gas-Boiler_Green-Transformation.csv", "key": "LSOA11CD"}
+			},
+			"domestic-oil-non-renewable": {
+				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Oil-Boiler_Green-Transformation.csv", "key": "LSOA11CD"}
 			}
 		}
 	}

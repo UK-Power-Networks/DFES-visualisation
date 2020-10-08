@@ -32,7 +32,7 @@ We need to let the visualisation know that the CSV files exist and where they ar
 }
 ```
 
-For each parameter, `description` is HTML that will be shown below the scenario drop-down box, `color` is the hex code to use for this scenario, `css` is a CSS class used for this scenario (so make sure to update [style.css](../../resources/styles.css) with any `color` change), and `data` is an object defining the parameters for this scenario. Each `data` object should have a unique key (the same one will be used `config.json`, below). It should have a property, `file`, for the path to the file and it should have a `key` which is the column heading that contains the unique geography code.
+For each parameter, `description` is HTML that will be shown below the scenario drop-down box, `color` is the hex code to use for this scenario, `css` is a CSS class used for this scenario (so make sure to update [style.css](../../resources/style.css) with any `color` change), and `data` is an object defining the parameters for this scenario. Each `data` object should have a unique key (the same one will be used `config.json`, below). It should have a property, `file`, for the path to the file and it should have a `key` which is the column heading that contains the unique geography code.
 
 Once you've finished adding this parameter to `index.json`, check it is valid JSON using [JSON Lint](https://jsonlint.com/) otherwise you could break the visualisation if you have an invalid file.
 

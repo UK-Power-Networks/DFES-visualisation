@@ -1,7 +1,7 @@
 {
 	"Steady Progression": {
 		"description": "<ul><li>Low uptake of electric vehicles</li></ul>",
-		"color": "#901320",
+		"color": "#9C5DA9",
 		"css": "steady-progression",
 		"data": {
 			"bev": {
@@ -20,7 +20,7 @@
 	},
 	"Engaged Society": {
 		"description": "<ul><li>Medium uptake of electric vehicles</li></ul>",
-		"color": "#f76100",
+		"color": "#4AB6BC",
 		"css": "engaged-society",
 		"data": {
 			"bev": {
@@ -39,7 +39,7 @@
 	},
 	"Green Transformation": {
 		"description": "<ul><li>High uptake of electric vehicles</li></ul>",
-		"color": "#118483",
+		"color": "#8BB323",
 		"css": "green-transformation",
 		"data": {
 			"bev": {

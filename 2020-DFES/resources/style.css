@@ -291,9 +291,9 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 .title { border-bottom: .0625rem solid #e0e0e0; color: black; background-color: white; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://innovation.ukpowernetworks.co.uk/wp-content/themes/ukpn-innov-theme/assets/images/home-banner_parallax_bg_desktop.png"); }
 
 /* DFES colours */
-.steady-progression { background-color: #901320; color: white; }
-.engaged-society { background-color: #F18E0D; color: black; }
-.green-transformation { background-color: #118483; color: white; }
+.steady-progression { background-color: #9C5DA9; color: white; }
+.engaged-society { background-color: #4AB6BC; color: black; }
+.green-transformation { background-color: #8BB323; color: white; }
 .deep-electrification { background-color: #AB1236!important; color: white!important; }
 .deep-electrification-text { color: #AB1236!important; }
 .high-hydrogen { background-color: #0085CA!important; color: white!important; }

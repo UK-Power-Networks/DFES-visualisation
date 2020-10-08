@@ -18,7 +18,7 @@ S(document).ready(function(){
 		},
 		"layers": {
 			"LAD":{
-				"geojson": "data/maps/LAD2020.geojson",
+				"geojson": "data/maps/LAD2020-clipped.geojson",
 				"key": "LAD20CD",
 				"data": {
 					"mapping": "data/lsoa2lad.json",

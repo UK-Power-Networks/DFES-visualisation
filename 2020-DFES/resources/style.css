@@ -224,7 +224,7 @@ footer ul { margin-left: 2em; }
 button { border-radius: 6.25rem; }
 
 /* Bar chart */
-.barchart { height: 100px; width: 100%; margin-bottom: 2.5em!important; }
+.barchart { height: 100px; width: 100%; margin-bottom: 1.5em!important; }
 .barchart .label { font-size: 0.8em; }
 .barchart table { width: 80%; }
 .barchart .grid .line { font-size: 0.8em; }

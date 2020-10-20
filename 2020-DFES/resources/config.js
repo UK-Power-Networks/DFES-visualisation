@@ -21,7 +21,22 @@ S(document).ready(function(){
 				"geojson": "data/maps/LAD2020-clipped.geojson",
 				"key": "LAD20CD",
 				"data": {
-					"mapping": "data/lsoa2lad.json",
+					"mapping": {
+						"src": "data/lsoa2lad-compact.json",
+						"process": function(d){
+							// Work out mapping from LSOA to LAD
+							// Data is saved as { LAD: [LSOA1,LSOA2,LSOA3...] }
+							var a,data,i;
+							data = {};
+							for(a in d){
+								for(i = 0; i < d[a].length; i++){
+									data[d[a][i]] = {};
+									data[d[a][i]][a] = 1;
+								}
+							}
+							return data;
+						}
+					},
 					"src": "lsoa"
 				}
 			},
@@ -29,7 +44,22 @@ S(document).ready(function(){
 				"geojson": "data/maps/LEP2020-clipped.geojson",
 				"key": "lep20cd",
 				"data": {
-					"mapping": "data/lsoa2lep.json",
+					"mapping": {
+						"src": "data/lsoa2lep-compact.json",
+						"process": function(d){
+							// Work out mapping from LSOA to LAD
+							// Data is saved as { LAD: [LSOA1,LSOA2,LSOA3...] }
+							var a,data,i;
+							data = {};
+							for(a in d){
+								for(i = 0; i < d[a].length; i++){
+									data[d[a][i]] = {};
+									data[d[a][i]][a] = 1;
+								}
+							}
+							return data;
+						}
+					},
 					"src": "lsoa"
 				}
 			},

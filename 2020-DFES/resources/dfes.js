@@ -340,11 +340,11 @@
 
 					if(this.layers[l].data){
 
-						if(this.layers[l].data.mapping && typeof this.layers[l].data.mapping==="string"){
+						if(this.layers[l].data.mapping && !this.layers[l].data.mapping.data && typeof this.layers[l].data.mapping.src==="string"){
 							// Process data layers that need a mapping
 
 							// Load from JSON file
-							S().ajax(path+this.layers[l].data.mapping,{
+							S().ajax(path+this.layers[l].data.mapping.src,{
 								'this':this,
 								'cache':false,
 								'dataType':'json',
@@ -355,7 +355,10 @@
 								'callback':callback,
 								'complete': function(d,attr){
 									console.info('Got '+attr.url);
-									this.layers[attr.layer].data.mapping = d;
+									if(typeof this.layers[attr.layer].data.mapping.process==="function"){
+										d = this.layers[attr.layer].data.mapping.process.call(this,d);
+									}
+									this.layers[attr.layer].data.mapping.data = d;
 									this.loadedData('',attr.scenario,attr.parameter,attr.callback);
 								},
 								'error': function(e,attr){
@@ -383,9 +386,9 @@
 
 									// The primary key
 									pkey = d.raw.rows[r][data.col];
-									if(this.layers[l].data.mapping){
-										if(this.layers[l].data.mapping[pkey]){
-											for(a in this.layers[l].data.mapping[pkey]){
+									if(this.layers[l].data.mapping && this.layers[l].data.mapping.data){
+										if(this.layers[l].data.mapping.data[pkey]){
+											for(a in this.layers[l].data.mapping.data[pkey]){
 												if(!data.layers[l].values[a]) data.layers[l].values[a] = {};
 												for(c = 0; c < d.raw.fields.name.length; c++){
 													// Set values to zero
@@ -408,17 +411,17 @@
 
 											v = d.raw.rows[r][c];
 
-											if(this.layers[l].data.mapping){
-												if(this.layers[l].data.mapping[pkey]){
+											if(this.layers[l].data.mapping && this.layers[l].data.mapping.data){
+												if(this.layers[l].data.mapping.data[pkey]){
 
 													key = d.raw.fields.name[c]+"";
 
-													for(a in this.layers[l].data.mapping[pkey]){
+													for(a in this.layers[l].data.mapping.data[pkey]){
 
 														if(this.parameters[parameter].combine=="sum"){
 
 															// Sum the fractional amount for this mapped area
-															data.layers[l].values[a][key] += (v*this.layers[l].data.mapping[pkey][a]);
+															data.layers[l].values[a][key] += (v*this.layers[l].data.mapping.data[pkey][a]);
 
 														}else if(this.parameters[parameter].combine=="max"){
 

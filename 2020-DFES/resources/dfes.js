@@ -298,7 +298,7 @@
 
 	FES.prototype.loadedData = function(d,scenario,parameter,callback){
 	
-		var r,c,v,p,lad,l,key,min,max,source;
+		var r,c,v,p,a,l,key,min,max,source;
 		var data = this.data.scenarios[scenario].data[parameter][this.options.source];
 
 		if(!data.key){
@@ -385,13 +385,13 @@
 									pkey = d.raw.rows[r][data.col];
 									if(this.layers[l].data.mapping){
 										if(this.layers[l].data.mapping[pkey]){
-											for(lad in this.layers[l].data.mapping[pkey]){
-												if(!data.layers[l].values[lad]) data.layers[l].values[lad] = {};
+											for(a in this.layers[l].data.mapping[pkey]){
+												if(!data.layers[l].values[a]) data.layers[l].values[a] = {};
 												for(c = 0; c < d.raw.fields.name.length; c++){
 													// Set values to zero
 													key = d.raw.fields.name[c];
-													if(c != col && parseInt(key)==key && !data.layers[l].values[lad][key]){
-														data.layers[l].values[lad][key] = 0;
+													if(c != col && parseInt(key)==key && !data.layers[l].values[a][key]){
+														data.layers[l].values[a][key] = 0;
 													}
 												}
 											}
@@ -413,17 +413,17 @@
 
 													key = d.raw.fields.name[c]+"";
 
-													for(lad in this.layers[l].data.mapping[pkey]){
+													for(a in this.layers[l].data.mapping[pkey]){
 
 														if(this.parameters[parameter].combine=="sum"){
 
 															// Sum the fractional amount for this mapped area
-															data.layers[l].values[lad][key] += (v*this.layers[l].data.mapping[pkey][lad]);
+															data.layers[l].values[a][key] += (v*this.layers[l].data.mapping[pkey][a]);
 
 														}else if(this.parameters[parameter].combine=="max"){
 
 															// Find the maximum value for mapped areas
-															data.layers[l].values[lad][key] = Math.max(v,data.layers[l].values[lad][key]);
+															data.layers[l].values[a][key] = Math.max(v,data.layers[l].values[a][key]);
 
 														}
 													}
@@ -739,7 +739,7 @@
 			
 			view = me.views[me.options.view].layers[attr.layer].id;
 			if(!me.layers[view].key || !feature.properties[me.layers[view].key]){
-				this.log('ERROR','No property '+me.layers[view].key+' in ',feature.properties);
+				me.log('ERROR','No property '+me.layers[view].key+' in ',feature.properties);
 				return "";
 			}
 			key = feature.properties[me.layers[view].key];

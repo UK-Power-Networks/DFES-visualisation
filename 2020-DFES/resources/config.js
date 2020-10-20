@@ -10,7 +10,7 @@ S(document).ready(function(){
 			"parameter": "bev",
 			"scale": "relative",
 			"source": null,
-			"years": {"min":2019,"max":2050},
+			"years": {"min":2020,"max":2050},
 			"map": {
 				"bounds": [[50.6,-1.55],[53,2]],
 				"attribution": "Vis: <a href=\"https://odileeds.org/projects/\">ODI Leeds</a>, Data: UK Power Networks"
@@ -22,6 +22,14 @@ S(document).ready(function(){
 				"key": "LAD20CD",
 				"data": {
 					"mapping": "data/lsoa2lad.json",
+					"src": "lsoa"
+				}
+			},
+			"LEP":{
+				"geojson": "data/maps/LEP2020-clipped.geojson",
+				"key": "lep20cd",
+				"data": {
+					"mapping": "data/lsoa2lep.json",
 					"src": "lsoa"
 				}
 			},
@@ -48,6 +56,29 @@ S(document).ready(function(){
 						popup = '<h3>%TITLE%</h3><p>%VALUE%</p>';
 
 						title = (attr.properties.LAD20NM || '?');
+						dp = (typeof attr.parameter.dp==="number" ? attr.parameter.dp : 2);
+						value = '<strong>'+attr.parameter.title+' '+this.options.key+':</strong> '+(dp==0 ? Math.round(attr.value) : attr.value.toFixed(dp)).toLocaleString()+''+(attr.parameter.units ? '&thinsp;'+attr.parameter.units : '');
+
+						// Replace values
+						return popup.replace(/\%VALUE\%/g,value).replace(/\%TITLE\%/g,title);
+					}
+				}
+				
+			},
+			"LEP":{
+				"title":"Local Enterprise Partnerships",
+				"source": "lsoa",
+				"layers":[{
+					"id": "LEP",
+					"heatmap": true,
+					"boundary":{"strokeWidth":2}
+				}],
+				"popup": {
+					"text": function(attr){
+						var popup,title,dp,value;
+						popup = '<h3>%TITLE%</h3><p>%VALUE%</p>';
+
+						title = (attr.properties.lep20nm || '?');
 						dp = (typeof attr.parameter.dp==="number" ? attr.parameter.dp : 2);
 						value = '<strong>'+attr.parameter.title+' '+this.options.key+':</strong> '+(dp==0 ? Math.round(attr.value) : attr.value.toFixed(dp)).toLocaleString()+''+(attr.parameter.units ? '&thinsp;'+attr.parameter.units : '');
 

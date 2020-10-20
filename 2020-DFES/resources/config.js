@@ -41,7 +41,7 @@ S(document).ready(function(){
 				}
 			},
 			"LEP":{
-				"geojson": "data/maps/LEP2020-clipped.geojson",
+				"geojson": "data/maps/LEP2020-clipped-simpler.geojson",
 				"key": "lep20cd",
 				"data": {
 					"mapping": {

@@ -499,7 +499,7 @@
 			this.map.on('popupopen',function(e){
 				// Call any attached functions
 				if(_obj.views[_obj.options.view].popup && _obj.views[_obj.options.view].popup['open']){
-					_obj.views[_obj.options.view].popup['open'].call(_obj,{'el':e.popup._contentNode,'id':e.popup._source.feature.properties.lad19cd});
+					_obj.views[_obj.options.view].popup['open'].call(_obj,{'el':e.popup._contentNode,'id':e.popup._source.feature.properties[_obj.layers[_obj.options.view].key]});
 				}
 			});
 			this.map.attributionControl._attributions = {};

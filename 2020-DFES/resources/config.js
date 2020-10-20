@@ -52,15 +52,59 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						var popup,title,dp,value;
-						popup = '<h3>%TITLE%</h3><p>%VALUE%</p>';
+						return '<h3>'+(attr.properties.LAD20NM || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LA may have been clipped to UKPN\'s area</p>';
+					},
+					"open": function(attr){
 
-						title = (attr.properties.LAD20NM || '?');
-						dp = (typeof attr.parameter.dp==="number" ? attr.parameter.dp : 2);
-						value = '<strong>'+attr.parameter.title+' '+this.options.key+':</strong> '+(dp==0 ? Math.round(attr.value) : attr.value.toFixed(dp)).toLocaleString()+''+(attr.parameter.units ? '&thinsp;'+attr.parameter.units : '');
+						var data,c,p,key,values;
+						if(!attr) attr = {};
+						
+						key = this.layers[this.options.view].key;
 
-						// Replace values
-						return popup.replace(/\%VALUE\%/g,value).replace(/\%TITLE\%/g,title);
+						if(attr.id && key){
+
+							data = [];
+							
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[this.options.view].values;
+
+							for(c in values[attr.id]){
+								if(c >= this.options.years.min && c <= this.options.years.max){
+									data.push([c,values[attr.id][c]]);
+								}
+							}
+
+							// Create the barchart object. We'll add a function to
+							// customise the class of the bar depending on the key.
+							var chart = new S.barchart('#barchart',{
+								'formatKey': function(key){
+									return (key%10==0 ? key.substr(0,4) : '');
+								},
+								'formatY': function(key){
+									return key.toLocaleString();
+								},
+								'formatBar': function(key,val,series){
+									return (typeof series==="number" ? "series-"+series : "");
+								}
+							});
+
+							// Send the data array and bin size then draw the chart
+							chart.setData(data).setBins({ 'mintick': 5 }).draw();
+							units = this.parameters[this.options.parameter].units;
+							dp = this.parameters[this.options.parameter].dp;
+
+							// Add an event
+							chart.on('barover',function(e){
+								S('.balloon').remove();
+								var v = parseFloat(this.bins[e.bin].value.toFixed(dp));
+								S(e.event.currentTarget).find('.bar.series-0').append(
+									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+v.toLocaleString()+(units ? '&thinsp;'+units : '')+"</div>"
+								);
+							});
+							S('.barchart table .bar').css({'background-color':'#cccccc'});
+							S('.barchart table .bar.series-0').css({'background-color':this.data.scenarios[this.options.scenario].color});
+						}else{
+							S(attr.el).find('#barchart').remove();
+						}
 					}
 				}
 				
@@ -75,15 +119,59 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						var popup,title,dp,value;
-						popup = '<h3>%TITLE%</h3><p>%VALUE%</p>';
+						return '<h3>'+(attr.properties.lep20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LEP has been clipped to UKPN\'s area</p>';
+					},
+					"open": function(attr){
 
-						title = (attr.properties.lep20nm || '?');
-						dp = (typeof attr.parameter.dp==="number" ? attr.parameter.dp : 2);
-						value = '<strong>'+attr.parameter.title+' '+this.options.key+':</strong> '+(dp==0 ? Math.round(attr.value) : attr.value.toFixed(dp)).toLocaleString()+''+(attr.parameter.units ? '&thinsp;'+attr.parameter.units : '');
+						var data,c,p,key,values;
+						if(!attr) attr = {};
+						
+						key = this.layers[this.options.view].key;
 
-						// Replace values
-						return popup.replace(/\%VALUE\%/g,value).replace(/\%TITLE\%/g,title);
+						if(attr.id && key){
+
+							data = [];
+							
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[this.options.view].values;
+
+							for(c in values[attr.id]){
+								if(c >= this.options.years.min && c <= this.options.years.max){
+									data.push([c,values[attr.id][c]]);
+								}
+							}
+
+							// Create the barchart object. We'll add a function to
+							// customise the class of the bar depending on the key.
+							var chart = new S.barchart('#barchart',{
+								'formatKey': function(key){
+									return (key%10==0 ? key.substr(0,4) : '');
+								},
+								'formatY': function(key){
+									return key.toLocaleString();
+								},
+								'formatBar': function(key,val,series){
+									return (typeof series==="number" ? "series-"+series : "");
+								}
+							});
+
+							// Send the data array and bin size then draw the chart
+							chart.setData(data).setBins({ 'mintick': 5 }).draw();
+							units = this.parameters[this.options.parameter].units;
+							dp = this.parameters[this.options.parameter].dp;
+
+							// Add an event
+							chart.on('barover',function(e){
+								S('.balloon').remove();
+								var v = parseFloat(this.bins[e.bin].value.toFixed(dp));
+								S(e.event.currentTarget).find('.bar.series-0').append(
+									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+v.toLocaleString()+(units ? '&thinsp;'+units : '')+"</div>"
+								);
+							});
+							S('.barchart table .bar').css({'background-color':'#cccccc'});
+							S('.barchart table .bar.series-0').css({'background-color':this.data.scenarios[this.options.scenario].color});
+						}else{
+							S(attr.el).find('#barchart').remove();
+						}
 					}
 				}
 				

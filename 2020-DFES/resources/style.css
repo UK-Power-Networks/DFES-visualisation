@@ -227,7 +227,8 @@ button { border-radius: 6.25rem; }
 .barchart { height: 100px; width: 100%; margin-bottom: 1.5em!important; }
 .barchart .label { font-size: 0.8em; }
 .barchart table { width: 80%; }
-.barchart .grid .line { font-size: 0.8em; }
+.barchart .grid .line { }
+.barchart .grid .line span { font-size: 0.8em; line-height: 1em; display: block; }
 .leaflet-popup { min-width: 350px; }
 .leaflet-popup-content table td:first-child { padding-right: 0; }
 .leaflet-container a { color: inherit; }
@@ -323,7 +324,7 @@ button { border-radius: 6.25rem; }
 button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 #play, #pause { line-height: 1.2em; }
 #issues { margin-top: 0.5em; text-align: right; }
-.line { height: 10px; }
+.thickline { height: 10px; }
 .title { border-bottom: .0625rem solid #e0e0e0; color: black; background-color: white; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://innovation.ukpowernetworks.co.uk/wp-content/themes/ukpn-innov-theme/assets/images/home-banner_parallax_bg_desktop.png"); }
 
 /* DFES colours */

@@ -285,7 +285,7 @@ S(document).ready(function(){
 										var ev = document.createEvent('HTMLEvents');
 										ev.initEvent('click', true, false);
 										//console.log(el.querySelector('.submit'),ev);
-										el.querySelector('.submit').dispatchEvent(ev);
+										//el.querySelector('.submit').dispatchEvent(ev);
 									}
 								}
 							}

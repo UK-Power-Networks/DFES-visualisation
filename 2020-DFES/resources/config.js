@@ -228,20 +228,23 @@ S(document).ready(function(){
 						div.innerHTML = '<div class="placesearch"><div class="submit" href="#" title="Search" role="button" aria-label="Search"></div><form class="placeform layersearch pop-left" action="search" method="GET" autocomplete="off"><input class="place" id="search" name="place" value="" placeholder="Search for a named area" type="text" /><div class="searchresults" id="searchresults"></div></div></form>';
 						el.appendChild(div);
 						
-						function setActive(el){
-							if(el.classList.contains('typing')){
-								el.classList.remove('typing');
+						function toggleActive(state){
+							e = el.querySelector('.placesearch');
+							if(typeof state!=="boolean") state = !e.classList.contains('typing');
+							if(state){
+								e.classList.add('typing');
+								e.querySelector('input.place').focus();
 							}else{
-								el.classList.add('typing');
-								el.querySelector('input.place').focus();
+								e.classList.remove('typing');
 							}
 						}
 					
-						div.querySelector('.submit').addEventListener('click', function(e){ setActive(e.currentTarget.parentNode); });
+						div.querySelector('.submit').addEventListener('click', function(e){ toggleActive(); });
 						
 						// Stop map dragging on the element
-						el.addEventListener('mouseover', function(){ _obj.map.dragging.disable(); });
-						el.addEventListener('mouseout', function(){ _obj.map.dragging.enable(); });
+						el.addEventListener('mousedown', function(){ _obj.map.dragging.disable(); });
+						el.addEventListener('mouseup', function(){ _obj.map.dragging.enable(); });
+
 						// Define a function for scoring how well a string matches
 						function getScore(str1,str2,v1,v2,v3){
 							var r = 0;
@@ -281,11 +284,8 @@ S(document).ready(function(){
 										// Open the popup for this feature
 										ly.getLayer(i).openPopup();
 										
-										// Take focus from the input field
-										var ev = document.createEvent('HTMLEvents');
-										ev.initEvent('click', true, false);
-										//console.log(el.querySelector('.submit'),ev);
-										//el.querySelector('.submit').dispatchEvent(ev);
+										// Change active state
+										toggleActive(false);
 									}
 								}
 							}

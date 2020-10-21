@@ -21,6 +21,8 @@
 		this.logging = true;		
 		this.layers = (config.layers||{});
 		this.views = (config.views||{});
+		this.events = {};
+		if(config.on) this.events = config.on;
 		
 		
 		S().ajax(path+"data/scenarios/config.json",{
@@ -502,7 +504,7 @@
 			this.map.on('popupopen',function(e){
 				// Call any attached functions
 				if(_obj.views[_obj.options.view].popup && _obj.views[_obj.options.view].popup['open']){
-					_obj.views[_obj.options.view].popup['open'].call(_obj,{'el':e.popup._contentNode,'id':e.popup._source.feature.properties[_obj.layers[_obj.options.view].key]});
+					_obj.views[_obj.options.view].popup['open'].call(_obj,{'el':e.popup._contentNode,'id':e.popup._source.feature.properties[_obj.layers[_obj.views[_obj.options.view].layers[0].id].key]});
 				}
 			});
 			this.map.attributionControl._attributions = {};
@@ -771,6 +773,9 @@
 			}
 			return popup;
 		}
+		
+		// Trigger any event callback
+		if(typeof this.events.buildMap==="function") this.events.buildMap.call(this);
 
 		return this;
 

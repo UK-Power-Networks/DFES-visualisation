@@ -357,6 +357,7 @@
 								'callback':callback,
 								'complete': function(d,attr){
 									console.info('Got '+attr.url);
+									this.layers[attr.layer].data.mapping.raw = d;
 									if(typeof this.layers[attr.layer].data.mapping.process==="function"){
 										d = this.layers[attr.layer].data.mapping.process.call(this,d);
 									}
@@ -689,6 +690,7 @@
 								"color": (layer.boundary ? layer.boundary.color||color : color),
 								"fillColor": (layer.boundary ? layer.boundary.fillColor||color : color)
 							};
+							if(layer.boundary && typeof layer.boundary.stroke==="boolean") props.stroke = layer.boundary.stroke;
 							if(feature.geometry.type == "Polygon" || feature.geometry.type == "MultiPolygon"){
 								var v = 0;
 								var data = _scenario[layer.id];

@@ -2,6 +2,7 @@
 var dfes
 
 S(document).ready(function(){
+
 	dfes = new FES({
 		"options": {
 			"scenario": "Steady Progression",
@@ -40,9 +41,39 @@ S(document).ready(function(){
 					"src": "lsoa"
 				}
 			},
+			"LSOAlayer":{
+				"geojson": "data/maps/LSOA11-rough.geojson",
+				"key": "LSOA11CD",
+				"data": {
+					"src": "lsoa"
+				}
+			},
 			"LEPlayer":{
 				"geojson": "data/maps/LEP2020-clipped-fullextent-simplified.geojson",
 				"key": "lep20cd",
+				"data": {
+					"mapping": {
+						"src": "data/lsoa2lep-compact.json",
+						"process": function(d){
+							// Work out mapping from LSOA to LAD
+							// Data is saved as { LAD: [LSOA1,LSOA2,LSOA3...] }
+							var a,data,i;
+							data = {};
+							for(a in d){
+								for(i = 0; i < d[a].length; i++){
+									data[d[a][i]] = {};
+									data[d[a][i]][a] = 1;
+								}
+							}
+							return data;
+						}
+					},
+					"src": "lsoa"
+				}
+			},
+			"Countylayer":{
+				"geojson": "data/maps/Counties-clipped-simplified.geojson",
+				"key": "cty20cd",
 				"data": {
 					"mapping": {
 						"src": "data/lsoa2lep-compact.json",
@@ -72,74 +103,6 @@ S(document).ready(function(){
 			}
 		},
 		"views":{
-			"LAD":{
-				"title":"Local Authorities",
-				"source": "lsoa",
-				"layers":[{
-					"id": "LADlayer",
-					"heatmap": true,
-					"boundary":{"strokeWidth":2}
-				}],
-				"popup": {
-					"text": function(attr){
-						return '<h3>'+(attr.properties.lad20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LA may have been clipped to UKPN\'s area</p>';
-					},
-					"open": function(attr){
-
-						var data,c,p,key,values,l;
-						if(!attr) attr = {};
-						
-						l = this.views[this.options.view].layers[0].id;
-						key = this.layers[l].key;
-
-						if(attr.id && key){
-
-							data = [];
-							
-							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[l].values;
-
-							for(c in values[attr.id]){
-								if(c >= this.options.years.min && c <= this.options.years.max){
-									data.push([c,values[attr.id][c]]);
-								}
-							}
-
-							// Create the barchart object. We'll add a function to
-							// customise the class of the bar depending on the key.
-							var chart = new S.barchart('#barchart',{
-								'formatKey': function(key){
-									return (key%10==0 ? key.substr(0,4) : '');
-								},
-								'formatY': function(key){
-									return key.toLocaleString();
-								},
-								'formatBar': function(key,val,series){
-									return (typeof series==="number" ? "series-"+series : "");
-								}
-							});
-
-							// Send the data array and bin size then draw the chart
-							chart.setData(data).setBins({ 'mintick': 5 }).draw();
-							units = this.parameters[this.options.parameter].units;
-							dp = this.parameters[this.options.parameter].dp;
-
-							// Add an event
-							chart.on('barover',function(e){
-								S('.balloon').remove();
-								var v = parseFloat(this.bins[e.bin].value.toFixed(dp));
-								S(e.event.currentTarget).find('.bar.series-0').append(
-									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+v.toLocaleString()+(units ? '&thinsp;'+units : '')+"</div>"
-								);
-							});
-							S('.barchart table .bar').css({'background-color':'#cccccc'});
-							S('.barchart table .bar.series-0').css({'background-color':this.data.scenarios[this.options.scenario].color});
-						}else{
-							S(attr.el).find('#barchart').remove();
-						}
-					}
-				}
-				
-			},
 			"LEP":{
 				"title":"Local Enterprise Partnerships",
 				"source": "lsoa",
@@ -206,15 +169,208 @@ S(document).ready(function(){
 				}
 				
 			},
-			"lsoa":{
-				"title":"LSOA",
+			"County":{
+				"title":"Counties and Unitary Authorities",
 				"source": "lsoa",
-				"inactive": true,
 				"layers":[{
-					"id": "lsoa",
+					"id": "Countylayer",
 					"heatmap": true,
-				}]
+					"boundary":{"strokeWidth":2}
+				}],
+				"popup": {
+					"text": function(attr){
+						return '<h3>'+(attr.properties.cty20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The area has been clipped to UKPN\'s area</p>';
+					},
+					"open": function(attr){
+						var data,c,p,key,values,l;
+						if(!attr) attr = {};
+						
+						l = this.views[this.options.view].layers[0].id;
+						key = this.layers[l].key;
+
+						if(attr.id && key){
+
+							data = [];							
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[l].values;
+
+							for(c in values[attr.id]){
+								if(c >= this.options.years.min && c <= this.options.years.max){
+									data.push([c,values[attr.id][c]]);
+								}
+							}
+
+							// Create the barchart object. We'll add a function to
+							// customise the class of the bar depending on the key.
+							var chart = new S.barchart('#barchart',{
+								'formatKey': function(key){
+									return (key%10==0 ? key.substr(0,4) : '');
+								},
+								'formatY': function(key){
+									return key.toLocaleString();
+								},
+								'formatBar': function(key,val,series){
+									return (typeof series==="number" ? "series-"+series : "");
+								}
+							});
+
+							// Send the data array and bin size then draw the chart
+							chart.setData(data).setBins({ 'mintick': 5 }).draw();
+							units = this.parameters[this.options.parameter].units;
+							dp = this.parameters[this.options.parameter].dp;
+
+							// Add an event
+							chart.on('barover',function(e){
+								S('.balloon').remove();
+								var v = parseFloat(this.bins[e.bin].value.toFixed(dp));
+								S(e.event.currentTarget).find('.bar.series-0').append(
+									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+v.toLocaleString()+(units ? '&thinsp;'+units : '')+"</div>"
+								);
+							});
+							S('.barchart table .bar').css({'background-color':'#cccccc'});
+							S('.barchart table .bar.series-0').css({'background-color':this.data.scenarios[this.options.scenario].color});
+						}else{
+							S(attr.el).find('#barchart').remove();
+						}
+					}
+				}	
+			},
+			"LAD":{
+				"title":"Local Authorities",
+				"source": "lsoa",
+				"layers":[{
+					"id": "LADlayer",
+					"heatmap": true,
+					"boundary":{"strokeWidth":2}
+				}],
+				"popup": {
+					"text": function(attr){
+						return '<h3>'+(attr.properties.lad20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LA may have been clipped to UKPN\'s area</p>';
+					},
+					"open": function(attr){
+
+						var data,c,p,key,values,l;
+						if(!attr) attr = {};
+						
+						l = 'LADlayer';
+						key = this.layers[l].key;
+
+						if(attr.id && key){
+
+							data = [];
+							
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[l].values;
+
+							for(c in values[attr.id]){
+								if(c >= this.options.years.min && c <= this.options.years.max){
+									data.push([c,values[attr.id][c]]);
+								}
+							}
+
+							// Create the barchart object. We'll add a function to
+							// customise the class of the bar depending on the key.
+							var chart = new S.barchart('#barchart',{
+								'formatKey': function(key){
+									return (key%10==0 ? key.substr(0,4) : '');
+								},
+								'formatY': function(key){
+									return key.toLocaleString();
+								},
+								'formatBar': function(key,val,series){
+									return (typeof series==="number" ? "series-"+series : "");
+								}
+							});
+
+							// Send the data array and bin size then draw the chart
+							chart.setData(data).setBins({ 'mintick': 5 }).draw();
+							units = this.parameters[this.options.parameter].units;
+							dp = this.parameters[this.options.parameter].dp;
+
+							// Add an event
+							chart.on('barover',function(e){
+								S('.balloon').remove();
+								var v = parseFloat(this.bins[e.bin].value.toFixed(dp));
+								S(e.event.currentTarget).find('.bar.series-0').append(
+									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+v.toLocaleString()+(units ? '&thinsp;'+units : '')+"</div>"
+								);
+							});
+							S('.barchart table .bar').css({'background-color':'#cccccc'});
+							S('.barchart table .bar.series-0').css({'background-color':this.data.scenarios[this.options.scenario].color});
+						}else{
+							S(attr.el).find('#barchart').remove();
+						}
+					}
+				}
+				
+			},
+			"LSOA":{
+				"title":"LSOAs",
+				"source": "lsoa",
+				"layers":[{
+					"id": "LSOAlayer",
+					"heatmap": true,
+					"boundary":{"stroke":false}
+				}],
+				"popup": {
+					"text": function(attr){
+						return '<h3>'+(attr.properties.LSOA11CD || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LSOAs may have been clipped to UKPN\'s area</p>';
+					},
+					"open": function(attr){
+
+						var data,c,p,key,values,l;
+						if(!attr) attr = {};
+						
+						l = 'LSOAlayer';
+						key = this.layers[l].key;
+
+						if(attr.id && key){
+
+							data = [];
+
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[l].values;
+
+							for(c in values[attr.id]){
+								if(c >= this.options.years.min && c <= this.options.years.max){
+									data.push([c,values[attr.id][c]]);
+								}
+							}
+
+							// Create the barchart object. We'll add a function to
+							// customise the class of the bar depending on the key.
+							var chart = new S.barchart('#barchart',{
+								'formatKey': function(key){
+									return (key%10==0 ? key.substr(0,4) : '');
+								},
+								'formatY': function(key){
+									return key.toLocaleString();
+								},
+								'formatBar': function(key,val,series){
+									return (typeof series==="number" ? "series-"+series : "");
+								}
+							});
+
+							// Send the data array and bin size then draw the chart
+							chart.setData(data).setBins({ 'mintick': 5 }).draw();
+							units = this.parameters[this.options.parameter].units;
+							dp = this.parameters[this.options.parameter].dp;
+
+							// Add an event
+							chart.on('barover',function(e){
+								S('.balloon').remove();
+								var v = parseFloat(this.bins[e.bin].value.toFixed(dp));
+								S(e.event.currentTarget).find('.bar.series-0').append(
+									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+v.toLocaleString()+(units ? '&thinsp;'+units : '')+"</div>"
+								);
+							});
+							S('.barchart table .bar').css({'background-color':'#cccccc'});
+							S('.barchart table .bar.series-0').css({'background-color':this.data.scenarios[this.options.scenario].color});
+						}else{
+							S(attr.el).find('#barchart').remove();
+						}
+					}
+				}
+				
 			}
+			
 		},
 		"on": {
 			"buildMap": function(){

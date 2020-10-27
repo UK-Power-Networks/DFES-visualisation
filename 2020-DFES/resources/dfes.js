@@ -509,7 +509,7 @@
 				}
 			});
 			this.map.attributionControl._attributions = {};
-			if(this.options.map && this.options.map.attribution) this.map.attributionControl.addAttribution(this.options.map.attribution);
+			if(this.options.map && this.options.map.attribution) this.map.attributionControl.setPrefix('').addAttribution(this.options.map.attribution);
 
 			// Create a map label pane so labels can sit above polygons
 			this.map.createPane('labels');

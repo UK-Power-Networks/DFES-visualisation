@@ -66,6 +66,16 @@ table {
 
 
 /* Main site styling */
+.ukpn { background: radial-gradient(circle at 82% 1%,#f76100,#de3200 77%,#e13000); color: white!important; }
+.title {
+	border-bottom: .0625rem solid #e0e0e0;
+	background-color: white;
+	color: black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("https://innovation.ukpowernetworks.co.uk/wp-content/themes/ukpn-innov-theme/assets/images/home-banner_parallax_bg_desktop.png");
+}
 .deep-electrification { background-color: #AB1236!important; color: white!important; }
 .deep-electrification-text { color: #AB1236!important; }
 .high-hydrogen { background-color: #0085CA!important; color: white!important; }
@@ -73,6 +83,7 @@ table {
 .net-zero { background-color: #00AB84!important; color: white!important; }
 .net-zero-text { color: #00AB84!important; }
 
+h1 { font-family: "ff-dax-pro", sans-serif; line-height: 1em; font-size: 1.5em; padding: 0.5em 0; }
 ol { list-style: decimal; margin-left: 1em; }
 ol li { margin-bottom: 1em; }
 ol li:last-child { margin-bottom: 0px; }

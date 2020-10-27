@@ -626,7 +626,8 @@
 							weight: 2,
 							color: color,
 							fillColor: color,
-							opacity: 1
+							opacity: 1,
+							stroke: true
 						});
 						if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) layer.bringToFront();
 					}

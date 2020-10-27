@@ -458,6 +458,7 @@ S(document).ready(function(){
 							key = "";
 							if(l=="LADlayer") key = "lad20nm";
 							else if(l=="LEPlayer") key = "lep20nm";
+							else if(l=="LSOAlayer") key = "LSOA11CD";
 							if(this.layers[l].geojson && this.layers[l].geojson.features && this.layers[l].key && key){
 								// If we haven't already processed this layer we do so now
 								if(!this.search._added[l]){

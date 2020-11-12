@@ -330,6 +330,10 @@ S(document).ready(function(){
 				"title":"LSOAs",
 				"source": "lsoa",
 				"layers":[{
+					"id":"LADlayer",
+					"heatmap": false,
+					"boundary":{"color":"#444444","strokeWidth":1,"opacity":0.5,"fillOpacity":0}
+				},{
 					"id": "LSOAlayer",
 					"heatmap": true,
 					"boundary":{"stroke":false}

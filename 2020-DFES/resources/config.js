@@ -93,13 +93,6 @@ S(document).ready(function(){
 					},
 					"src": "lsoa"
 				}
-			},
-			"lsoa":{
-				"geojson":"data/maps/NEEDSUPDATING.geojson",
-				"key": "",
-				"data": {
-					"src": "lsoa"	// This is the key used in data/scenarios/index.json
-				}
 			}
 		},
 		"views":{
@@ -374,11 +367,12 @@ S(document).ready(function(){
 		},
 		"on": {
 			"buildMap": function(){
-				var el = document.querySelector('.leaflet-top.leaflet-left');
+				var el,div,_obj;
+				el = document.querySelector('.leaflet-top.leaflet-left');
 				if(el){
 					// Does the place search exist?
 					if(!el.querySelector('.placesearch')){
-						var div = document.createElement('div');
+						div = document.createElement('div');
 						div.classList.add('leaflet-control');
 						div.classList.add('leaflet-bar');
 						div.innerHTML = '<div class="placesearch"><div class="submit" href="#" title="Search" role="button" aria-label="Search"></div><form class="placeform layersearch pop-left" action="search" method="GET" autocomplete="off"><input class="place" id="search" name="place" value="" placeholder="Search for a named area" type="text" /><div class="searchresults" id="searchresults"></div></div></form>';
@@ -396,6 +390,8 @@ S(document).ready(function(){
 						}
 					
 						div.querySelector('.submit').addEventListener('click', function(e){ toggleActive(); });
+
+						_obj = this;
 						
 						// Stop map dragging on the element
 						el.addEventListener('mousedown', function(){ _obj.map.dragging.disable(); });
@@ -411,7 +407,6 @@ S(document).ready(function(){
 							if(str1==str2) r += (v3||4);
 							return r;
 						}
-						var _obj = this;
 						this.search = TypeAhead.init('#search',{
 							'items': [],
 							'render': function(d){
@@ -470,6 +465,17 @@ S(document).ready(function(){
 							}
 						}
 					}
+
+					// Update the "moreinfo" box for screenshots
+					div = el.querySelector('.moreinfo');
+					if(!div){
+						div = document.createElement('div');
+						div.classList.add('leaflet-control');
+						div.classList.add('moreinfo');
+						el.appendChild(div);
+					}
+					div.innerHTML = 'Scenario: '+this.options.scenario+'<br />Parameter: '+this.parameters[this.options.parameter].title+'<br />View: '+this.views[this.options.view].title;
+					div.setAttribute('style','border-color:'+this.data.scenarios[this.options.scenario].color)
 				}
 			}
 		}

@@ -63,12 +63,14 @@
 				</div>
 			</div>
 			<div class="right">
-				<div id="map">
-					<div class="spinner">
-						<img src="https://odileeds.org/resources/images/odi.svg" alt="Loading..." />
+				<div id="screenshot">
+					<div id="map">
+						<div class="spinner">
+							<img src="https://odileeds.org/resources/images/odi.svg" alt="Loading..." />
+						</div>
 					</div>
+					<div id="scale"></div>
 				</div>
-				<div id="scale"></div>
 				<div id="issues"><a href="#" onClick="saveMap();">Save map as PNG</a> | <a href="https://github.com/odileeds/ukpowernetworks/tree/main/2020-DFES/data/scenarios/lsoa">Get the data</a> | <a href="https://github.com/odileeds/ukpowernetworks/issues/">Report any issues you find</a> with our tool</div>
 			</div>
 		</div>
@@ -100,18 +102,19 @@
 	<div class="scenario thickline"></div>
 	<script>
 	function saveMap(){
-		el = document.getElementById('map');
+		el = document.getElementById('screenshot');
 
 		function filter(node){
-			if(node && node.classList) return !(node.classList.contains('leaflet-top') && node.classList.contains('leaflet-left'));
+			if(node && node.classList) return !(node.classList.contains('leaflet-bar'));
 			else return true;
 		}
-
+		el.classList.add('capture');
 		domtoimage.toPng(el,{filter:filter,'height':el.offsetHeight,'width':el.offsetWidth}).then(function(dataUrl){
 			var link = document.createElement('a');
 			link.download = 'map.png';
 			link.href = dataUrl;
 			link.click();
+			el.classList.remove('capture');
 		});
 	}
 	</script>

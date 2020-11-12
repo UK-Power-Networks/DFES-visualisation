@@ -244,7 +244,7 @@ button { border-radius: 6.25rem; }
 #screenshot .moreinfo { display: none; background: #d4dadc; padding: 0.25em 0.5em; border-width: 1px; border-style: solid; }
 #screenshot.capture .moreinfo { display: block; }
 .capture #barchart { width:100%; height: 300px; }
-.capture .capture-hide, .capture .balloon, .capture .leaflet-bar { display: none; }
+.capture .capture-hide, .capture .balloon, .capture .leaflet-bar, .capture .leaflet-popup { display: none; }
 .capture .dfes-popup-inner { padding: 1em; }
 .capture .barchart table { width: 88%; }
 .capture .barchart table .label, .capture #scale .min, .capture #scale .max { border: 0px!important; }

@@ -715,7 +715,7 @@
 								'mouseover':highlightFeature,
 								'mouseout': resetHighlight
 							}
-							if(popup) layer.bindPopup(popup);
+							if(popup) layer.bindPopup('<div class="dfes-popup-content"><div class="dfes-popup-inner">'+popup+'</div></div>');
 							layer.on(attr);
 						}
 					}

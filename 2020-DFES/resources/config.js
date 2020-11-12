@@ -1,6 +1,33 @@
 // Define a new instance of the FES
 var dfes
 
+function saveDOMImage(el,opt){
+	if(!opt) opt = {};
+	if(!opt.src) opt.src = "map.png";
+	if(opt.scale){
+		if(!opt.height) opt.height = el.offsetHeight*2;
+		if(!opt.width) opt.width = el.offsetWidth*2;
+		// Force bigger size for element
+		w = el.style.getPropertyValue('width');
+		h = el.style.getPropertyValue('height');
+		el.style.setProperty('width',(opt.width)+'px');
+		el.style.setProperty('height',(opt.height)+'px');
+	}
+	el.classList.add('capture');
+	domtoimage.toPng(el,opt).then(function(dataUrl){
+		var link = document.createElement('a');
+		link.download = opt.src;
+		link.href = dataUrl;
+		link.click();
+		// Reset element
+		if(opt.scale){
+			el.style.setProperty('width',w);
+			el.style.setProperty('height',h);
+		}
+		el.classList.remove('capture');
+	});
+}
+
 S(document).ready(function(){
 
 	dfes = new FES({
@@ -106,7 +133,7 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						return '<h3>'+(attr.properties.lep20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LEP has been clipped to UKPN\'s area</p>';
+						return '<h3>'+(attr.properties.lep20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LEP has been clipped to UKPN\'s area.</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\'lep.png\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 						var data,c,p,key,values,l;
@@ -155,6 +182,7 @@ S(document).ready(function(){
 							});
 							S('.barchart table .bar').css({'background-color':'#cccccc'});
 							S('.barchart table .bar.series-0').css({'background-color':this.data.scenarios[this.options.scenario].color});
+							
 						}else{
 							S(attr.el).find('#barchart').remove();
 						}
@@ -172,7 +200,7 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						return '<h3>'+(attr.properties.cty20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The area has been clipped to UKPN\'s area</p>';
+						return '<h3>'+(attr.properties.cty20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The area has been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\'county.png\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 						var data,c,p,key,values,l;
@@ -237,7 +265,7 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						return '<h3>'+(attr.properties.lad20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LA may have been clipped to UKPN\'s area</p>';
+						return '<h3>'+(attr.properties.lad20nm || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LA may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\'lad.png\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 
@@ -305,7 +333,7 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						return '<h3>'+(attr.properties.LSOA11CD || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LSOAs may have been clipped to UKPN\'s area</p>';
+						return '<h3>'+(attr.properties.LSOA11CD || '?')+'</h3><p>'+attr.parameter.title+'</p><div id="barchart">barchart</div><p class="footnote">The LSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\'lsoa.png\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 

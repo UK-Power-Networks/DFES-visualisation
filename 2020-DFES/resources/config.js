@@ -342,7 +342,7 @@ S(document).ready(function(){
 				"popup": {
 					"text": function(attr){
 						file = 'LSOA-'+attr.properties.LSOA11CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.LSOA11CD || '?')+'</h3><p>'+attr.parameter.title+': '+attr.value.toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						return '<h3>'+(attr.properties.LSOA11CD || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 

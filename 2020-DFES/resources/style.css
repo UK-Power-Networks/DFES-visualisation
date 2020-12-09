@@ -105,10 +105,11 @@ header a { text-decoration: none; }
 footer {
 	width: 100%;
 	padding-bottom: 3em;
-	background: #30354a;
-	color: #fff;
 }
-footer a { color: inherit; }
+footer a, #cookie_banner a { color: inherit; }
+footer, #cookie_banner { 	background: #30354a; color: #fff; }
+#cookie_banner { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1000;}
+#cookie_banner_close { position: absolute; top: 1em; right: 1em; font-size: 1.3em; }
 
 .c1-text { color: #2254F4; }
 .c2-text { color: #178CFF; }
@@ -337,6 +338,7 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 #play, #pause { line-height: 1.2em; }
 #issues { margin-top: 0.5em; text-align: right; }
 .thickline { height: 10px; }
+.thinline { height: 2px; }
 .title { border-bottom: .0625rem solid #e0e0e0; color: black; background-color: white; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://innovation.ukpowernetworks.co.uk/wp-content/themes/ukpn-innov-theme/assets/images/home-banner_parallax_bg_desktop.png"); }
 
 /* DFES colours */

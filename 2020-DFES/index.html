@@ -108,6 +108,26 @@
 			</ul>
 		</div>
 	</footer>
+	<div id="cookie_banner">
+		<div class="scenario thinline"></div>
+		<div class="holder">
+			<div class="close"></div>
+			<h4>Cookies</h4>
+			<p>We take your data privacy seriously. View our <a href="https://www.ukpowernetworks.co.uk/internet/en/privacy-policy/">Privacy Policy</a>. This site uses cookies to improve your visitor experience and by using this site you agree to these cookies being set. View our <a href="https://www.ukpowernetworks.co.uk/internet/en/cookie-policy/">Cookie Policy</a>.</p>
+		</div>
+		<a href="#" id="cookie_banner_close">Close &times;</a>
+	</div>
 	<div class="scenario thickline"></div>
+	<script>
+	var banner,pad,body,close;
+	body = document.body;
+	banner = document.getElementById('cookie_banner');
+	close = document.getElementById('cookie_banner_close');
+	if(banner && body && close){
+		pad = body.style['padding-bottom'];
+		body.style['padding-bottom'] = banner.offsetHeight+'px';
+		if(close) close.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); banner.style.display = "none"; body.style['padding-bottom'] = pad; });
+	}
+	</script>
 </body>
 </html>

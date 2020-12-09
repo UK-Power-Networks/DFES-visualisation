@@ -13,7 +13,7 @@
 	// Main function
 	function FES(config){
 
-		this.version = "1.2.2";
+		this.version = "1.2.4";
 		if(!config) config = {};
 		this.options = (config.options||{});
 		this.parameters = {};
@@ -23,7 +23,7 @@
 		this.views = (config.views||{});
 		this.events = {};
 		if(config.on) this.events = config.on;
-		
+
 		S().ajax(path+"data/scenarios/config.json",{
 			'this':this,
 			'cache':false,
@@ -81,6 +81,7 @@
 		}
 		if(this.parameters && S('#parameters').length==0){
 			var html = "";
+			if(!this.data.scenarios[this.options.scenario]) this.message('Scenario <em>"'+this.options.scenario+'"</em> is not defined in index.json.',{'id':'scenario','type':'ERROR'});
 			var css = this.data.scenarios[this.options.scenario].css;
 			for(var p in this.parameters) html += "<option"+(this.options.parameter == p ? " selected=\"selected\"":"")+" value=\""+p+"\">"+this.parameters[p].title+"</option>";
 			S('#parameter-holder').html('<select id="parameters">'+html+'</select><div class="about"></div>');
@@ -322,8 +323,8 @@
 				for(c = 0; c < data.raw.fields.name.length; c++){
 					if(parseInt(data.raw.fields.name[c])==data.raw.fields.name[c]){
 						for(r = 0; r < data.raw.rows.length; r++){
-							// Convert to numbers
-							data.raw.rows[r][c] = parseFloat(data.raw.rows[r][c]);
+							// Convert to numbers - if the number doesn't parse replace with zero
+							data.raw.rows[r][c] = (parseFloat(data.raw.rows[r][c])||0);
 						}
 					}
 				}
@@ -1039,7 +1040,7 @@
 		if(!attr.max) attr.max = 0;
 		if(!attr.units) attr.units = "";
 		if(attr.units) attr.units = "&thinsp;"+attr.units;
-		var str = '<div class="bar" style="'+grad+';"><dic class="bar-inner" style="border-color: '+attr.color+'"></div></div><div class="range" style="border-color: '+attr.color+'">';
+		var str = '<div class="bar" style="'+grad+';"><div class="bar-inner" style="border-color: '+attr.color+'"></div></div><div class="range" style="border-color: '+attr.color+'">';
 		if(attr.levels){
 			var gap,i,v;
 			gap = (attr.max-attr.min)/attr.levels;
@@ -1048,6 +1049,9 @@
 				c = attr.scale.getColourFromScale(attr.scaleid, v, attr.min, attr.max);
 				str += '<span class="lvl'+(i==0 ? ' min' : (i==attr.levels ? ' max':''))+'" style="border-color: '+(i==0 ? attr.color : c)+';left:'+(100*i/attr.levels)+'%;">'+v.toLocaleString()+attr.units+'</span>'
 			}
+		}else{
+				str += '<span class="lvl min" style="border-color: '+attr.color+';left:0%;">'+attr.min.toLocaleString()+attr.units+'</span>';
+				str += '<span class="lvl max" style="border-color: '+attr.color+';left:100%;">'+attr.max.toLocaleString()+attr.units+'</span>';
 		}
 		str += '</div>';
 		return str;

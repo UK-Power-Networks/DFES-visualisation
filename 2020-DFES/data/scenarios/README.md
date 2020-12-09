@@ -26,9 +26,9 @@ We need to let the visualisation know that the CSV files exist and where they ar
 			},
 			"newparameter": {
 				"primary": { "file": "lsoa/NewParameter-CommunityRenewables.csv", "key": "LSOA11CD" }
-			},
-    }
-  }
+			}
+                 }
+         }
 }
 ```
 

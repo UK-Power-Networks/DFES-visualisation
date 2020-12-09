@@ -12,7 +12,7 @@ Add the CSV files for this parameter to the [LSOA data directory](https://github
 
 ### Update the index
 
-We need to let the visualisation know that the CSV files exist and where they are. Edit the [index.json](https://github.com/odileeds/ukpowernetworks/blob/master/data/scenarios/index.json) file. We need a _unique_ key for the new parameter. Existing keys are e.g. `ev`, `peakdemand`, `peakutilisation` etc. Keys should be simple - they won't be displayed in the visualisation - and any special characters (e.g. `‘`, `”`, `\`) will need to be escaped with a `\`. For this example we will use `newparameter`. Add the new parameter to each of the scenarios e.g.
+We need to let the visualisation know that the CSV files exist and where they are. Edit the [index.json](index.json) file. We need a _unique_ key for the new parameter. Existing keys are e.g. `ev`, `peakdemand`, `peakutilisation` etc. Keys should be simple - they won't be displayed in the visualisation - and any special characters (e.g. `‘`, `”`, `\`) will need to be escaped with a `\`. For this example we will use `newparameter`. Add the new parameter to each of the scenarios e.g.
 
 ```javascript
 {
@@ -22,10 +22,10 @@ We need to let the visualisation know that the CSV files exist and where they ar
 		"css": "steady-progression",
 		"data": {
 			"ev": {
-				"primary": { "file": "primaries/EV-CommunityRenewables.csv", "key": "LSOA11CD" }
+				"primary": { "file": "lsoa/EV-CommunityRenewables.csv", "key": "LSOA11CD" }
 			},
 			"newparameter": {
-				"primary": { "file": "primaries/NewParameter-CommunityRenewables.csv", "key": "LSOA11CD" }
+				"primary": { "file": "lsoa/NewParameter-CommunityRenewables.csv", "key": "LSOA11CD" }
 			},
     }
   }

@@ -5,19 +5,106 @@
 		"css": "steady-progression",
 		"data": {
 			"bev": {
-				"lsoa": { "file": "lsoa/EV-BEV-Low.csv", "key": "LSOA11CD" }
+				"lsoa": { "file": "lsoa/2020-DFES/Cars_Steady Progression_BEV cars.csv", "key": "LSOA11CD" }
 			},
 			"phev": {
-				"lsoa": { "file": "lsoa/EV-PHEV-Low.csv", "key": "LSOA11CD" }
+				"lsoa": { "file": "lsoa/2020-DFES/Cars_Steady Progression_PHEV cars.csv", "key": "LSOA11CD" }
 			},
 			"domestic-gas-non-renewable": {
-				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Gas-Boiler_Steady-Progression.csv", "key": "LSOA11CD"}
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Gas boiler.csv", "key": "LSOA11CD"}
 			},
 			"domestic-oil-non-renewable": {
-				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Oil-Boiler_Steady-Progression.csv", "key": "LSOA11CD"}
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Oil boiler.csv", "key": "LSOA11CD"}
 			},
 			"Bus":{
 				"lsoa":{"file":"lsoa/2020-DFES/Bus_Steady Progression_Electric bus.csv","key":"LSOA11CD"}
+			},
+			"domestic-Biomass": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Biomass Boiler.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Electric": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Electric.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Hybrid-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Hybrid Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Micro-CHP": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Micro CHP.csv", "key": "LSOA11CD"}
+			},
+			"Coach": {
+				"lsoa": { "file": "lsoa/2020-DFES/Coach_Steady Progression_Electric coach.csv", "key": "LSOA11CD"}
+			},
+			"I&C-District-Heat": {
+				"lsoa": { "file": "lsoa/2020-DFES/District heating_Steady Progression_I&C District Heating.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-batteries": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic batteries_Steady Progression_Domestic battery capacity.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-connection-count": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic Connection Count_Domestic connections.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-District-Heat": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic district heating_Steady Progression_District Heating.csv", "key": "LSOA11CD"}
+			},
+			"HGV": {
+				"lsoa": { "file": "lsoa/2020-DFES/HGV_Steady Progression_Electric HGV.csv", "key": "LSOA11CD"}
+			},
+			"I&C-batteries": {
+				"lsoa": { "file": "lsoa/2020-DFES/I C batteries_Steady Progression_I&C battery capacity.csv", "key": "LSOA11CD"}
+			},
+			"I&C-connections": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C connections_Steady Progression_I&C connections.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Biomass": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Steady Progression_Biomass Boiler.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Electric": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Steady Progression_Electric.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Gas-boiler": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Steady Progression_Gas Boiler.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Steady Progression_Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Hybrid-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Steady Progression_Hybrid Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Micro-CHP": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Steady Progression_Micro CHP.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Oil-Boiler": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Steady Progression_Oil Boiler.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Floorspace": {
+				"lsoa": { "file": "lsoa/2020-DFES/I_C Floorspace_Central_Floorspace.csv", "key": "LSOA11CD"}
+			},
+			"Minibus": {
+				"lsoa": { "file": "lsoa/2020-DFES/Minibus_Steady Progression_Electric minibus.csv", "key": "LSOA11CD"}
+			},
+			"Motorcycles": {
+				"lsoa": { "file": "lsoa/2020-DFES/Motorcycles_Steady Progression_EV motorcycles.csv", "key": "LSOA11CD"}
+			},
+			"PHV": {
+				"lsoa": { "file": "lsoa/2020-DFES/PHV_Steady Progression_Electric PHVs.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-PV-capacity": {
+				"lsoa": { "file": "lsoa/2020-DFES/Small scale PV_Steady Progression_Domestic PV capacity.csv", "key": "LSOA11CD"}
+			},
+			"I&C-PV-capacity": {
+				"lsoa": { "file": "lsoa/2020-DFES/Small scale PV_Steady Progression_I&C PV capacity.csv", "key": "LSOA11CD"}
+			},
+			"Taxi": {
+				"lsoa": { "file": "lsoa/2020-DFES/Taxi_Steady Progression_Electric Taxis.csv", "key": "LSOA11CD"}
+			},
+			"bev-vans": {
+				"lsoa": { "file": "lsoa/2020-DFES/Vans_Steady Progression_BEV vans.csv", "key": "LSOA11CD"}
+			},
+			"phev-vans": {
+				"lsoa": { "file": "lsoa/2020-DFES/Vans_Steady Progression_PHEV vans.csv", "key": "LSOA11CD"}
 			}
 		}
 	},
@@ -27,19 +114,106 @@
 		"css": "engaged-society",
 		"data": {
 			"bev": {
-				"lsoa": { "file": "lsoa/EV-BEV-Medium.csv", "key": "LSOA11CD" }
+				"lsoa": { "file": "lsoa/2020-DFES/Cars_Consumer Transformation_BEV cars.csv", "key": "LSOA11CD" }
 			},
 			"phev": {
-				"lsoa": { "file": "lsoa/EV-PHEV-Medium.csv", "key": "LSOA11CD" }
+				"lsoa": { "file": "lsoa/2020-DFES/Cars_Consumer Transformation_PHEV cars.csv", "key": "LSOA11CD" }
 			},
 			"domestic-gas-non-renewable": {
-				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Gas-Boiler_Engaged-Society.csv", "key": "LSOA11CD"}
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Gas boiler.csv", "key": "LSOA11CD"}
 			},
 			"domestic-oil-non-renewable": {
-				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Oil-Boiler_Engaged-Society.csv", "key": "LSOA11CD"}
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Oil boiler.csv", "key": "LSOA11CD"}
 			},
 			"Bus":{
-				"lsoa":{"file":"lsoa/2020-DFES/Bus_Consumer Transmformation_Electric bus.csv","key":"LSOA11CD"}
+				"lsoa":{"file":"lsoa/2020-DFES/Bus_Consumer Transformation_Electric bus.csv","key":"LSOA11CD"}
+			},
+			"domestic-Biomass": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Biomass Boiler.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Electric": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Electric.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Hybrid-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Hybrid Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Micro-CHP": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Micro CHP.csv", "key": "LSOA11CD"}
+			},
+			"Coach": {
+				"lsoa": { "file": "lsoa/2020-DFES/Coach_Consumer Transformation_Electric coach.csv", "key": "LSOA11CD"}
+			},
+			"I&C-District-Heat": {
+				"lsoa": { "file": "lsoa/2020-DFES/District heating_Consumer Transformation_I&C District Heating.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-batteries": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic batteries_Consumer Transformation_Domestic battery capacity.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-connection-count": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic Connection Count_Domestic connections.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-District-Heat": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic district heating_Consumer Transformation_District Heating.csv", "key": "LSOA11CD"}
+			},
+			"HGV": {
+				"lsoa": { "file": "lsoa/2020-DFES/HGV_Consumer Transformation_Electric HGV.csv", "key": "LSOA11CD"}
+			},
+			"I&C-batteries": {
+				"lsoa": { "file": "lsoa/2020-DFES/I C batteries_Consumer Transformation_I&C battery capacity.csv", "key": "LSOA11CD"}
+			},
+			"I&C-connections": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C connections_Consumer Transformation_I&C connections.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Biomass": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Consumer Transformation_Biomass Boiler.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Electric": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Consumer Transformation_Electric.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Gas-boiler": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Consumer Transformation_Gas Boiler.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Consumer Transformation_Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Hybrid-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Consumer Transformation_Hybrid Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Micro-CHP": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Consumer Transformation_Micro CHP.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Oil-Boiler": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_Consumer Transformation_Oil Boiler.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Floorspace": {
+				"lsoa": { "file": "lsoa/2020-DFES/I_C Floorspace_Central_Floorspace.csv", "key": "LSOA11CD"}
+			},
+			"Minibus": {
+				"lsoa": { "file": "lsoa/2020-DFES/Minibus_Consumer Transformation_Electric minibus.csv", "key": "LSOA11CD"}
+			},
+			"Motorcycles": {
+				"lsoa": { "file": "lsoa/2020-DFES/Motorcycles_Consumer Transformation_EV motorcycles.csv", "key": "LSOA11CD"}
+			},
+			"PHV": {
+				"lsoa": { "file": "lsoa/2020-DFES/PHV_Consumer Transformation_Electric PHVs.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-PV-capacity": {
+				"lsoa": { "file": "lsoa/2020-DFES/Small scale PV_Consumer Transformation_Domestic PV capacity.csv", "key": "LSOA11CD"}
+			},
+			"I&C-PV-capacity": {
+				"lsoa": { "file": "lsoa/2020-DFES/Small scale PV_Consumer Transformation_I&C PV capacity.csv", "key": "LSOA11CD"}
+			},
+			"Taxi": {
+				"lsoa": { "file": "lsoa/2020-DFES/Taxi_Consumer Transformation_Electric Taxis.csv", "key": "LSOA11CD"}
+			},
+			"bev-vans": {
+				"lsoa": { "file": "lsoa/2020-DFES/Vans_Consumer Transformation_BEV vans.csv", "key": "LSOA11CD"}
+			},
+			"phev-vans": {
+				"lsoa": { "file": "lsoa/2020-DFES/Vans_Consumer Transformation_PHEV vans.csv", "key": "LSOA11CD"}
 			}
 		}
 	},
@@ -49,19 +223,106 @@
 		"css": "green-transformation",
 		"data": {
 			"bev": {
-				"lsoa": { "file": "lsoa/EV-BEV-High.csv", "key": "LSOA11CD" }
+				"lsoa": { "file": "lsoa/2020-DFES/Cars_System Transformation_BEV cars.csv", "key": "LSOA11CD" }
 			},
 			"phev": {
-				"lsoa": { "file": "lsoa/EV-PHEV-High.csv", "key": "LSOA11CD" }
+				"lsoa": { "file": "lsoa/2020-DFES/Cars_System Transformation_PHEV cars.csv", "key": "LSOA11CD" }
 			},
 			"domestic-gas-non-renewable": {
-				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Gas-Boiler_Green-Transformation.csv", "key": "LSOA11CD"}
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Gas boiler.csv", "key": "LSOA11CD"}
 			},
 			"domestic-oil-non-renewable": {
-				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Oil-Boiler_Green-Transformation.csv", "key": "LSOA11CD"}
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Oil boiler.csv", "key": "LSOA11CD"}
 			},
 			"Bus":{
 				"lsoa":{"file":"lsoa/2020-DFES/Bus_System Transformation_Electric bus.csv","key":"LSOA11CD"}
+			},
+			"domestic-Biomass": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Biomass Boiler.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Electric": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Electric.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Hybrid-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Hybrid Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"domestic-Micro-CHP": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Micro CHP.csv", "key": "LSOA11CD"}
+			},
+			"Coach": {
+				"lsoa": { "file": "lsoa/2020-DFES/Coach_System Transformation_Electric coach.csv", "key": "LSOA11CD"}
+			},
+			"I&C-District-Heat": {
+				"lsoa": { "file": "lsoa/2020-DFES/District heating_System Transformation_I&C District Heating.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-batteries": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic batteries_System Transformation_Domestic battery capacity.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-connection-count": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic Connection Count_Domestic connections.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-District-Heat": {
+				"lsoa": { "file": "lsoa/2020-DFES/Domestic district heating_System Transformation_District Heating.csv", "key": "LSOA11CD"}
+			},
+			"HGV": {
+				"lsoa": { "file": "lsoa/2020-DFES/HGV_System Transformation_Electric HGV.csv", "key": "LSOA11CD"}
+			},
+			"I&C-batteries": {
+				"lsoa": { "file": "lsoa/2020-DFES/I C batteries_System Transformation_I&C battery capacity.csv", "key": "LSOA11CD"}
+			},
+			"I&C-connections": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C connections_System Transformation_I&C connections.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Biomass": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_System Transformation_Biomass Boiler.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Electric": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_System Transformation_Electric.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Gas-boiler": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_System Transformation_Gas Boiler.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_System Transformation_Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Hybrid-Heat-Pump": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_System Transformation_Hybrid Heat Pump.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Micro-CHP": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_System Transformation_Micro CHP.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Oil-Boiler": {
+				"lsoa": { "file": "lsoa/2020-DFES/I&C heating technologies_System Transformation_Oil Boiler.csv", "key": "LSOA11CD"}
+			},
+			"I&C-Floorspace": {
+				"lsoa": { "file": "lsoa/2020-DFES/I_C Floorspace_Central_Floorspace.csv", "key": "LSOA11CD"}
+			},
+			"Minibus": {
+				"lsoa": { "file": "lsoa/2020-DFES/Minibus_System Transformation_Electric minibus.csv", "key": "LSOA11CD"}
+			},
+			"Motorcycles": {
+				"lsoa": { "file": "lsoa/2020-DFES/Motorcycles_System Transformation_EV motorcycles.csv", "key": "LSOA11CD"}
+			},
+			"PHV": {
+				"lsoa": { "file": "lsoa/2020-DFES/PHV_System Transformation_Electric PHVs.csv", "key": "LSOA11CD"}
+			},
+			"Domestic-PV-capacity": {
+				"lsoa": { "file": "lsoa/2020-DFES/Small scale PV_System Transformation_Domestic PV capacity.csv", "key": "LSOA11CD"}
+			},
+			"I&C-PV-capacity": {
+				"lsoa": { "file": "lsoa/2020-DFES/Small scale PV_System Transformation_I&C PV capacity.csv", "key": "LSOA11CD"}
+			},
+			"Taxi": {
+				"lsoa": { "file": "lsoa/2020-DFES/Taxi_System Transformation_Electric Taxis.csv", "key": "LSOA11CD"}
+			},
+			"bev-vans": {
+				"lsoa": { "file": "lsoa/2020-DFES/Vans_System Transformation_BEV vans.csv", "key": "LSOA11CD"}
+			},
+			"phev-vans": {
+				"lsoa": { "file": "lsoa/2020-DFES/Vans_System Transformation_PHEV vans.csv", "key": "LSOA11CD"}
 			}
 		}
 	}

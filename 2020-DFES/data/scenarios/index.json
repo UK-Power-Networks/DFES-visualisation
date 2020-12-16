@@ -18,6 +18,7 @@
 			},
 			"Bus":{
 				"lsoa":{"file":"lsoa/2020-DFES/Bus_Steady Progression_Electric bus.csv","key":"LSOA11CD"}
+			}
 		}
 	},
 	"Engaged Society": {
@@ -39,6 +40,7 @@
 			},
 			"Bus":{
 				"lsoa":{"file":"lsoa/2020-DFES/Bus_Consumer Transmformation_Electric bus.csv","key":"LSOA11CD"}
+			}
 		}
 	},
 	"Green Transformation": {
@@ -60,6 +62,7 @@
 			},
 			"Bus":{
 				"lsoa":{"file":"lsoa/2020-DFES/Bus_System Transformation_Electric bus.csv","key":"LSOA11CD"}
+			}
 		}
 	}
 }

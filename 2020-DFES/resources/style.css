@@ -343,8 +343,8 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 
 /* DFES colours */
 .steady-progression { background-color: #868686; color: white; }
-.engaged-society { background-color: #ffbf22; color: black; }
-.green-transformation { background-color: #5bccf5; color: white; }
+.consumer-transformation { background-color: #ffbf22; color: black; }
+.system-transformation { background-color: #5bccf5; color: white; }
 .deep-electrification { background-color: #AB1236!important; color: white!important; }
 .deep-electrification-text { color: #AB1236!important; }
 .high-hydrogen { background-color: #0085CA!important; color: white!important; }

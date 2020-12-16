@@ -218,7 +218,7 @@
 		}
 	},
 	"System Transformation": {
-		"description": "<ul><li>Meets net zero target thanks to a combination of electric and hydrogen technologies</li></ul>",
+		"description": "<ul><li>Reaches 2050 net zero target thanks to a combination of electric and hydrogen technologies</li></ul>",
 		"color": "#5bccf5",
 		"css": "system-transformation",
 		"data": {

@@ -1,7 +1,7 @@
 {
 	"Steady Progression": {
 		"description": "<ul><li>Low uptake of electric vehicles</li></ul>",
-		"color": "#9C5DA9",
+		"color": "#868686",
 		"css": "steady-progression",
 		"data": {
 			"bev": {
@@ -108,10 +108,10 @@
 			}
 		}
 	},
-	"Engaged Society": {
+	"Consumer Transformation": {
 		"description": "<ul><li>Medium uptake of electric vehicles</li></ul>",
-		"color": "#4AB6BC",
-		"css": "engaged-society",
+		"color": "#ffbf22",
+		"css": "consumer-transformation",
 		"data": {
 			"bev": {
 				"lsoa": { "file": "lsoa/2020-DFES/Cars_Consumer Transformation_BEV cars.csv", "key": "LSOA11CD" }
@@ -217,10 +217,10 @@
 			}
 		}
 	},
-	"Green Transformation": {
+	"System Transformation": {
 		"description": "<ul><li>High uptake of electric vehicles</li></ul>",
-		"color": "#8BB323",
-		"css": "green-transformation",
+		"color": "#5bccf5",
+		"css": "system-transformation",
 		"data": {
 			"bev": {
 				"lsoa": { "file": "lsoa/2020-DFES/Cars_System Transformation_BEV cars.csv", "key": "LSOA11CD" }

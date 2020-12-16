@@ -345,7 +345,7 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 .steady-progression { background-color: #868686; color: white; }
 .consumer-transformation { background-color: #ffbf22; color: black; }
 .system-transformation { background-color: #5bccf5; color: white; }
-.leading-the-way {background-color: #c2cd23; color: black;}
+.leading-the-way { background-color: #c2cd23; color: black; }
 .deep-electrification { background-color: #AB1236!important; color: white!important; }
 .deep-electrification-text { color: #AB1236!important; }
 .high-hydrogen { background-color: #0085CA!important; color: white!important; }

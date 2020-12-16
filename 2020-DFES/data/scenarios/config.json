@@ -2,5 +2,6 @@
 	"phev": { "title": "Plugin Electric Hybrid Vehicles", "combine": "sum", "units":"", "dp": 0, "description": "Number of plugin electric hybrid vehicles." },
 	"bev": { "title": "Electric Vehicles (battery)", "combine": "sum", "units":"", "dp": 0, "description": "Number of battery electric vehicles." },
 	"domestic-gas-non-renewable": { "title": "Gas Boilers (domestic)", "combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic gas boilers." },
-	"domestic-oil-non-renewable": { "title": "Oil Boilers (domestic)", "combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic oil boilers." }
+	"domestic-oil-non-renewable": { "title": "Oil Boilers (domestic)", "combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic oil boilers." },
+	"Bus":{"title":"Electric Buses","combine": "sum", "units":"", "dp": 0, "description": "Number of electric buses." }
 }

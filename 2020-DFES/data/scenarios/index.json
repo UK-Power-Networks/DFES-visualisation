@@ -1,6 +1,6 @@
 {
 	"Steady Progression": {
-		"description": "<ul><li>Low uptake of electric vehicles</li></ul>",
+		"description": "<ul><li>Business as usual scenario, does not meet the 2050 net zero target</li></ul>",
 		"color": "#868686",
 		"css": "steady-progression",
 		"data": {
@@ -109,7 +109,7 @@
 		}
 	},
 	"Consumer Transformation": {
-		"description": "<ul><li>Medium uptake of electric vehicles</li></ul>",
+		"description": "<ul><li>Reaches 2050 net zero target thanks to widespread electrification</li></ul>",
 		"color": "#ffbf22",
 		"css": "consumer-transformation",
 		"data": {
@@ -218,7 +218,7 @@
 		}
 	},
 	"System Transformation": {
-		"description": "<ul><li>High uptake of electric vehicles</li></ul>",
+		"description": "<ul><li>Meets net zero target thanks to a combination of electric and hydrogen technologies</li></ul>",
 		"color": "#5bccf5",
 		"css": "system-transformation",
 		"data": {

@@ -15,6 +15,9 @@
 			},
 			"domestic-oil-non-renewable": {
 				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Oil-Boiler_Steady-Progression.csv", "key": "LSOA11CD"}
+			},
+			"Bus":{
+				"lsoa":{"file":"lsoa/2020-DFES/Bus_Steady Progression_Electric bus.csv","key":"LSOA11CD"}
 			}
 		}
 	},
@@ -34,6 +37,9 @@
 			},
 			"domestic-oil-non-renewable": {
 				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Oil-Boiler_Engaged-Society.csv", "key": "LSOA11CD"}
+			},
+			"Bus":{
+				"lsoa":{"file":"lsoa/2020-DFES/Bus_Consumer Transmformation_Electric bus.csv","key":"LSOA11CD"}
 			}
 		}
 	},
@@ -53,6 +59,9 @@
 			},
 			"domestic-oil-non-renewable": {
 				"lsoa": { "file": "lsoa/domestic-heating-non-renewable/Oil-Boiler_Green-Transformation.csv", "key": "LSOA11CD"}
+			},
+			"Bus":{
+				"lsoa":{"file":"lsoa/2020-DFES/Bus_System Transformation_Electric bus.csv","key":"LSOA11CD"}
 			}
 		}
 	}

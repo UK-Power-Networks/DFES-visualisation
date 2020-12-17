@@ -37,7 +37,6 @@ S(document).ready(function(){
 			"key": (new Date()).getFullYear()+"",
 			"parameter": "bev",
 			"scale": "relative",
-			"source": null,
 			"years": {"min":2020,"max":2050},
 			"map": {
 				"bounds": [[50.6,-1.55],[53,2]],
@@ -45,82 +44,128 @@ S(document).ready(function(){
 				"quantised": 5
 			}
 		},
+		"mapping": {
+			"lsoa": {
+				"LSOAlayer": {},
+				"LADlayer": {
+					"file": "data/lsoa2lad-compact.json",
+					"process": function(d){
+						// Work out mapping from LSOA to LAD
+						// Data is saved as { LAD: [LSOA1,LSOA2,LSOA3...] }
+						var a,data,i;
+						data = {};
+						for(a in d){
+							for(i = 0; i < d[a].length; i++){
+								data[d[a][i]] = {};
+								data[d[a][i]][a] = 1;
+							}
+						}
+						return data;
+					}
+				},
+				"LEPlayer": {
+					"file": "data/lsoa2lep-compact.json",
+					"process": function(d){
+						// Work out mapping from LSOA to LAD
+						// Data is saved as { LEP: [LSOA1,LSOA2,LSOA3...] }
+						var a,data,i;
+						data = {};
+						for(a in d){
+							for(i = 0; i < d[a].length; i++){
+								data[d[a][i]] = {};
+								data[d[a][i]][a] = 1;
+							}
+						}
+						return data;
+					}
+				},
+				"Countylayer":{
+					"file": "data/lsoa2cty.json",
+					"process": function(d){
+						// Work out mapping from LSOA to County
+						// Data is saved as { CTY: [LSOA1,LSOA2,LSOA3...] }
+						var a,data,i;
+						data = {};
+						for(a in d){
+							for(i = 0; i < d[a].length; i++){
+								data[d[a][i]] = {};
+								data[d[a][i]][a] = 1;
+							}
+						}
+						return data;
+					}
+				}
+			},
+			"msoa": {
+				"LSOAlayer": {
+					"file": "data/msoa2lsoa.json"
+				},
+				"LADlayer": {
+					"file": "data/msoa2lad.json",
+					"process": function(d){
+						// Work out mapping from MSOA to LAD
+						// Data is saved as { LAD: [MSOA1,MSOA2,MSOA3...] }
+						var a,data,i;
+						data = {};
+						for(a in d){
+							for(i = 0; i < d[a].length; i++){
+								data[d[a][i]] = {};
+								data[d[a][i]][a] = 1;
+							}
+						}
+						return data;
+					}
+				},
+				"LEPlayer": {
+					"file": "data/msoa2lep.json",
+					"process": function(d){
+						// Work out mapping from MSOA to LAD
+						// Data is saved as { LEP: [MSOA1,MSOA2,MSOA3...] }
+						var a,data,i;
+						data = {};
+						for(a in d){
+							for(i = 0; i < d[a].length; i++){
+								data[d[a][i]] = {};
+								data[d[a][i]][a] = 1;
+							}
+						}
+						return data;
+					}
+				},
+				"Countylayer":{
+					"file": "data/msoa2cty.json",
+					"process": function(d){
+						// Work out mapping from MSOA to County
+						// Data is saved as { CTY: [MSOA1,MSOA2,MSOA3...] }
+						var a,data,i;
+						data = {};
+						for(a in d){
+							for(i = 0; i < d[a].length; i++){
+								data[d[a][i]] = {};
+								data[d[a][i]][a] = 1;
+							}
+						}
+						return data;
+					}
+				}
+			}
+		},
 		"layers": {
 			"LADlayer":{
 				"geojson": "data/maps/LAD2020-clipped-fullextent-simplified.geojson",
-				"key": "lad20cd",
-				"data": {
-					"mapping": {
-						"src": "data/lsoa2lad-compact.json",
-						"process": function(d){
-							// Work out mapping from LSOA to LAD
-							// Data is saved as { LAD: [LSOA1,LSOA2,LSOA3...] }
-							var a,data,i;
-							data = {};
-							for(a in d){
-								for(i = 0; i < d[a].length; i++){
-									data[d[a][i]] = {};
-									data[d[a][i]][a] = 1;
-								}
-							}
-							return data;
-						}
-					},
-					"src": "lsoa"
-				}
+				"key": "lad20cd"
 			},
 			"LSOAlayer":{
 				"geojson": "data/maps/LSOA11-rough.geojson",
 				"key": "LSOA11CD",
-				"data": {
-					"src": "lsoa"
-				}
 			},
 			"LEPlayer":{
 				"geojson": "data/maps/LEP2020-clipped-fullextent-simplified.geojson",
 				"key": "lep20cd",
-				"data": {
-					"mapping": {
-						"src": "data/lsoa2lep-compact.json",
-						"process": function(d){
-							// Work out mapping from LSOA to LAD
-							// Data is saved as { LAD: [LSOA1,LSOA2,LSOA3...] }
-							var a,data,i;
-							data = {};
-							for(a in d){
-								for(i = 0; i < d[a].length; i++){
-									data[d[a][i]] = {};
-									data[d[a][i]][a] = 1;
-								}
-							}
-							return data;
-						}
-					},
-					"src": "lsoa"
-				}
 			},
 			"Countylayer":{
 				"geojson": "data/maps/Counties-clipped-simplified.geojson",
 				"key": "cty19cd",
-				"data": {
-					"mapping": {
-						"src": "data/lsoa2cty.json",
-						"process": function(d){
-							// Work out mapping from LSOA to LAD
-							// Data is saved as { LAD: [LSOA1,LSOA2,LSOA3...] }
-							var a,data,i;
-							data = {};
-							for(a in d){
-								for(i = 0; i < d[a].length; i++){
-									data[d[a][i]] = {};
-									data[d[a][i]][a] = 1;
-								}
-							}
-							return data;
-						}
-					},
-					"src": "lsoa"
-				}
 			}
 		},
 		"views":{
@@ -147,7 +192,7 @@ S(document).ready(function(){
 						if(attr.id && key){
 
 							data = [];							
-							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[l].values;
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter].layers[this.options.view].values;
 
 							for(c in values[attr.id]){
 								if(c >= this.options.years.min && c <= this.options.years.max){
@@ -215,7 +260,7 @@ S(document).ready(function(){
 						if(attr.id && key){
 
 							data = [];							
-							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[l].values;
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter].layers[this.options.view].values;
 
 							for(c in values[attr.id]){
 								if(c >= this.options.years.min && c <= this.options.years.max){
@@ -283,7 +328,7 @@ S(document).ready(function(){
 
 							data = [];
 							
-							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[l].values;
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter].layers[this.options.view].values;
 
 							for(c in values[attr.id]){
 								if(c >= this.options.years.min && c <= this.options.years.max){
@@ -356,7 +401,7 @@ S(document).ready(function(){
 
 							data = [];
 
-							values = this.data.scenarios[this.options.scenario].data[this.options.parameter][this.options.source].layers[l].values;
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter].layers[this.options.view].values;
 
 							for(c in values[attr.id]){
 								if(c >= this.options.years.min && c <= this.options.years.max){

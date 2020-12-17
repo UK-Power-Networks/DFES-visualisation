@@ -21,18 +21,14 @@ We need to let the visualisation know that the CSV files exist and where they ar
 		"color": "#901320",
 		"css": "steady-progression",
 		"data": {
-			"ev": {
-				"primary": { "file": "lsoa/EV-CommunityRenewables.csv", "key": "LSOA11CD" }
-			},
-			"newparameter": {
-				"primary": { "file": "lsoa/NewParameter-CommunityRenewables.csv", "key": "LSOA11CD" }
-			}
-                 }
-         }
+			"ev": { "dataBy": "lsoa", "file": "primaries/EV-S1.csv", "key": "LSOA11CD" },
+			"newparameter": { "dataBy": "msoa", "file": "lsoa/NewParameter-CommunityRenewables.csv", "key": "MSOA11CD" }
+        }
+	}
 }
 ```
 
-For each parameter, `description` is HTML that will be shown below the scenario drop-down box, `color` is the hex code to use for this scenario, `css` is a CSS class used for this scenario (so make sure to update [style.css](../../resources/style.css) with any `color` change), and `data` is an object defining the parameters for this scenario. Each `data` object should have a unique key (the same one will be used `config.json`, below). It should have a property, `file`, for the path to the file and it should have a `key` which is the column heading that contains the unique geography code.
+For each parameter, `description` is HTML that will be shown below the scenario drop-down box, `color` is the hex code to use for this scenario, `css` is a CSS class used for this scenario (so make sure to update [style.css](../../resources/style.css) with any `color` change), and `data` is an object defining the parameters for this scenario. Each `data` object should have a unique key (the same one will be used `config.json`, below e.g. `ev`). Each of the data objects should have a `dataBy` property (either `lsoa` or `msoa`), a `file` property for the path to the file, and a `key` which is the column heading that contains the unique geography code.
 
 Once you've finished adding this parameter to `index.json`, check it is valid JSON using [JSON Lint](https://jsonlint.com/) otherwise you could break the visualisation if you have an invalid file.
 

@@ -32,6 +32,6 @@
 	"I&C-batteries":{"title":"I&C Batteries","combine": "sum", "units":"kW", "dp": 0, "description": "Total I&C battery capacity (kW)." },
 	"I&C-PV-capacity":{"title":"I&C PV","combine": "sum", "units":"kW", "dp": 0, "description": "Total I&C PV capacity (kW)." },
 	"I&C-Floorspace":{"title":"I&C Floorspace","combine": "sum", "units":"Thousands of m^2", "dp": 0, "description": "Amount of I&C floorspace." },
-	"I&C-connections":{"title":"I&C Connection Count","combine": "sum", "units":"", "dp": 0, "description": "Number of I&C connections." }
-	
+	"I&C-connections":{"title":"I&C Connection Count","combine": "sum", "units":"", "dp": 0, "description": "Number of I&C connections." },
+	"large-solar":{"title":"Large Solar","combine": "sum", "units":"", "dp": 0, "description": "????" }	
 }

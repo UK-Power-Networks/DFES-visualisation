@@ -33,5 +33,17 @@
 	"I&C-PV-capacity":{"title":"I&C PV","combine": "sum", "units":"kW", "dp": 0, "description": "Total I&C PV capacity (kW)." },
 	"I&C-Floorspace":{"title":"I&C Floorspace","combine": "sum", "units":"Thousands of m^2", "dp": 0, "description": "Amount of I&C floorspace." },
 	"I&C-connections":{"title":"I&C Connection Count","combine": "sum", "units":"", "dp": 0, "description": "Number of I&C connections." },
-	"large-solar":{"title":"Large Solar","combine": "sum", "units":"", "dp": 0, "description": "????" }	
+	"large-solar":{"title":"Large Solar","combine": "sum", "units":"MW", "dp": 0, "description": "Total large (> 150kW) solar PV capacity" },
+	"Biomass":{"title":"Biomass and energy crops (including CHP)","combine": "sum", "units":"MW", "dp": 0, "description": "Total biomass and energy crops generation capacity" },
+	"Co-located_storage":{"title":"Co-located storage","combine": "sum", "units":"MW", "dp": 0, "description": "Total capacity of storage co-located with generation" },
+	"Fuel-cells":{"title":"Fuel cells","combine": "sum", "units":"MW", "dp": 0, "description": "Total fuel cell capacity" },
+	"Large-CHP-non-ren":{"title":"Large CHP","combine": "sum", "units":"MW", "dp": 0, "description": "Total large (> 1MW) CHP capacity" },
+	"Small-CHP-non-ren":{"title":"Small CHP","combine": "sum", "units":"MW", "dp": 0, "description": "Total small (< 1MW) CHP capacity" },
+	"Diesel":{"title":"Disel","combine": "sum", "units":"MW", "dp": 0, "description": "Total diesel non-renewable engines capacity" },
+	"Gas":{"title":"Gas","combine": "sum", "units":"MW", "dp": 0, "description": "Total gas non-renewable engines capacity" },
+	"OCGT_CCGT":{"title":"OCGT and CCGT","combine": "sum", "units":"MW", "dp": 0, "description": "Total Open and Closed Cycle Gas Turbine capacity" },
+	"wind":{"title":"Onshore wind","combine": "sum", "units":"MW", "dp": 0, "description": "Total onshore wind capacity" },
+	"Renewable_engines":{"title":"Renewable engines","combine": "sum", "units":"MW", "dp": 0, "description": "Total capacity of renewable engines such as landfill gas and biogas" },
+	"Storage":{"title":"Grid scale battery storage","combine": "sum", "units":"MW", "dp": 0, "description": "Total grid scale battery capacity" },
+	"Waste_incineration":{"title":"Waste incineration","combine": "sum", "units":"MW", "dp": 0, "description": "Total waste incineration capacity" }
 }

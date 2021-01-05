@@ -6,8 +6,8 @@
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Cars_Steady Progression_BEV cars.csv", "key": "LSOA11CD" },
 			"phev": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Cars_Steady Progression_PHEV cars.csv", "key": "LSOA11CD" },
-			"domestic-gas-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Gas boiler.csv", "key": "LSOA11CD" },
-			"domestic-oil-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Oil boiler.csv", "key": "LSOA11CD" },
+			"domestic-gas-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Gas Boiler.csv", "key": "LSOA11CD" },
+			"domestic-oil-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Oil Boiler.csv", "key": "LSOA11CD" },
 			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2020-DFES/Bus_Steady Progression_Electric bus.csv","key":"LSOA11CD" },
 			"domestic-Biomass": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Biomass Boiler.csv", "key": "LSOA11CD" },
 			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Electric.csv", "key": "LSOA11CD" },
@@ -61,8 +61,8 @@
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Cars_Consumer Transformation_BEV cars.csv", "key": "LSOA11CD" },
 			"phev": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Cars_Consumer Transformation_PHEV cars.csv", "key": "LSOA11CD" },
-			"domestic-gas-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Gas boiler.csv", "key": "LSOA11CD" },
-			"domestic-oil-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Oil boiler.csv", "key": "LSOA11CD" },
+			"domestic-gas-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Gas Boiler.csv", "key": "LSOA11CD" },
+			"domestic-oil-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Oil Boiler.csv", "key": "LSOA11CD" },
 			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2020-DFES/Bus_Consumer Transformation_Electric bus.csv","key":"LSOA11CD" },
 			"domestic-Biomass": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Biomass Boiler.csv", "key": "LSOA11CD" },
 			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Electric.csv", "key": "LSOA11CD" },
@@ -115,8 +115,8 @@
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Cars_System Transformation_BEV cars.csv", "key": "LSOA11CD" },
 			"phev": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Cars_System Transformation_PHEV cars.csv", "key": "LSOA11CD" },
-			"domestic-gas-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Gas boiler.csv", "key": "LSOA11CD" },
-			"domestic-oil-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Oil boiler.csv", "key": "LSOA11CD" },
+			"domestic-gas-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Gas Boiler.csv", "key": "LSOA11CD" },
+			"domestic-oil-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Oil Boiler.csv", "key": "LSOA11CD" },
 			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2020-DFES/Bus_System Transformation_Electric bus.csv","key":"LSOA11CD" },
 			"domestic-Biomass": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Biomass Boiler.csv", "key": "LSOA11CD" },
 			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Electric.csv", "key": "LSOA11CD" },
@@ -169,8 +169,8 @@
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Cars_Leading the Way_BEV cars.csv", "key": "LSOA11CD"  },
 			"phev": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Cars_Leading the Way_PHEV cars.csv", "key": "LSOA11CD"  },
-			"domestic-gas-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Leading the Way_Gas boiler.csv", "key": "LSOA11CD" },
-			"domestic-oil-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Leading the Way_Oil boiler.csv", "key": "LSOA11CD" },
+			"domestic-gas-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Leading the Way_Gas Boiler.csv", "key": "LSOA11CD" },
+			"domestic-oil-non-renewable": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Leading the Way_Oil Boiler.csv", "key": "LSOA11CD" },
 			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2020-DFES/Bus_Leading the Way_Electric bus.csv","key":"LSOA11CD" },
 			"domestic-Biomass": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Leading the Way_Biomass Boiler.csv", "key": "LSOA11CD" },
 			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Leading the Way_Electric.csv", "key": "LSOA11CD" },

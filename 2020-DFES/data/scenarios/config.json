@@ -12,7 +12,7 @@
 	"PHV":{"title":"Private Hire Vehicles","combine": "sum", "units":"", "dp": 0, "description": "Number of electric PHVs." },
 	"domestic-gas-non-renewable": { "title": "Gas Boilers (domestic)", "combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic gas boilers." },
 	"domestic-oil-non-renewable": { "title": "Oil Boilers (domestic)", "combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic oil boilers." },
-	"domestic-biomass":{"title":"Biomass Boilers (domestic)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic biomass boilers." },
+	"domestic-Biomass":{"title":"Biomass Boilers (domestic)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic biomass boilers." },
 	"domestic-Electric":{"title":"Electric Heaters (domestic)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic electric heaters." },
 	"domestic-Heat-Pump":{"title":"Heat Pumps (domestic)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic heat pumps." },
 	"domestic-Hybrid-Heat-Pump":{"title":"Hybrid Heat Pumps (domestic)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic hybrid heat pumps." },

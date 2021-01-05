@@ -21,7 +21,7 @@
 	"Domestic-batteries":{"title":"Domestic Batteries","combine": "sum", "units":"kW", "dp": 0, "description": "Total domestic battery capacity (kW)." },
 	"Domestic-PV-capacity":{"title":"Domestic PV","combine": "sum", "units":"kW", "dp": 0, "description": "Total domestic PV capacity (kW)." },
 	"Domestic-connection-count":{"title":"Domestic Connection Count","combine": "sum", "units":"", "dp": 0, "description": "Number of domestic connections." },
-	"I&C-Gas-Boiler":{"title":"Gas Boilers (I&C)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed I&C gas boilers." },
+	"I&C-Gas-boiler":{"title":"Gas Boilers (I&C)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed I&C gas boilers." },
 	"I&C-Oil-Boiler":{"title":"Oil Boilers (I&C)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed I&C oil boilers." },
 	"I&C-Biomass":{"title":"Biomass Boilers (I&C)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed I&C biomass boilers." },
 	"I&C-Electric":{"title":"Electric Heaters (I&C)","combine": "sum", "units":"", "dp": 0, "description": "Number of installed I&C electric heaters." },

@@ -13,7 +13,7 @@
 	// Main function
 	function FES(config){
 
-		this.version = "1.3.0";
+		this.version = "1.3.1";
 		if(!config) config = {};
 		this.options = (config.options||{});
 		this.parameters = {};
@@ -128,7 +128,9 @@
 		});
 		
 		this.setScenario(this.options.scenario);
-		
+
+		// Trigger the setParameter callback (because we aren't explicity calling it)
+		if(typeof this.events.setParameter==="function") this.events.setParameter.call(this);
 
 		S('#play').on('click',{me:this},function(e){
 			e.preventDefault();
@@ -232,6 +234,9 @@
 				this.mapData();
 			}
 		}
+		
+		// Trigger any event callback
+		if(typeof this.events.setScenario==="function") this.events.setScenario.call(this);
 
 		return this;
 	}
@@ -283,6 +288,10 @@
 				}
 			}
 		}
+
+		// Trigger any event callback
+		if(typeof this.events.setParameter==="function") this.events.setParameter.call(this);
+
 		return this;
 	}
 	

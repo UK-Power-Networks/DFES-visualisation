@@ -39,7 +39,7 @@
 	"Fuel-cells":{"title":"Fuel cells","combine": "sum", "units":"MW", "dp": 0, "description": "Fuel cell capacity" },
 	"Large-CHP-non-ren":{"title":"Large CHP","combine": "sum", "units":"MW", "dp": 0, "description": "Large (> 1MW) CHP capacity" },
 	"Small-CHP-non-ren":{"title":"Small CHP","combine": "sum", "units":"MW", "dp": 0, "description": "Small (< 1MW) CHP capacity" },
-	"Diesel":{"title":"Disel","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of diesel non-renewable engines" },
+	"Diesel":{"title":"Diesel","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of diesel non-renewable engines" },
 	"Gas":{"title":"Gas","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of gas non-renewable engines" },
 	"OCGT_CCGT":{"title":"OCGT and CCGT","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of Open and Closed Cycle Gas Turbines" },
 	"wind":{"title":"Onshore wind","combine": "sum", "units":"MW", "dp": 0, "description": "Onshore wind capacity" },

@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNH3DNT0PS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WNH3DNT0PS');
+</script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>UK Power Networks DFES 2021</title>
+	<link rel="StyleSheet" href="resources/nouislider.min.css" type="text/css" />
+	<link rel="StyleSheet" href="resources/leaflet.css" type="text/css" />
+	<link rel="StyleSheet" href="resources/stuquery.barchart.css" type="text/css" />
+	<link rel="StyleSheet" href="resources/style.css" type="text/css" />
+	<link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<script type="text/javascript" src="resources/stuquery.js"></script>
+	<script type="text/javascript" src="resources/nouislider.min.js"></script>
+	<script type="text/javascript" src="resources/typeahead.js"></script>
+	<script type="text/javascript" src="resources/dom-to-image.min.js"></script>
+	<script type="text/javascript" src="resources/dfes.js"></script>
+	<script type="text/javascript" src="resources/config.js"></script>
+	<script type="text/javascript" src="resources/leaflet.js"></script>
+	<script type="text/javascript" src="resources/stuquery.barchart.min.js"></script>
+</head>
+<body>
+	
+	<header class="b2-bg">
+		<div class="holder">
+			<a href="https://odileeds.org/" class="ODIlogo"><img alt="ODI Leeds"
+					src="https://odileeds.org/resources/images/odileeds.svg" title="ODI Leeds"></a>
+			<a href="https://www.ukpowernetworks.co.uk/"><img alt="UK Power Networks"
+					src="https://odileeds.org/dashboard/data/img/ukpn.svg" title="UK Power Networks"></a>
+			<a href="http://www.element-energy.co.uk/"><img alt="Element Energy"
+					src="https://odileeds.org/dashboard/data/img/elementenergy.svg" title="Element Energy"></a>
+		</div>
+		<div class="title">
+			<div class="holder">
+				<h1>UK Power Networks Distribution Future Energy Scenarios - December 2021</h1>
+			</div>
+		</div>
+	</header>
+
+
+	<div class="b6-bg" id="scenario">
+		<div class="holder columns">
+			<div class="left">
+				<p>UKPN's future energy scenarios as interpreted from the 2021 <a href="https://www.nationalgrideso.com/future-energy/future-energy-scenarios/fes-2021#fes-reports">National Grid Future Energy Scenarios</a>.</p>
+				<h2><label for="scenarios">Choose a scenario</label>:</h2>
+				<div id="scenario-holder"></div>
+				<h2><label for="parameters">Choose a parameter</label>:</h2>
+				<div id="parameter-holder"></div>
+				<h2><label for="views">View by</label>:</h2>
+				<div id="view-holder"></div>
+				<h2>Select year (<span class="year"></span>):</h2>
+				<div id="slider"></div>
+				<div><button id="play" class="scenario" title="Play">&#9658;</button> <button id="pause" class="scenario" title="Pause" disabled>&#10074;&#10074;</button></div>
+				<h2><label for="scale-mode">Automatically adjust colour scale?</label>:</h2>
+				<div id="scale-holder" class="toggleinput toggler">
+					<span class="toggle-label1" title="To compare the values of different areas for the current year">Yes</span>
+					<div class="toggle-bg">
+						<input type="checkbox" id="scale-mode" name="scale-mode" title="Select for an absolute scale" />
+						<span class="switch"></span>
+					</div>
+					<label class="toggle-label2" for="scale-mode" title="To compare the values of different areas across the the full range of years">No</label>
+				</div>
+				<p>Select <strong>No</strong> and the colour scale at the bottom of the map will stay the same.</p>
+				<p>Select <strong>Yes</strong> and the colour scale at the bottom of the map will change depending on the year you have selected. This will help improve contrast for each area within your chosen year.</p>
+			</div>
+			<div class="right">
+				<div id="screenshot">
+					<div id="map">
+						<div class="spinner">
+							<img src="https://odileeds.org/resources/images/odi.svg" alt="Loading..." />
+						</div>
+					</div>
+					<div id="scale"></div>
+				</div>
+				<div id="issues"><a href="#" onClick="saveDOMImage(document.getElementById('screenshot'));">Save map as PNG</a> | <a href="https://innovation.ukpowernetworks.co.uk/2020/02/06/distribution-future-energy-scenarios/">Get the data</a> | <a href="https://github.com/odileeds/ukpowernetworks/issues/">Report any issues you find</a> with our tool</div>
+			</div>
+		</div>
+	</div>
+	<div class="scenario thickline"></div>
+	<div class="about tallpadded">
+		<div class="holder">
+			<h2>About this visualisation - DFES 2021</h2>
+			<p>This interactive heat map displays our Distribution Future Energy Scenarios (DFES) forecasts for key drivers within our licence area out to 2050.
+			The scenarios are designed to illustrate energy futures with different levels of decentralisation, decarbonisation, and digitalisation.
+			We are always keen to understand what our stakeholders think, and so if you have any thoughts, let us know by emailing DFES@ukpowernetworks.co.uk</p>
+		</div>
+	</div>
+	<footer class="tallpadded">
+		<div class="holder">
+			<h2>Credits</h2>
+			<h3>Interactive visualisation</h3>
+			<p>&copy; ODI Leeds (Stuart Lowe &amp; Patrick Lake) 2020. Released under an <a href="https://github.com/odileeds/ukpowernetworks/blob/main/LICENSE">MIT licence</a>. View the <a href="https://github.com/odileeds/ukpowernetworks">repository on Github</a>.</p>
+			<h3>Energy scenario data</h3>
+			<p>&copy; UK Power Networks &amp; Element Energy 2020. Released under a Creative Commons Attribution Licence.</p>
+			<h3>Geographic boundaries</h3>
+			<p><a href="https://geoportal.statistics.gov.uk/datasets/local-authority-districts-may-2020-boundaries-uk-bfe">Local Authority District boundaries (May 2020)</a>, <a href="https://geoportal.statistics.gov.uk/datasets/local-enterprise-partnerships-april-2020-boundaries-en-bfe">Local Enterprise Partnership boundaries (April 2020)</a>, and <a href="https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-areas-december-2011-boundaries-ew-bsc">LSOA boundaries (December 2011)</a> use data from the ONS geo service. They are <a href="https://www.ons.gov.uk/methodology/geography/licences">released under the OGL</a>:</p>
+			<ul>
+				<li>Contains National Statistics data © Crown copyright and database right 2020</li>
+				<li>Contains OS data © Crown copyright and database right 2020</li>
+			</ul>
+		</div>
+	</footer>
+	<div id="cookie_banner">
+		<div class="scenario thinline"></div>
+		<div class="holder">
+			<div class="close"></div>
+			<h4>Cookies</h4>
+			<p>We take your data privacy seriously. View our <a href="https://www.ukpowernetworks.co.uk/internet/en/privacy-policy/">Privacy Policy</a>. This site uses cookies to improve your visitor experience and by using this site you agree to these cookies being set. View our <a href="https://www.ukpowernetworks.co.uk/internet/en/cookie-policy/">Cookie Policy</a>.</p>
+		</div>
+		<a href="#" id="cookie_banner_close">Close &times;</a>
+	</div>
+	<div class="scenario thickline"></div>
+	<script>
+	var banner,pad,body,close;
+	body = document.body;
+	banner = document.getElementById('cookie_banner');
+	close = document.getElementById('cookie_banner_close');
+	if(banner && body && close){
+		pad = body.style['padding-bottom'];
+		body.style['padding-bottom'] = banner.offsetHeight+'px';
+		if(close) close.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); banner.style.display = "none"; body.style['padding-bottom'] = pad; });
+	}
+	</script>
+</body>
+</html>

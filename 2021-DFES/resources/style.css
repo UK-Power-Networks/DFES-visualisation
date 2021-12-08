@@ -177,7 +177,7 @@ p { margin-bottom: 1em; }
 @keyframes sk-cubeGridScaleDelay { 0%, 70%, 100% {   -webkit-transform: scale3D(1, 1, 1);   transform: scale3D(1, 1, 1); } 35% {   -webkit-transform: scale3D(0, 0, 1);   transform: scale3D(0, 0, 1); }  }
 
 footer a:visited { color: inherit; }
-#scenario .about { padding: 0.25em 0.5em; background-color: #efefef; }
+#scenario .about { padding: 0.25em 0.5em; }
 #scenario ul, footer ul { list-style: disc; margin-left: 1em; }
 input, select { font: inherit; line-height: 2em; width: 100%; height: 2em; }
 select option:hover, select option:checked { filter: hue-rotate(90deg); }
@@ -315,7 +315,7 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 /* DFES colours */
 .steady-progression { background-color: #868686; color: white; }
 .consumer-transformation { background-color: #ffbf22; color: black; }
-.system-transformation { background-color: #5bccf5; color: white; }
+.system-transformation { background-color: #5bccf5; color: black; }
 .leading-the-way { background-color: #c2cd23; color: black; }
 .deep-electrification { background-color: #AB1236!important; color: white!important; }
 .deep-electrification-text { color: #AB1236!important; }
@@ -323,8 +323,10 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 .high-hydrogen-text { color: #0085CA!important; }
 .net-zero { background-color: #00AB84!important; color: white!important; }
 .net-zero-text { color: #00AB84!important; }
-.about { background: #454a60; }
-
+#FAQ.about {
+    background-color: #454a60;
+    color: white !important;
+}
 
 @media only screen and (max-width: 1000px) {
 	body{ overflow-x: hidden; }

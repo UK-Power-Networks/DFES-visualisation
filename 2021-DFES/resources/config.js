@@ -493,11 +493,19 @@ S(document).ready(function(){
 							'items': [],
 							'render': function(d){
 								// Construct the label shown in the drop down list
-								return d['name']+(d['type'] ? ' ('+d['type']+')':'');
+								return d.name+(d.layer=="LSOAlayer" ? ' ('+d.id+')' : '');
 							},
 							'rank': function(d,str){
 								// Calculate the weight to add to this airport
 								var r = 0;
+								if(postcodes[postcode] && postcodes[postcode].data){
+									_obj.log(d,d.id,postcodes[postcode].data.attributes.lep1);
+									for(var cd in postcodes[postcode].data.attributes){
+										if(postcodes[postcode].data.attributes[cd]==d.id){
+											r += 1;
+										}
+									}
+								}
 								if(d['name']) r += getScore(d['name'],str);
 								if(d['id']) r += getScore(d['name'],str);
 								return r;
@@ -523,23 +531,44 @@ S(document).ready(function(){
 								}
 							}
 						});
-
+						var postcode = "";
+						var postcodes = {};
+						var regex = new RegExp(/^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([AZa-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9]?[A-Za-z]))))[0-9][A-Za-z]{2})$/);
+						this.search.on('change',{'me':this.search},function(e){
+							var v = e.target.value.replace(/ /g,"");
+							var m = v.match(regex)||[];
+							if(m.length){
+								_obj.log('INFO','Looks like a postcode',m[0]);
+								postcode = m[0];
+								if(!postcodes[m[0]]){
+									postcodes[m[0]] = {};
+									S().ajax('https://findthatpostcode.uk/postcodes/'+m[0]+'.json',{
+										'dataType':'json',
+										'postcode':m[0],
+										'this': e.data.me,
+										'success': function(data,attr){
+											postcodes[attr.postcode] = data;
+											this.update();
+										}
+									});
+								}
+							}else postcode = "";
+						});
 					}
 					if(this.search){
 						var l,f,i,j;
 						this.search._added = {};
 						this.search.clearItems();
-						//console.log(this,this.options.view,this.layers[this.options.view]);
 						for(j = 0; j < this.views[this.options.view].layers.length; j++){
 							l = this.views[this.options.view].layers[j].id;
 							key = "";
 							if(l=="LADlayer") key = "lad20nm";
+							else if(l=="Countylayer") key = "cty19nm";
 							else if(l=="LEPlayer") key = "lep20nm";
 							else if(l=="LSOAlayer") key = "LSOA11NM";
 							if(this.layers[l].geojson && this.layers[l].geojson.features && this.layers[l].key && key){
 								// If we haven't already processed this layer we do so now
 								if(!this.search._added[l]){
-									//console.log('adding',l);
 									f = this.layers[l].geojson.features;
 									for(i = 0; i < f.length; i++) this.search.addItems({'name':f[i].properties[key]||"?",'id':f[i].properties[this.layers[l].key]||"",'i':i,'layer':l});
 									this.search._added[l] = true;

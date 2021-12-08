@@ -327,6 +327,7 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
     background-color: #454a60;
     color: white !important;
 }
+.warning { background-color: #F9BC26; color: black; }
 
 @media only screen and (max-width: 1000px) {
 	body{ overflow-x: hidden; }

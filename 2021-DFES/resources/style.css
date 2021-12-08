@@ -147,6 +147,7 @@ h1 { font-family: "ff-dax-pro", sans-serif; line-height: 1em; font-size: 1.5em; 
 	max-height: 90vh;
 	display: block;
 	width: 100%;
+	position: relative;
 	border: .0625rem solid #e0e0e0;
 }
 header > div:first-child { text-align: center; }

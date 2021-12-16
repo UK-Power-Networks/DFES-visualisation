@@ -55,7 +55,7 @@
 		}
 	},
 	"Consumer Transformation": {
-		"description": "<ul><li>Reaches 2050 net zero target thanks to widespread electrification</li></ul>",
+		"description": "<ul><li>Reaches 2050 Net Zero target thanks to widespread electrification</li></ul>",
 		"color": "#FFC000",
 		"css": "consumer-transformation",
 		"data": {
@@ -71,7 +71,7 @@
 			"domestic-Micro-CHP": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Consumer Transformation_Micro CHP.csv", "key": "LSOA11CD" },
 			"Coach": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Coach_Consumer Transformation_Electric coach.csv", "key": "LSOA11CD" },
 			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/District heating_Consumer Transformation_I&C District Heating.csv", "key": "LSOA11CD" },
-			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic batteries_Consumer Transformation_Domestic battery capacity.csv", "key": "LSOA11CD" },
+			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_Consumer Transformation_Domestic battery capacity.csv", "key": "LSOA11CD" },
 			"Domestic-connection-count": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic Connection Count_Domestic connections.csv", "key": "LSOA11CD" },
 			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic district heating_Consumer Transformation_District Heating.csv", "key": "LSOA11CD" },
 			"HGV": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/HGV_Consumer Transformation_Electric HGV.csv", "key": "LSOA11CD" },
@@ -88,8 +88,8 @@
 			"Minibus": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Minibus_Consumer Transformation_Electric minibus.csv", "key": "LSOA11CD" },
 			"Motorcycles": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Motorcycles_Consumer Transformation_EV motorcycles.csv", "key": "LSOA11CD" },
 			"PHV": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/PHV_Consumer Transformation_Electric PHVs.csv", "key": "LSOA11CD" },
-			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Small scale PV_Consumer Transformation_Domestic PV capacity.csv", "key": "LSOA11CD" },
-			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Small scale PV_Consumer Transformation_I&C PV capacity.csv", "key": "LSOA11CD" },
+			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Small scale PV_Consumer Transformation_Domestic PV capacity.csv", "key": "LSOA11CD" },
+			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Small scale PV_Consumer Transformation_I&C PV capacity.csv", "key": "LSOA11CD" },
 			"Taxi": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Taxi_Consumer Transformation_Electric Taxis.csv", "key": "LSOA11CD" },
 			"bev-vans": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Vans_Consumer Transformation_BEV vans.csv", "key": "LSOA11CD" },
 			"phev-vans": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Vans_Consumer Transformation_PHEV vans.csv", "key": "LSOA11CD" },

@@ -1,6 +1,6 @@
 {
 	"Steady Progression": {
-		"description": "<ul><li>Business as usual scenario, does not meet the 2050 net zero target</li></ul>",
+		"description": "<ul><li>Business as usual scenario, does not meet the 2050 Net Zero target</li></ul>",
 		"color": "#555555",
 		"css": "steady-progression",
 		"data": {
@@ -16,7 +16,7 @@
 			"domestic-Micro-CHP": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Steady Progression_Micro CHP.csv", "key": "LSOA11CD" },
 			"Coach": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Coach_Steady Progression_Electric coach.csv", "key": "LSOA11CD" },
 			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/District heating_Steady Progression_I&C District Heating.csv", "key": "LSOA11CD" },
-			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic batteries_Steady Progression_Domestic battery capacity.csv", "key": "LSOA11CD" },
+			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_Steady Progression_Domestic battery capacity.csv", "key": "LSOA11CD" },
 			"Domestic-connection-count": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic Connection Count_Domestic connections.csv", "key": "LSOA11CD" },
 			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic district heating_Steady Progression_District Heating.csv", "key": "LSOA11CD" },
 			"HGV": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/HGV_Steady Progression_Electric HGV.csv", "key": "LSOA11CD" },
@@ -33,8 +33,8 @@
 			"Minibus": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Minibus_Steady Progression_Electric minibus.csv", "key": "LSOA11CD" },
 			"Motorcycles": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Motorcycles_Steady Progression_EV motorcycles.csv", "key": "LSOA11CD" },
 			"PHV": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/PHV_Steady Progression_Electric PHVs.csv", "key": "LSOA11CD" },
-			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Small scale PV_Steady Progression_Domestic PV capacity.csv", "key": "LSOA11CD" },
-			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Small scale PV_Steady Progression_I&C PV capacity.csv", "key": "LSOA11CD" },
+			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Small scale PV_Steady Progression_Domestic PV capacity.csv", "key": "LSOA11CD" },
+			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Small scale PV_Steady Progression_I&C PV capacity.csv", "key": "LSOA11CD" },
 			"Taxi": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Taxi_Steady Progression_Electric Taxis.csv", "key": "LSOA11CD" },
 			"bev-vans": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Vans_Steady Progression_BEV vans.csv", "key": "LSOA11CD" },
 			"phev-vans": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Vans_Steady Progression_PHEV vans.csv", "key": "LSOA11CD" },
@@ -109,7 +109,7 @@
 		}
 	},
 	"System Transformation": {
-		"description": "<ul><li>Reaches 2050 net zero target thanks to a combination of electric and hydrogen technologies</li></ul>",
+		"description": "<ul><li>Reaches 2050 Net Zero target by relying on hydrogen to decarbonise the more difficult sectors of heat and heavy transport</li></ul>",
 		"color": "#00B0F0",
 		"css": "system-transformation",
 		"data": {
@@ -125,7 +125,7 @@
 			"domestic-Micro-CHP": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_System Transformation_Micro CHP.csv", "key": "LSOA11CD" },
 			"Coach": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Coach_System Transformation_Electric coach.csv", "key": "LSOA11CD" },
 			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/District heating_System Transformation_I&C District Heating.csv", "key": "LSOA11CD" },
-			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic batteries_System Transformation_Domestic battery capacity.csv", "key": "LSOA11CD" },
+			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_System Transformation_Domestic battery capacity.csv", "key": "LSOA11CD" },
 			"Domestic-connection-count": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic Connection Count_Domestic connections.csv", "key": "LSOA11CD" },
 			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic district heating_System Transformation_District Heating.csv", "key": "LSOA11CD" },
 			"HGV": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/HGV_System Transformation_Electric HGV.csv", "key": "LSOA11CD" },
@@ -142,8 +142,8 @@
 			"Minibus": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Minibus_System Transformation_Electric minibus.csv", "key": "LSOA11CD" },
 			"Motorcycles": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Motorcycles_System Transformation_EV motorcycles.csv", "key": "LSOA11CD" },
 			"PHV": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/PHV_System Transformation_Electric PHVs.csv", "key": "LSOA11CD" },
-			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Small scale PV_System Transformation_Domestic PV capacity.csv", "key": "LSOA11CD" },
-			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Small scale PV_System Transformation_I&C PV capacity.csv", "key": "LSOA11CD" },
+			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Small scale PV_System Transformation_Domestic PV capacity.csv", "key": "LSOA11CD" },
+			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Small scale PV_System Transformation_I&C PV capacity.csv", "key": "LSOA11CD" },
 			"Taxi": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Taxi_System Transformation_Electric Taxis.csv", "key": "LSOA11CD" },
 			"bev-vans": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Vans_System Transformation_BEV vans.csv", "key": "LSOA11CD" },
 			"phev-vans": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Vans_System Transformation_PHEV vans.csv", "key": "LSOA11CD" },
@@ -163,7 +163,7 @@
 		}
 	},
 	"Leading the Way": {
-		"description": "<ul><li>Achieves net zero ahead of the 2050 target thanks to a combination of electric and hydrogen technologies</li></ul>",
+		"description": "<ul><li>Achieves Net Zero ahead of the 2050 target thanks to a combination of electric and hydrogen technologies</li></ul>",
 		"color": "#92D050",
 		"css": "leading-the-way",
 		"data": {
@@ -179,7 +179,7 @@
 			"domestic-Micro-CHP": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic heating technologies_Leading the Way_Micro CHP.csv", "key": "LSOA11CD" },
 			"Coach": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Coach_Leading the Way_Electric coach.csv", "key": "LSOA11CD" },
 			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/District heating_Leading the Way_I&C District Heating.csv", "key": "LSOA11CD" },
-			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic batteries_Leading the Way_Domestic battery capacity.csv", "key": "LSOA11CD" },
+			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_Leading the Way_Domestic battery capacity.csv", "key": "LSOA11CD" },
 			"Domestic-connection-count": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic Connection Count_Domestic connections.csv", "key": "LSOA11CD" },
 			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic district heating_Leading the Way_District Heating.csv", "key": "LSOA11CD" },
 			"HGV": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/HGV_Leading the Way_Electric HGV.csv", "key": "LSOA11CD" },
@@ -196,8 +196,8 @@
 			"Minibus": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Minibus_Leading the Way_Electric minibus.csv", "key": "LSOA11CD" },
 			"Motorcycles": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Motorcycles_Leading the Way_EV motorcycles.csv", "key": "LSOA11CD" },
 			"PHV": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/PHV_Leading the Way_Electric PHVs.csv", "key": "LSOA11CD" },
-			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Small scale PV_Leading the Way_Domestic PV capacity.csv", "key": "LSOA11CD" },
-			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Small scale PV_Leading the Way_I&C PV capacity.csv", "key": "LSOA11CD" },
+			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Small scale PV_Leading the Way_Domestic PV capacity.csv", "key": "LSOA11CD" },
+			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Small scale PV_Leading the Way_I&C PV capacity.csv", "key": "LSOA11CD" },
 			"Taxi": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Taxi_Leading the Way_Electric Taxis.csv", "key": "LSOA11CD" },
 			"bev-vans": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Vans_Leading the Way_BEV vans.csv", "key": "LSOA11CD" },
 			"phev-vans": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Vans_Leading the Way_PHEV vans.csv", "key": "LSOA11CD" },

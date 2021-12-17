@@ -18,7 +18,7 @@
 			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/District heating_Steady Progression_I&C District Heating.csv", "key": "LSOA11CD" },
 			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_Steady Progression_Domestic battery capacity.csv", "key": "LSOA11CD" },
 			"Domestic-connection-count": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Connection Count_Central_Domestic connection count.csv", "key": "LSOA11CD" },
-			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/Domestic district heating_Steady Progression_District Heating.csv", "key": "LSOA11CD" },
+			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic district heating_Steady Progression_District Heating.csv", "key": "LSOA11CD" },
 			"HGV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/HGV_Steady Progression_Electric HGV.csv", "key": "LSOA11CD" },
 			"I&C-batteries": { "dataBy": "lsoa", "file": "lsoa/2020-DFES/I C batteries_Steady Progression_I&C battery capacity.csv", "key": "LSOA11CD" },
 			"I&C-connections": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Connection Count_Central_I&C connection count.csv", "key": "LSOA11CD" },

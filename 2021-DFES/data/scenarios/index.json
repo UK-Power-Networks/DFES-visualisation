@@ -40,7 +40,7 @@
 			"OCGT_CCGT": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Steady Progression_OCGT and CCGT.csv", "key": "MSOA11CD" },
 			"wind": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Steady Progression_Onshore wind.csv", "key": "MSOA11CD" },
 			"Renewable_engines": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Steady Progression_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA11CD" },
-			"large-solar": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Steady Progression_Solar Generation (Large greater than150 kW).csv", "key": "MSOA11CD" },
+			"large-solar": { "dataBy": "msoa", "file": "lsoa/2021-DFES/Distributed Generation_Steady Progression_Solar Generation (Large greater than150 kW).csv", "key": "MSOA11CD" },
 			"Storage": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Steady Progression_Storage.csv", "key": "MSOA11CD" },
 			"Waste_incineration": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Steady Progression_Waste incineration (including CHP).csv", "key": "MSOA11CD" }
 			
@@ -87,7 +87,7 @@
 			"OCGT_CCGT": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Consumer Transformation_OCGT and CCGT.csv", "key": "MSOA11CD" },
 			"wind": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Consumer Transformation_Onshore wind.csv", "key": "MSOA11CD" },
 			"Renewable_engines": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Consumer Transformation_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA11CD" },
-			"large-solar": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Consumer Transformation_Solar Generation (Large greater than150 kW).csv", "key": "MSOA11CD" },
+			"large-solar": { "dataBy": "msoa", "file": "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Solar Generation (Large greater than150 kW).csv", "key": "MSOA11CD" },
 			"Storage": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Consumer Transformation_Storage.csv", "key": "MSOA11CD" },
 			"Waste_incineration": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Consumer Transformation_Waste incineration (including CHP).csv", "key": "MSOA11CD" }
 		}
@@ -133,7 +133,7 @@
 			"OCGT_CCGT": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_System Transformation_OCGT and CCGT.csv", "key": "MSOA11CD" },
 			"wind": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_System Transformation_Onshore wind.csv", "key": "MSOA11CD" },
 			"Renewable_engines": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_System Transformation_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA11CD" },
-			"large-solar": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_System Transformation_Solar Generation (Large greater than150 kW).csv", "key": "MSOA11CD" },
+			"large-solar": { "dataBy": "msoa", "file": "lsoa/2021-DFES/Distributed Generation_System Transformation_Solar Generation (Large greater than150 kW).csv", "key": "MSOA11CD" },
 			"Storage": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_System Transformation_Storage.csv", "key": "MSOA11CD" },
 			"Waste_incineration": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_System Transformation_Waste incineration (including CHP).csv", "key": "MSOA11CD" }
 		}
@@ -179,7 +179,7 @@
 			"OCGT_CCGT": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Leading the Way_OCGT and CCGT.csv", "key": "MSOA11CD" },
 			"wind": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Leading the Way_Onshore wind.csv", "key": "MSOA11CD" },
 			"Renewable_engines": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Leading the Way_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA11CD" },
-			"large-solar": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Leading the Way_Solar Generation (Large greater than150 kW).csv", "key": "MSOA11CD" },
+			"large-solar": { "dataBy": "msoa", "file": "lsoa/2021-DFES/Distributed Generation_Leading the Way_Solar Generation (Large greater than150 kW).csv", "key": "MSOA11CD" },
 			"Storage": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Leading the Way_Storage.csv", "key": "MSOA11CD" },
 			"Waste_incineration": { "dataBy": "msoa", "file": "lsoa/2020-DFES/Distributed Generation_Leading the Way_Waste incineration (including CHP).csv", "key": "MSOA11CD" }
 		}

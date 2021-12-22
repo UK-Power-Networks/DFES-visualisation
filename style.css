@@ -360,7 +360,6 @@ header > div:first-child { text-align: center; }
 header img {
 	margin:auto;
 	height: 60px;
-	height: auto;
 	margin: .625rem;
 }
 footer { padding-left: 0px; padding-right: 0px; }

@@ -194,7 +194,7 @@ footer ul { margin-left: 2em; }
 #scale .range { display: block; height: 1.5em; position: relative; }
 #scale .lvl { position: absolute; transform: translate3d(-50%,0,0); }
 #scale .min { padding-left: 0.25em; border-left-width: 1px; border-left-style: solid; border-right:0px; transform: none; }
-#scale .max { padding-right: 0.25em; padding-left: 0; border-right-width: 1px; border-right-style: solid; transform: translate3d(-100%, 0, 0); border-left: 0; }
+#scale .max { padding-right: 0.25em; padding-left: 0; border-right-width: 1px; border-right-style: solid; transform: translate3d(-100%, 0, 0); border-left: 0; white-space: nowrap; }
 button { border-radius: 6.25rem; }
 
 /* Bar chart */

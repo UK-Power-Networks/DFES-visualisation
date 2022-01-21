@@ -75,6 +75,7 @@ foreach $scenario (sort(keys(%{$index}))){
 					$f1 =~ s/\//\\\//g;
 					$f2 =~ s/\//\\\//g;
 					`sed -i 's/$f1/$f2/' index.json`;
+					$updates .= "sed -i 's/$f1/$f2/' index.json\n";
 				}
 			}
 		}

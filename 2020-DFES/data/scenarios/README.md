@@ -8,7 +8,7 @@ Let's add a new parameter.
 
 ### Add CSV files
 
-Add the CSV files for this parameter to the [LSOA data directory](https://github.com/odileeds/ukpowernetworks/tree/master/data/scenarios/lsoa).
+Add the CSV files for this parameter to the [LSOA data directory](https://github.com/UK-Power-Networks/DFES-visualisation/tree/master/data/scenarios/lsoa).
 
 ### Update the index
 

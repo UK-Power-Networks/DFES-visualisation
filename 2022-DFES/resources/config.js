@@ -94,6 +94,22 @@ S(document).ready(function(){
 						}
 						return data;
 					}
+				},
+				"DNOlayer":{
+					"file": "data/lsoa2dno.json",
+					"process": function(d){
+						// Work out mapping from LSOA to DNO
+						// Data is saved as { DNO: [LSOA1,LSOA2,LSOA3...] }
+						var a,data,i;
+						data = {};
+						for(a in d){
+							for(i = 0; i < d[a].length; i++){
+								data[d[a][i]] = {};
+								data[d[a][i]][a] = 1;
+							}
+						}
+						return data;
+					}
 				}
 			},
 			"msoa": {
@@ -166,9 +182,81 @@ S(document).ready(function(){
 			"Countylayer":{
 				"geojson": "data/maps/Counties-clipped-simplified.geojson",
 				"key": "cty19cd",
+			},
+			"DNOlayer":{
+				"geojson": "data/maps/DNO-clipped-simplified.geojson",
+				"key": "dnola22cd",
 			}
 		},
 		"views":{
+			"DNO":{
+				"title":"DNO licence areas",
+				"source": "lsoa",
+				"layers":[{
+					"id": "DNOlayer",
+					"heatmap": true,
+					"boundary":{"strokeWidth":2}
+				}],
+				"popup": {
+					"text": function(attr){
+						file = 'DNO-licence-areas-'+attr.properties.dnola22cd+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
+						return '<h3>'+(attr.properties.LongName || '?')+'</h3><p>'+attr.parameter.title+': '+(typeof attr.value==="number" ? attr.value.toLocaleString() : '?')+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LEP has been clipped to UKPN\'s area.</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+					},
+					"open": function(attr){
+						var data,c,p,key,values,l;
+						if(!attr) attr = {};
+						
+						l = this.views[this.options.view].layers[0].id;
+						key = this.layers[l].key;
+
+						if(attr.id && key){
+
+							data = [];							
+							values = this.data.scenarios[this.options.scenario].data[this.options.parameter].layers[this.options.view].values;
+
+							for(c in values[attr.id]){
+								if(c >= this.options.years.min && c <= this.options.years.max){
+									data.push([c,values[attr.id][c]]);
+								}
+							}
+
+							// Create the barchart object. We'll add a function to
+							// customise the class of the bar depending on the key.
+							var chart = new S.barchart('#barchart',{
+								'formatKey': function(key){
+									return (key%10==0 ? key.substr(0,4) : '');
+								},
+								'formatY': function(key){
+									return key.toLocaleString();
+								},
+								'formatBar': function(key,val,series){
+									return (typeof series==="number" ? "series-"+series : "");
+								}
+							});
+
+							// Send the data array and bin size then draw the chart
+							chart.setData(data).setBins({ 'mintick': 5 }).draw();
+							units = this.parameters[this.options.parameter].units;
+							dp = this.parameters[this.options.parameter].dp;
+
+							// Add an event
+							chart.on('barover',function(e){
+								S('.balloon').remove();
+								var v = parseFloat(this.bins[e.bin].value.toFixed(dp));
+								S(e.event.currentTarget).find('.bar.series-0').append(
+									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+v.toLocaleString()+(units ? '&thinsp;'+units : '')+"</div>"
+								);
+							});
+							S('.barchart table .bar').css({'background-color':'#cccccc'});
+							S('.barchart table .bar.series-0').css({'background-color':this.data.scenarios[this.options.scenario].color});
+							
+						}else{
+							S(attr.el).find('#barchart').remove();
+						}
+					}
+				}
+				
+			},
 			"LEP":{
 				"title":"Local Enterprise Partnerships",
 				"source": "lsoa",

@@ -200,7 +200,7 @@ S(document).ready(function(){
 				"popup": {
 					"text": function(attr){
 						file = 'DNO-licence-areas-'+attr.properties.dnola22cd+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.LongName || '?')+'</h3><p>'+attr.parameter.title+': '+(typeof attr.value==="number" ? attr.value.toLocaleString() : '?')+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LEP has been clipped to UKPN\'s area.</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						return '<h3>'+(attr.properties.LongName || '?')+'</h3><p>'+attr.parameter.title+': '+(typeof attr.value==="number" ? attr.value.toLocaleString() : '?')+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 						var data,c,p,key,values,l;

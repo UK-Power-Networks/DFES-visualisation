@@ -67,20 +67,12 @@
 				<div id="parameter-holder"></div>
 				<h2><label for="views">View by</label>:</h2>
 				<div id="view-holder"></div>
+				<div class="info-bubble warning" data-scale="absolute" style="display:none;"><p>To improve the contrast between areas within your chosen year you may wish to change the colour scale.</p></div>
+
 				<h2>Select year (<span class="year"></span>):</h2>
 				<div id="slider"></div>
 				<div><button id="play" class="scenario" title="Play">&#9658;</button> <button id="pause" class="scenario" title="Pause" disabled>&#10074;&#10074;</button></div>
-				<h2><label for="scale-mode">Automatically adjust colour scale?</label>:</h2>
-				<div id="scale-holder" class="toggleinput toggler">
-					<span class="toggle-label1" title="To compare the values of different areas for the current year">Yes</span>
-					<div class="toggle-bg">
-						<input type="checkbox" id="scale-mode" name="scale-mode" title="Select for an absolute scale" />
-						<span class="switch"></span>
-					</div>
-					<label class="toggle-label2" for="scale-mode" title="To compare the values of different areas across the the full range of years">No</label>
-				</div>
-				<p>Select <strong>No</strong> and the colour scale at the bottom of the map will stay the same.</p>
-				<p>Select <strong>Yes</strong> and the colour scale at the bottom of the map will change depending on the year you have selected. This will help improve contrast for each area within your chosen year.</p>
+				<div class="info-bubble warning" data-scale="relative"><p>To better show changes in values over time you may wish to change the colour scale.</p></div>
 			</div>
 			<div class="right">
 				<div class="message"></div>
@@ -101,6 +93,18 @@
 						</div>
 					</div>
 					<div id="scale"></div>
+				</div>
+				<div id="scale-holder" class="toggleinput toggler">
+					<label for="scale-mode">Automatically adjust colour scale?</label>
+					<div id="scale-holder" class="toggleinput toggler">
+						<span class="toggle-label1" title="To compare the values of different areas for the current year">Yes</span><div class="toggle-bg">
+							<input type="checkbox" id="scale-mode" name="scale-mode" title="Select for an absolute scale" />
+							<span class="switch"></span>
+						</div><span class="toggle-label2" title="To compare the values of different areas across the the full range of years">No</span>
+					</div>
+				</div>
+				<div class="info-bubble warning">
+					<p>Select <strong>Yes</strong> and the colour scale at the bottom of the map will change depending on the year you have selected. This will help improve contrast for each area within your chosen year. Select <strong>No</strong> and the colour scale at the bottom of the map will stay the same as you move through the years.</p>
 				</div>
 				<div id="issues"><a href="#" onClick="saveDOMImage(document.getElementById('screenshot'));">Save map as PNG</a> | <a href="https://innovation.ukpowernetworks.co.uk/2020/02/06/distribution-future-energy-scenarios/">Get the data</a> | <a href="https://github.com/odileeds/ukpowernetworks/issues/">Report any issues you find</a> with our tool</div>
 			</div>

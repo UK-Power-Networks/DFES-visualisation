@@ -70,6 +70,9 @@ footer, #cookie_banner { 	background: #30354a; color: #fff; }
 #cookie_banner { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1000;}
 #cookie_banner_close { position: absolute; top: 1em; right: 1em; font-size: 1.3em; }
 
+.warning { color: rgb(95, 82, 7); background-color: rgb(251, 245, 208); text-align:center; }
+#error, .error { color: rgb(95, 7, 28); background-color: rgb(251, 208, 218); text-align:center; }
+
 .c1-text { color: #2254F4; }
 .c2-text { color: #178CFF; }
 .c3-text { color: #00B6FF; }

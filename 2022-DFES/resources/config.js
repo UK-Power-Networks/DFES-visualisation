@@ -169,23 +169,28 @@ S(document).ready(function(){
 		"layers": {
 			"LADlayer":{
 				"geojson": "data/maps/LAD2020-clipped-fullextent-simplified.geojson",
-				"key": "lad20cd"
+				"key": "lad20cd",
+				"name": "lad20nm"
 			},
 			"LSOAlayer":{
 				"geojson": "data/maps/LSOA11-rough.geojson",
 				"key": "LSOA11CD",
+				"name": "LSOA11NM"
 			},
 			"LEPlayer":{
 				"geojson": "data/maps/LEP2020-clipped-fullextent-simplified.geojson",
 				"key": "lep20cd",
+				"name": "lep20nm"
 			},
 			"Countylayer":{
 				"geojson": "data/maps/Counties-clipped-simplified.geojson",
 				"key": "cty19cd",
+				"name": "cty19cd"
 			},
 			"DNOlayer":{
 				"geojson": "data/maps/DNO-clipped-simplified.geojson",
 				"key": "dnola22cd",
+				"name": "LongName"
 			}
 		},
 		"views":{
@@ -688,11 +693,92 @@ S(document).ready(function(){
 		}
 	});
 
-	
-/*	
 
-*/	
-	
+	// Add download button
+	if(S('#download-csv')){
+		S('#download-csv').on('click',{me:dfes},function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var csv = "";
+			var opt = e.data.me.options;
+			var filename = ("DFES-2022--{{scenario}}--{{parameter}}--{{view}}.csv").replace(/\{\{([^\}]+)\}\}/g,function(m,p1){ return (opt[p1]||"").replace(/[ ]/g,"_") });
+			var values,r,rs,y,v,l,layerid,p,ky,nm;
+			values = e.data.me.data.scenarios[e.data.me.options.scenario].data[e.data.me.options.parameter].layers[e.data.me.options.view].values;
+			v = e.data.me.options.view;
+			layerid = '';
+			// We need to loop over the view's layers
+			for(l = 0; l < e.data.me.views[v].layers.length; l++){
+				if(e.data.me.views[v].layers[l].heatmap) layerid = l;
+			}
+			ky = e.data.me.layers[e.data.me.views[v].layers[layerid].id].key;
+			nm = e.data.me.layers[e.data.me.views[v].layers[layerid].id].name;
+			if(typeof ky==="undefined") console.warn('No key provided for this layer in the layers structure.');
+			if(typeof nm==="undefined") console.warn('No name provided for this layer in the layers structure.');
+
+			console.log(e.data.me.layers,e.data.me.layers[e.data.me.views[v].layers[layerid].id])
+
+			rs = Object.keys(values).sort();
+			csv = ky.toUpperCase()+','+e.data.me.views[v].title;
+			for(y = e.data.me.options.years.min; y <= e.data.me.options.years.max; y+=5) csv += ','+y+(e.data.me.parameters[e.data.me.options.parameter] && e.data.me.parameters[e.data.me.options.parameter].units ? ' ('+e.data.me.parameters[e.data.me.options.parameter].units+')' : '');
+			csv += '\n';
+			for(i = 0; i < rs.length; i++){
+				r = rs[i];
+				p = getGeoJSONPropertiesByKeyValue(e.data.me.layers[e.data.me.views[v].layers[layerid].id].geojson,ky,r);
+				csv += r;
+				csv += ','+(typeof nm==="string" && p[nm] ? (p[nm].match(',') ? '"'+p[nm]+'"' : p[nm]) : "?");
+				for(y = e.data.me.options.years.min; y <= e.data.me.options.years.max; y+=5) csv += ','+(typeof e.data.me.parameters[e.data.me.options.parameter].dp==="number" ? values[r][y].toFixed(e.data.me.parameters[e.data.me.options.parameter].dp) : values[r][y]);
+				csv += '\n'
+			}
+			saveToFile(csv,filename,'text/plain');
+		});
+	}
+	function saveToFile(txt,fileNameToSaveAs,mime){
+		// Bail out if there is no Blob function
+		if(typeof Blob!=="function") return this;
+
+		var textFileAsBlob = new Blob([txt], {type:(mime||'text/plain')});
+
+		function destroyClickedElement(event){ document.body.removeChild(event.target); }
+
+		var dl = document.createElement("a");
+		dl.download = fileNameToSaveAs;
+		dl.innerHTML = "Download File";
+
+		if(window.webkitURL != null){
+			// Chrome allows the link to be clicked without actually adding it to the DOM.
+			dl.href = window.webkitURL.createObjectURL(textFileAsBlob);
+		}else{
+			// Firefox requires the link to be added to the DOM before it can be clicked.
+			dl.href = window.URL.createObjectURL(textFileAsBlob);
+			dl.onclick = destroyClickedElement;
+			dl.style.display = "none";
+			document.body.appendChild(dl);
+		}
+		dl.click();
+	}
+	function getGeoJSONPropertiesByKeyValue(geojson,key,value){
+		if(!geojson.features || typeof geojson.features!=="object"){
+			fes.log('WARNING','Invalid GeoJSON',geojson);
+			return {};
+		}
+		for(var i = 0; i < geojson.features.length; i++){
+			if(geojson.features[i].properties[key] == value) return geojson.features[i].properties;
+		}
+		return {};
+	};
+	function getGeoJSONPropertyValue(l,value){
+		if(!fes.layers[l].key){
+			fes.log('WARNING','No key set for layer '+l);
+			return "";
+		}
+		if(fes.layers[l] && fes.layers[l].geojson){
+			key = (fes.layers[l].name||fes.layers[l].key);
+			for(var i = 0; i < fes.layers[l].geojson.features.length; i++){
+				if(fes.layers[l].geojson.features[i].properties[fes.layers[l].key] == value) return fes.layers[l].geojson.features[i].properties[key];
+			}
+			return "";
+		}else return "";
+	};
 	
 	
 });

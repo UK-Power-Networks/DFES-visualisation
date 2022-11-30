@@ -719,14 +719,14 @@ S(document).ready(function(){
 
 			rs = Object.keys(values).sort();
 			csv = ky.toUpperCase()+','+e.data.me.views[v].title;
-			for(y = e.data.me.options.years.min; y <= e.data.me.options.years.max; y+=5) csv += ','+y+(e.data.me.parameters[e.data.me.options.parameter] && e.data.me.parameters[e.data.me.options.parameter].units ? ' ('+e.data.me.parameters[e.data.me.options.parameter].units+')' : '');
+			for(y = e.data.me.options.years.min; y <= e.data.me.options.years.max; y++) csv += ','+y+(e.data.me.parameters[e.data.me.options.parameter] && e.data.me.parameters[e.data.me.options.parameter].units ? ' ('+e.data.me.parameters[e.data.me.options.parameter].units+')' : '');
 			csv += '\n';
 			for(i = 0; i < rs.length; i++){
 				r = rs[i];
 				p = getGeoJSONPropertiesByKeyValue(e.data.me.layers[e.data.me.views[v].layers[layerid].id].geojson,ky,r);
 				csv += r;
 				csv += ','+(typeof nm==="string" && p[nm] ? (p[nm].match(',') ? '"'+p[nm]+'"' : p[nm]) : "?");
-				for(y = e.data.me.options.years.min; y <= e.data.me.options.years.max; y+=5) csv += ','+(typeof e.data.me.parameters[e.data.me.options.parameter].dp==="number" ? values[r][y].toFixed(e.data.me.parameters[e.data.me.options.parameter].dp) : values[r][y]);
+				for(y = e.data.me.options.years.min; y <= e.data.me.options.years.max; y++) csv += ','+(typeof e.data.me.parameters[e.data.me.options.parameter].dp==="number" ? values[r][y].toFixed(e.data.me.parameters[e.data.me.options.parameter].dp) : values[r][y]);
 				csv += '\n'
 			}
 			saveToFile(csv,filename,'text/plain');

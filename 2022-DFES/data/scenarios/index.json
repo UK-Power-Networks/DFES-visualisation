@@ -52,7 +52,8 @@
 		"description": "<ul><li>Reaches 2050 Net Zero target thanks to widespread electrification</li></ul>",
 		"color": "#FFC000",
 		"css": "consumer-transformation",
-		"data": {"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Consumer Transformation_BEV cars.csv", "key": "LSOA11CD" },
+		"data": {
+			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Consumer Transformation_BEV cars.csv", "key": "LSOA11CD" },
 			"phev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Consumer Transformation_PHEV cars.csv", "key": "LSOA11CD" },
 			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus scenario outputs_Consumer Transformation_Bus.csv","key":"LSOA11CD" },
 			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Consumer Transformation_Domestic electric resistive heating.csv", "key": "LSOA11CD" },
@@ -101,7 +102,8 @@
 		"description": "<ul><li>Reaches 2050 Net Zero target by relying on hydrogen to decarbonise the more difficult sectors of heat and heavy transport</li></ul>",
 		"color": "#00B0F0",
 		"css": "system-transformation",
-		"data": {"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_System Transformation_BEV cars.csv", "key": "LSOA11CD" },
+		"data": {
+			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_System Transformation_BEV cars.csv", "key": "LSOA11CD" },
 			"phev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_System Transformation_PHEV cars.csv", "key": "LSOA11CD" },
 			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus scenario outputs_System Transformation_Bus.csv","key":"LSOA11CD" },
 			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_System Transformation_Domestic electric resistive heating.csv", "key": "LSOA11CD" },
@@ -149,7 +151,8 @@
 		"description": "<ul><li>Achieves Net Zero ahead of the 2050 target thanks to a combination of electric and hydrogen technologies</li></ul>",
 		"color": "#92D050",
 		"css": "leading-the-way",
-		"data": {"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Leading the Way_BEV cars.csv", "key": "LSOA11CD" },
+		"data": {
+			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Leading the Way_BEV cars.csv", "key": "LSOA11CD" },
 			"phev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Leading the Way_PHEV cars.csv", "key": "LSOA11CD" },
 			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus scenario outputs_Leading the Way_Bus.csv","key":"LSOA11CD" },
 			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Leading the Way_Domestic electric resistive heating.csv", "key": "LSOA11CD" },

@@ -27,8 +27,9 @@
 	{ "key": "large-solar","title":"Large Solar","combine": "sum", "units":"MW", "dp": 0, "description": "Large (> 150kW) solar PV capacity" },
 	{ "key": "Biomass","title":"Biomass and energy crops (including CHP)","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of biomass and energy crops generation" },
 	{ "key": "Co-located_storage","title":"Co-located storage","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of storage co-located with generation" },
-	{ "key": "Fuel-cells","title":"Fuel cells","combine": "sum", "units":"MW", "dp": 0, "description": "Fuel cell capacity" },
+	{ "key": "Hydrogen","title":"Hydrogen","combine": "sum", "units":"MW", "dp": 0, "description": "Hydrogen fuelled generation capacity" },
 	{ "key": "Large-CHP-non-ren","title":"Large CHP","combine": "sum", "units":"MW", "dp": 0, "description": "Large (> 1MW) CHP capacity" },
+	{ "key": "Other generation","title":"Other generation","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of other generation sources" },
 	{ "key": "Small-CHP-non-ren","title":"Small CHP","combine": "sum", "units":"MW", "dp": 0, "description": "Small (< 1MW) CHP capacity" },
 	{ "key": "Diesel","title":"Diesel","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of diesel non-renewable engines" },
 	{ "key": "Gas","title":"Gas","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of gas non-renewable engines" },
@@ -36,5 +37,7 @@
 	{ "key": "wind","title":"Onshore wind","combine": "sum", "units":"MW", "dp": 0, "description": "Onshore wind capacity" },
 	{ "key": "Renewable_engines","title":"Renewable engines","combine": "sum", "units":"MW", "dp": 0, "description": "Capacity of renewable engines such as landfill gas and biogas" },
 	{ "key": "Storage","title":"Grid scale battery storage","combine": "sum", "units":"MW", "dp": 0, "description": "Grid scale battery capacity" },
+	{ "key": "Dom-AC","title":"Domestic air conditioning units","combine": "sum", "units":"", "dp": 0, "description": "Number of installed domestic air conditioning units" },
+	{ "key": "I&C-AC","title":"I&C air conditioning units","combine": "sum", "units":"", "dp": 0, "description": "Number of installed I&C air conditioning units" },
 	{ "key": "Waste_incineration","title":"Waste incineration","combine": "sum", "units":"MW", "dp": 0, "description": "Waste incineration capacity" }
 ]

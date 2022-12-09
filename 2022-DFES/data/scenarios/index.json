@@ -2,7 +2,7 @@
 	"Falling Short": {
 		"description": "<ul><li>Business as usual scenario, does not meet the 2050 Net Zero target</li></ul>",
 		"color": "#555555",
-		"css": "steady-progression",
+		"css": "Falling.Short",
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Falling Short_BEV cars.csv", "key": "LSOA11CD" },
 			"phev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Falling Short_PHEV cars.csv", "key": "LSOA11CD" },

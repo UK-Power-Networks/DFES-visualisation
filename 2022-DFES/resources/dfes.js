@@ -139,7 +139,7 @@
 
 		// Update parameters drop-down
 		if(this.parameters){
-			if(S('#parameters').length==0) S('#parameter-holder').html('<select id="parameters">'+html+'</select><div class="about"></div>');
+			if(S('#parameters').length==0) S('#parameter-holder').html('<select id="parameters">'+html+'</select>');
 			html = "";
 			if(!this.data.scenarios[this.options.scenario]) this.message('Scenario <em>"'+this.options.scenario+'"</em> is not defined in index.json.',{'id':'scenario','type':'ERROR'});
 			css = this.data.scenarios[this.options.scenario].css;

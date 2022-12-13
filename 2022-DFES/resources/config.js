@@ -731,8 +731,6 @@ S(document).ready(function(){
 			if(typeof ky==="undefined") console.warn('No key provided for this layer in the layers structure.');
 			if(typeof nm==="undefined") console.warn('No name provided for this layer in the layers structure.');
 
-			console.log(e.data.me.layers,e.data.me.layers[e.data.me.views[v].layers[layerid].id])
-
 			rs = Object.keys(values).sort();
 			csv = ky.toUpperCase()+','+e.data.me.views[v].title;
 			for(y = e.data.me.options.years.min; y <= e.data.me.options.years.max; y++) csv += ','+y+(e.data.me.parameters[e.data.me.options.parameter] && e.data.me.parameters[e.data.me.options.parameter].units ? ' ('+e.data.me.parameters[e.data.me.options.parameter].units+')' : '');
@@ -741,8 +739,12 @@ S(document).ready(function(){
 				r = rs[i];
 				p = getGeoJSONPropertiesByKeyValue(e.data.me.layers[e.data.me.views[v].layers[layerid].id].geojson,ky,r);
 				csv += r;
-				csv += ','+(typeof nm==="string" && p[nm] ? (p[nm].match(',') ? '"'+p[nm]+'"' : p[nm]) : "?");
-				for(y = e.data.me.options.years.min; y <= e.data.me.options.years.max; y++) csv += ','+(typeof e.data.me.parameters[e.data.me.options.parameter].dp==="number" ? values[r][y].toFixed(e.data.me.parameters[e.data.me.options.parameter].dp) : values[r][y]);
+				csv += ',';
+				csv += (typeof nm==="string" && p[nm] ? (p[nm].match(',') ? '"'+p[nm]+'"' : p[nm]) : "?");
+				for(y = e.data.me.options.years.min; y <= e.data.me.options.years.max; y++){
+					csv += ',';
+					if(typeof values[r][y]==="number") csv += (typeof e.data.me.parameters[e.data.me.options.parameter].dp==="number" ? values[r][y].toFixed(e.data.me.parameters[e.data.me.options.parameter].dp) : values[r][y]);
+				}
 				csv += '\n'
 			}
 			saveToFile(csv,filename,'text/plain');

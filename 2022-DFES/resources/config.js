@@ -163,6 +163,22 @@ S(document).ready(function(){
 						}
 						return data;
 					}
+				},
+				"DNOlayer":{
+					"file": "data/msoa2dno.json",
+					"process": function(d){
+						// Work out mapping from MSOA to DNO
+						// Data is saved as { DNO: [MSOA1,MSOA2,MSOA3...] }
+						var a,data,i;
+						data = {};
+						for(a in d){
+							for(i = 0; i < d[a].length; i++){
+								data[d[a][i]] = {};
+								data[d[a][i]][a] = 1;
+							}
+						}
+						return data;
+					}
 				}
 			}
 		},

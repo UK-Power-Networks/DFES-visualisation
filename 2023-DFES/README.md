@@ -12,3 +12,9 @@ Things to update on the index page:
 - update the year in the title and h1 tags
 - check all weblinks work and update where needed e.g. lsoa/msoa to be updated to 21 from 11
 - check emails are correct
+
+
+
+TODO LIST
+- Update the MSOA-DNO lookup in data/temp, and work out where this is used
+- Update all mapping table json files in data, using the latest mapping file from ERM

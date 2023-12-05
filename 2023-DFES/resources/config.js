@@ -198,9 +198,9 @@ S(document).ready(function(){
 				"name": "MSOA11NM"
 			},
 			"LADlayer":{
-				"geojson": "data/maps/LAD2020-super-generalised-clipped.geojson",
-				"key": "LAD20CD",
-				"name": "LAD20NM"
+				"geojson": "data/maps/LAD2022-super-generalised-clipped.geojson",
+				"key": "LAD22CD",
+				"name": "LAD22NM"
 			},
 			"LEPlayer":{
 				"geojson": "data/maps/LEP2020-clipped-fullextent-simplified.geojson",

@@ -431,8 +431,8 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						file = 'LAD-'+attr.properties.LAD20CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.LAD20NM || '?')+'</h3><p>'+attr.parameter.title+': '+attr.value.toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The local authority may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						file = 'LAD-'+attr.properties.LAD22CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
+						return '<h3>'+(attr.properties.LAD22NM || '?')+'</h3><p>'+attr.parameter.title+': '+attr.value.toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The local authority may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 
@@ -753,7 +753,7 @@ S(document).ready(function(){
 						for(j = 0; j < this.views[this.options.view].layers.length; j++){
 							l = this.views[this.options.view].layers[j].id;
 							key = "";
-							if(l=="LADlayer") key = "LAD20NM";
+							if(l=="LADlayer") key = "LAD22NM";
 							else if(l=="Countylayer") key = "cty19nm";
 							else if(l=="LEPlayer") key = "lep20nm";
 							else if(l=="LSOAlayer") key = "LSOA11NM";

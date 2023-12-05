@@ -188,9 +188,9 @@ S(document).ready(function(){
 		},
 		"layers": {
 			"LSOAlayer":{
-				"geojson": "data/maps/LSOA2011-super-generalised-clipped.geojson",
-				"key": "LSOA11CD",
-				"name": "LSOA11NM"
+				"geojson": "data/maps/LSOA2021-super-generalised-clipped.geojson",
+				"key": "LSOA21CD",
+				"name": "LSOA21NM"
 			},
 			"MSOAlayer":{
 				"geojson": "data/maps/MSOA2011-super-generalised-clipped.geojson",
@@ -576,9 +576,9 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						file = 'LSOA-'+attr.properties.LSOA11CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
+						file = 'LSOA-'+attr.properties.LSOA21CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
 						console.log(this.data.scenarios[this.options.scenario].data[this.options.parameter]);
-						return '<h3>'+(attr.properties.LSOA11NM || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">'+(this.data.scenarios[this.options.scenario].data[this.options.parameter].dataBy=="msoa" ? 'The values for this parameter are provided at MSOA level so have been equally split between the LSOAs for this view.' : '')+'</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						return '<h3>'+(attr.properties.LSOA21NM || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">'+(this.data.scenarios[this.options.scenario].data[this.options.parameter].dataBy=="msoa" ? 'The values for this parameter are provided at MSOA level so have been equally split between the LSOAs for this view.' : '')+'</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 
@@ -756,7 +756,7 @@ S(document).ready(function(){
 							if(l=="LADlayer") key = "LAD22NM";
 							else if(l=="Countylayer") key = "cty19nm";
 							else if(l=="LEPlayer") key = "lep20nm";
-							else if(l=="LSOAlayer") key = "LSOA11NM";
+							else if(l=="LSOAlayer") key = "LSOA21NM";
 							else if(l=="MSOAlayer") key = "MSOA11NM";
 							if(this.layers[l].geojson && this.layers[l].geojson.features && this.layers[l].key && key){
 								// If we haven't already processed this layer we do so now

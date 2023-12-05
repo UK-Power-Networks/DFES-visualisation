@@ -117,20 +117,7 @@ S(document).ready(function(){
 			},
 			"msoa": {
 				"LSOAlayer": {
-					"file": "data/msoa2lsoa.json",
-					"process": function(d){
-						// Work out mapping from MSOA to LSOA
-						// Data is saved as { LSOA: [LSOA1,LSOA2,LSOA3...] }
-						var a,data,i;
-						data = {};
-						for(a in d){
-							for(i = 0; i < d[a].length; i++){
-								data[d[a][i]] = {};
-								data[d[a][i]][a] = 1;
-							}
-						}
-						return data;
-					}				
+					"file": "data/msoa2lsoa.json"			
 				},
 				"MSOAlayer": {},
 				"LADlayer": {

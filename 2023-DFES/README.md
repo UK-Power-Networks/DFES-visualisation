@@ -17,11 +17,4 @@ Things to update on the index page:
 
 TODO LIST
 - Update the MSOA-DNO lookup in data/temp, and work out where this is used
-- Update all mapping table json files in data/, using the latest mapping file from ERM
-- resources/config.js - update geojsons and layer names
-- data/maps - update geojson files (joe)
-- convert dfes files into necessary shape with R
-- replace files in data/scenarios/lsoa
-- replace files in data/scenarios/msoa
-- add any new parameters to index and configuration
-  
+- Update all mapping table json files in data, using the latest mapping file from ERM

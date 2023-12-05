@@ -118,23 +118,10 @@ S(document).ready(function(){
 			"msoa": {
 				"LSOAlayer": {
 					"file": "data/msoa2lsoa.json"
-					"process": function(d){
-						// Work out mapping from MSOA to LSOA
-						// Data is saved as { LSOA: [LSOA1,LSOA2,LSOA3...] }
-						var a,data,i;
-						data = {};
-						for(a in d){
-							for(i = 0; i < d[a].length; i++){
-								data[d[a][i]] = {};
-								data[d[a][i]][a] = 1;
-							}
-						}
-						return data;
-					}
 				},
 				"MSOAlayer": {},
 				"LADlayer": {
-					"file": "data/msoa2lad-compact.json",
+					"file": "data/msoa2lad.json",
 					"process": function(d){
 						// Work out mapping from MSOA to LAD
 						// Data is saved as { LAD: [MSOA1,MSOA2,MSOA3...] }
@@ -201,19 +188,19 @@ S(document).ready(function(){
 		},
 		"layers": {
 			"LSOAlayer":{
-				"geojson": "data/maps/LSOA2021-super-generalised-clipped.geojson",
-				"key": "LSOA21CD",
-				"name": "LSOA21NM"
+				"geojson": "data/maps/LSOA2011-super-generalised-clipped.geojson",
+				"key": "LSOA11CD",
+				"name": "LSOA11NM"
 			},
 			"MSOAlayer":{
-				"geojson": "data/maps/MSOA2021-super-generalised-clipped.geojson",
-				"key": "MSOA21CD",
-				"name": "MSOA21NM"
+				"geojson": "data/maps/MSOA2011-super-generalised-clipped.geojson",
+				"key": "MSOA11CD",
+				"name": "MSOA11NM"
 			},
 			"LADlayer":{
-				"geojson": "data/maps/LAD2023-super-generalised-clipped.geojson",
-				"key": "LAD23CD",
-				"name": "LAD23NM"
+				"geojson": "data/maps/LAD2020-super-generalised-clipped.geojson",
+				"key": "LAD20CD",
+				"name": "LAD20NM"
 			},
 			"LEPlayer":{
 				"geojson": "data/maps/LEP2020-clipped-fullextent-simplified.geojson",
@@ -517,8 +504,8 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						file = 'MSOA-'+attr.properties.MSOA21CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.MSOA21NM || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The MSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						file = 'MSOA-'+attr.properties.MSOA11CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
+						return '<h3>'+(attr.properties.MSOA11NM || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The MSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 
@@ -766,11 +753,11 @@ S(document).ready(function(){
 						for(j = 0; j < this.views[this.options.view].layers.length; j++){
 							l = this.views[this.options.view].layers[j].id;
 							key = "";
-							if(l=="LADlayer") key = "LAD23NM";
+							if(l=="LADlayer") key = "LAD20NM";
 							else if(l=="Countylayer") key = "cty19nm";
 							else if(l=="LEPlayer") key = "lep20nm";
-							else if(l=="LSOAlayer") key = "LSOA21NM";
-							else if(l=="MSOAlayer") key = "MSOA21NM";
+							else if(l=="LSOAlayer") key = "LSOA11NM";
+							else if(l=="MSOAlayer") key = "MSOA11NM";
 							if(this.layers[l].geojson && this.layers[l].geojson.features && this.layers[l].key && key){
 								// If we haven't already processed this layer we do so now
 								if(!this.search._added[l]){

@@ -117,7 +117,7 @@ S(document).ready(function(){
 			},
 			"msoa": {
 				"LSOAlayer": {
-					"file": "data/msoa2lsoa.json"
+					"file": "data/msoa2lsoa.json",
 					"process": function(d){
 						// Work out mapping from MSOA to LSOA
 						// Data is saved as { LSOA: [LSOA1,LSOA2,LSOA3...] }

@@ -193,9 +193,9 @@ S(document).ready(function(){
 				"name": "LSOA21NM"
 			},
 			"MSOAlayer":{
-				"geojson": "data/maps/MSOA2011-super-generalised-clipped.geojson",
-				"key": "MSOA11CD",
-				"name": "MSOA11NM"
+				"geojson": "data/maps/MSOA2021-super-generalised-clipped.geojson",
+				"key": "MSOA21CD",
+				"name": "MSOA21NM"
 			},
 			"LADlayer":{
 				"geojson": "data/maps/LAD2022-super-generalised-clipped.geojson",
@@ -504,8 +504,8 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						file = 'MSOA-'+attr.properties.MSOA11CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.MSOA11NM || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The MSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						file = 'MSOA-'+attr.properties.MSOA21CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
+						return '<h3>'+(attr.properties.MSOA21NM || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The MSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 
@@ -757,7 +757,7 @@ S(document).ready(function(){
 							else if(l=="Countylayer") key = "cty19nm";
 							else if(l=="LEPlayer") key = "lep20nm";
 							else if(l=="LSOAlayer") key = "LSOA21NM";
-							else if(l=="MSOAlayer") key = "MSOA11NM";
+							else if(l=="MSOAlayer") key = "MSOA21NM";
 							if(this.layers[l].geojson && this.layers[l].geojson.features && this.layers[l].key && key){
 								// If we haven't already processed this layer we do so now
 								if(!this.search._added[l]){

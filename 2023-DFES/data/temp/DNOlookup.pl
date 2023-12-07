@@ -6,7 +6,7 @@ open(FILE,$ARGV[0]||"DNOlookup.tsv");
 close(FILE);
 
 $areahead = $ARGV[1]||"Licence area";
-$msoahead = $ARGV[2]||"MSOA11CD";
+$msoahead = $ARGV[2]||"MSOA21CD";
 
 %areas;
 

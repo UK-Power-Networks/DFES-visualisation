@@ -32,7 +32,7 @@
 			"Dom-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Air Conditioning_Falling Short_Domestic AC.csv", "key": "LSOA21CD" },
 			"I&C-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Air Conditioning_Falling Short_Non-domestic AC.csv", "key": "LSOA21CD" },
 			"Biomass": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Biomass & energy crops (including CHP).csv", "key": "MSOA21CD" },
-			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Co-located storage.csv", "key": "MSOA21CD" },
+			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Falling Short_Generation Co-Location.csv", "key": "MSOA21CD" },
 			"Hydrogen": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Hydrogen.csv", "key": "MSOA21CD" },
 			"Large-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Non-renewable CHP (greater than1 MW).csv", "key": "MSOA21CD" },
 			"Small-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Non-renewable CHP (less than=1 MW).csv", "key": "MSOA21CD" },
@@ -43,7 +43,7 @@
 			"Other generation": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Other.csv", "key": "MSOA21CD" },
 			"Renewable_engines": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA21CD" },
 			"large-solar": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Solar Generation (Large greater than150 kW).csv", "key": "MSOA21CD" },
-			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Storage.csv", "key": "MSOA21CD" },
+			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Falling Short_Standalone - Grid Services.csv", "key": "MSOA21CD" },
 			"Waste_incineration": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Falling Short_Waste incineration (including CHP).csv", "key": "MSOA21CD" }
 			
 		}
@@ -81,7 +81,7 @@
 			"Dom-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Air Conditioning_Consumer Transformation_Domestic AC.csv", "key": "LSOA21CD" },
 			"I&C-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Air Conditioning_Consumer Transformation_Non-domestic AC.csv", "key": "LSOA21CD" },
 			"Biomass": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Biomass & energy crops (including CHP).csv", "key": "MSOA21CD" },
-			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Co-located storage.csv", "key": "MSOA21CD" },
+			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Consumer Transformation_Generation Co-Location.csv", "key": "MSOA21CD" },
 			"Hydrogen": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Hydrogen.csv", "key": "MSOA21CD" },
 			"Large-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Non-renewable CHP (greater than1 MW).csv", "key": "MSOA21CD" },
 			"Small-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Non-renewable CHP (less than=1 MW).csv", "key": "MSOA21CD" },
@@ -92,7 +92,7 @@
 			"Other generation": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Other.csv", "key": "MSOA21CD" },
 			"Renewable_engines": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA21CD" },
 			"large-solar": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Solar Generation (Large greater than150 kW).csv", "key": "MSOA21CD" },
-			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Storage.csv", "key": "MSOA21CD" },
+			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Consumer Transformation_Standalone - Grid Services.csv", "key": "MSOA21CD" },
 			"Waste_incineration": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Consumer Transformation_Waste incineration (including CHP).csv", "key": "MSOA21CD" }
 			
 
@@ -131,7 +131,7 @@
 			"Dom-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Air Conditioning_System Transformation_Domestic AC.csv", "key": "LSOA21CD" },
 			"I&C-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Air Conditioning_System Transformation_Non-domestic AC.csv", "key": "LSOA21CD" },
 			"Biomass": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Biomass & energy crops (including CHP).csv", "key": "MSOA21CD" },
-			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Co-located storage.csv", "key": "MSOA21CD" },
+			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_System Transformation_Generation Co-Location.csv", "key": "MSOA21CD" },
 			"Hydrogen": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Hydrogen.csv", "key": "MSOA21CD" },
 			"Large-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Non-renewable CHP (greater than1 MW).csv", "key": "MSOA21CD" },
 			"Small-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Non-renewable CHP (less than=1 MW).csv", "key": "MSOA21CD" },
@@ -142,7 +142,7 @@
 			"Other generation": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Other.csv", "key": "MSOA21CD" },
 			"Renewable_engines": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA21CD" },
 			"large-solar": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Solar Generation (Large greater than150 kW).csv", "key": "MSOA21CD" },
-			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Storage.csv", "key": "MSOA21CD" },
+			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_System Transformation_Standalone - Grid Services.csv", "key": "MSOA21CD" },
 			"Waste_incineration": { "dataBy": "msoa", "file": "msoa/Distributed Generation_System Transformation_Waste incineration (including CHP).csv", "key": "MSOA21CD" }
 			
 		}
@@ -180,7 +180,7 @@
 			"Dom-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Air Conditioning_Leading the Way_Domestic AC.csv", "key": "LSOA21CD" },
 			"I&C-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Air Conditioning_Leading the Way_Non-domestic AC.csv", "key": "LSOA21CD" },
 			"Biomass": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Biomass & energy crops (including CHP).csv", "key": "MSOA21CD" },
-			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Co-located storage.csv", "key": "MSOA21CD" },
+			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Leading the Way_Generation Co-Location.csv", "key": "MSOA21CD" },
 			"Hydrogen": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Hydrogen.csv", "key": "MSOA21CD" },
 			"Large-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Non-renewable CHP (greater than1 MW).csv", "key": "MSOA21CD" },
 			"Small-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Non-renewable CHP (less than=1 MW).csv", "key": "MSOA21CD" },
@@ -191,7 +191,7 @@
 			"Other generation": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Other.csv", "key": "MSOA21CD" },
 			"Renewable_engines": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA21CD" },
 			"large-solar": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Solar Generation (Large greater than150 kW).csv", "key": "MSOA21CD" },
-			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Storage.csv", "key": "MSOA21CD" },
+			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Leading the Way_Standalone - Grid Services.csv", "key": "MSOA21CD" },
 			"Waste_incineration": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Leading the Way_Waste incineration (including CHP).csv", "key": "MSOA21CD" }
 			
 

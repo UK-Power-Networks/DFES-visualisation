@@ -37,7 +37,7 @@ S(document).ready(function(){
 			"key": (new Date()).getFullYear()+"",
 			"parameter": "bev",
 			"scale": "relative",
-			"years": {"min":2021,"max":2050},
+			"years": {"min":2022,"max":2050},
 			"map": {
 				"bounds": [[50.7,-1.55],[53,2]],
 				"attribution": "Vis: <a href=\"https://open-innovations.org/projects/\">Open Innovations</a>, Data: UK Power Networks",

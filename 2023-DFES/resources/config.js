@@ -209,8 +209,8 @@ S(document).ready(function(){
 			},
 			"Countylayer":{
 				"geojson": "data/maps/Counties-clipped-simplified.geojson",
-				"key": "cty19cd",
-				"name": "cty19cd"
+				"key": "cty22cd",
+				"name": "cty22cd"
 			},
 			"DNOlayer":{
 				"geojson": "data/maps/DNO-clipped-simplified.geojson",
@@ -365,8 +365,8 @@ S(document).ready(function(){
 				}],
 				"popup": {
 					"text": function(attr){
-						file = 'County-'+attr.properties.cty19cd+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.cty19nm || '?')+'</h3><p>'+attr.parameter.title+': '+attr.value.toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The area has been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						file = 'County-'+attr.properties.cty22cd+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
+						return '<h3>'+(attr.properties.cty22nm || '?')+'</h3><p>'+attr.parameter.title+': '+attr.value.toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The area has been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 						var data,c,p,key,values,l;
@@ -754,7 +754,7 @@ S(document).ready(function(){
 							l = this.views[this.options.view].layers[j].id;
 							key = "";
 							if(l=="LADlayer") key = "LAD22NM";
-							else if(l=="Countylayer") key = "cty19nm";
+							else if(l=="Countylayer") key = "cty22nm";
 							else if(l=="LEPlayer") key = "lep20nm";
 							else if(l=="LSOAlayer") key = "LSOA21NM";
 							else if(l=="MSOAlayer") key = "MSOA21NM";

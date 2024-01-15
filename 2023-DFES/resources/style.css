@@ -309,7 +309,7 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 #issues { margin-top: 0.5em; text-align: right; }
 .thickline { height: 10px; }
 .thinline { height: 2px; }
-.title { border-bottom: .0625rem solid #e0e0e0; color: black; background-color: white; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://innovation.ukpowernetworks.co.uk/wp-content/themes/ukpn-innov-theme/assets/images/home-banner_parallax_bg_desktop.png"); }
+.title {text-align: center; border-bottom: .0625rem solid #e0e0e0; color: black; background-color: white; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://innovation.ukpowernetworks.co.uk/wp-content/themes/ukpn-innov-theme/assets/images/home-banner_parallax_bg_desktop.png"); }
 
 /* DFES colours */
 .Falling-Short { background-color: #555; color: white; }

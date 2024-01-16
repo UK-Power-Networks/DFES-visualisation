@@ -323,7 +323,7 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 .net-zero { background-color: #00AB84!important; color: white!important; }
 .net-zero-text { color: #00AB84!important; }
 #FAQ.about {
-    background-color: #454a60;
+    background-color: #4c4ebd;
     color: white !important;
 }
 .warning { background-color: #F9BC26; color: black; }

@@ -66,7 +66,7 @@ footer {
 	padding-bottom: 3em;
 }
 footer a, #cookie_banner a { color: inherit; }
-footer, #cookie_banner { 	background: #30354a; color: #fff; }
+footer, #cookie_banner { 	background: #27187E; color: #fff; }
 #cookie_banner { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1000;}
 #cookie_banner_close { position: absolute; top: 1em; right: 1em; font-size: 1.3em; }
 

@@ -18,7 +18,7 @@ Things to update on the index page:
 
 ANNUAL UPDATE PROCESS
 - Update all mapping table json files in data/, using the latest mapping file from ERM, only needs to be updated if boundaries are updated in the DFES
-- resources/config.js - update geojsons and layer names
+- resources/config.js - update geojsons and layer names, only needs to be updated if boundaries are updated in the DFES
 - data/maps - update geojson files, we got this from open innovations this year, only needs to be updated if boundaries are updated in the DFES
 - convert dfes files into necessary shape with R (script saved on sharepoint)
 - replace files in data/scenarios/lsoa with new dfes files from the R script

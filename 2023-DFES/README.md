@@ -12,15 +12,15 @@ Things to update on the index page:
 - update the year in the title and h1 tags
 - check all weblinks work and update where needed e.g. lsoa/msoa to be updated to 21 from 11
 - check emails are correct
+- Update the FAQ and text
 
 
 
-TODO LIST
-- Update the MSOA-DNO lookup in data/temp, and work out where this is used
-- Update all mapping table json files in data/, using the latest mapping file from ERM
+ANNUAL UPDATE PROCESS
+- Update all mapping table json files in data/, using the latest mapping file from ERM, only needs to be updated if boundaries are updated in the DFES
 - resources/config.js - update geojsons and layer names
-- data/maps - update geojson files (joe)
-- convert dfes files into necessary shape with R
-- replace files in data/scenarios/lsoa
-- replace files in data/scenarios/msoa
-- add any new parameters to index and configuration
+- data/maps - update geojson files, we got this from open innovations this year, only needs to be updated if boundaries are updated in the DFES
+- convert dfes files into necessary shape with R (script saved on sharepoint)
+- replace files in data/scenarios/lsoa with new dfes files from the R script
+- replace files in data/scenarios/msoa with new dfes files from the R script
+- add any new parameters to index and configuration using the info on that page

@@ -6,4 +6,5 @@ The following visualisations were made in collaboration with [Open Innovations](
 * [UK Power Networks Future Energy Scenarios 2022](https://uk-power-networks.github.io/DFES-visualisation/2021-DFES)
 * [UK Power Networks Future Energy Scenarios 2023](https://uk-power-networks.github.io/DFES-visualisation/2022-DFES)
 * [UK Power Networks Future Energy Scenarios 2024](https://uk-power-networks.github.io/DFES-visualisation/2023-DFES)
+* [UK Power Networks Future Energy Scenarios 2025](https://uk-power-networks.github.io/DFES-visualisation/2024-DFES)
 

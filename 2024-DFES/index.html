@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6MZ2CDXYY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WNH3DNT0PS');
+</script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>UK Power Networks DFES 2024</title>
+	<link rel="StyleSheet" href="resources/nouislider.min.css" type="text/css" />
+	<link rel="StyleSheet" href="resources/leaflet.css" type="text/css" />
+	<link rel="StyleSheet" href="resources/stuquery.barchart.css" type="text/css" />
+	<link rel="StyleSheet" href="resources/style.css" type="text/css" />
+	<link href="https://d1lf1oz5vvdb9r.cloudfront.net/app/uploads/2023/06/cropped-ukpn-favicon-32x32.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<script type="text/javascript" src="resources/stuquery.js"></script>
+	<script type="text/javascript" src="resources/nouislider.min.js"></script>
+	<script type="text/javascript" src="resources/typeahead.js"></script>
+	<script type="text/javascript" src="resources/dom-to-image.min.js"></script>
+	<script type="text/javascript" src="resources/dfes.js"></script>
+	<script type="text/javascript" src="resources/config.js"></script>
+	<script type="text/javascript" src="resources/leaflet.js"></script>
+	<script type="text/javascript" src="resources/stuquery.barchart.min.js"></script>
+</head>
+<body>
+	
+	<header class="b2-bg">
+		<div class="holder">
+			<a href="https://open-innovations.org/"><img alt="Open Innovations"
+					src="https://open-innovations.org/resources/images/logos/oi-square-white.svg" title="Open Innovations"></a>
+			<a href="https://dso.ukpowernetworks.co.uk/"><img alt="UK Power Networks Distribution System Operator"
+					src="resources/UKPN_DSO_WHITE.png" title="UK Power Networks"></a>
+			<a href="https://www.erm.com/"><img alt="ERM"
+					src="resources/ERM_Horizontal_White_RGB.svg" title="ERM"></a>
+		</div>
+		<div class="title">
+			<div class="holder">
+				<h1>UK Power Networks Distribution Future Energy Scenarios - 2024</h1>
+			</div>
+		</div>
+	</header>
+
+
+	<div class="b6-bg" id="scenario">
+		<div class="intro tallpadded">
+			<div class="holder">
+				<p>This interactive heat map displays our Distribution Future Energy Scenarios (DFES) forecasts for key drivers within our licence area up until 2050.
+				The scenarios are designed to illustrate energy futures with different levels of decentralisation, decarbonisation, and digitalisation.
+				We are always keen to understand what our stakeholders think, and and any views you may have are welcome via email at <a href="mailto:networkinsights@ukpowernetworks.co.uk?subject=DFES%20Interactive%20Map%20Feedback">networkinsights@ukpowernetworks.co.uk</a>. For <a href="#FAQ">FAQs on this visualisation</a>, please scroll to the bottom of the page.
+				To learn more about the DFES, read our technical document, summary report or download the source data, <strong>please visit our <a href="https://dso.ukpowernetworks.co.uk/distribution-future-energy-scenarios"> DFES website</a></strong>.
+			</p>
+			</div>
+		</div>
+		<div class="scenario thickline"></div>
+		
+		<div class="columns">
+			<div class="left">
+				<p>UKPN's future energy scenarios as interpreted from the 2023 <a href="https://www.nationalgrideso.com/future-energy/future-energy-scenarios#fullsuite">National Grid Future Energy Scenarios</a>.</p>
+				<h2><label for="scenarios">Choose a scenario</label>:</h2>
+				<div id="scenario-holder"></div>
+				<h2><label for="parameters">Choose a parameter</label>:</h2>
+				<div id="parameter-holder"></div>
+				<h2><label for="views">View by</label>:</h2>
+				<div id="view-holder"></div>
+				<div class="info-bubble warning" data-scale="absolute" style="display:none;"><p>To improve the contrast between areas within your chosen year you may wish to change the colour scale.</p></div>
+
+				<h2>Select year (<span class="year"></span>):</h2>
+				<div id="slider"></div>
+				<div><button id="play" class="scenario" title="Play">&#9658;</button> <button id="pause" class="scenario" title="Pause" disabled>&#10074;&#10074;</button></div>
+				<div class="info-bubble warning" data-scale="relative"><p>To better show changes in values over time you may wish to change the colour scale.</p></div>
+
+				<div id="download">
+					<button class="page-header__branding scenario" id="download-csv"><svg width="1em" height="1em" viewBox="0 0 32 32" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M 0 32 l 32 0 l 0 -10 l -4 0 l 0 6 l -24 0 l 0 -6 l -4 0 l 0 10 M 12 5 l 8 0 l 0 10 l 8 0 l -12 12 l -12 -12 l 8 0"></path></svg> Download CSV for this view</button>
+				</div>
+			</div>
+			<div class="right">
+				<div class="message"></div>
+				<div id="screenshot">
+					<div id="map">
+						<div class="spinner">
+							<svg version="1.1" width="64" height="64" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+								<g transform="matrix(.11601 0 0 .11601 -49.537 -39.959)">
+								<path d="m610.92 896.12m183.9-106.17-183.9-106.17-183.9 106.17v212.35l183.9 106.17 183.9-106.17z" fill="black"><animate attributeName="opacity" values="1;0;0" keyTimes="0;0.7;1" dur="1s" begin="-0.83333s" repeatCount="indefinite" /></path>
+								<path d="m794.82 577.6m183.9-106.17-183.9-106.17-183.9 106.17v212.35l183.9 106.17 183.9-106.17z" fill="black"><animate attributeName="opacity" values="1;0;0" keyTimes="0;0.7;1" dur="1s" begin="-0.6666s" repeatCount="indefinite" /></path>
+								<path d="m1162.6 577.6m183.9-106.17-183.9-106.17-183.9 106.17v212.35l183.9 106.17 183.9-106.17z" fill="black"><animate attributeName="opacity" values="1;0;0" keyTimes="0;0.7;1" dur="1s" begin="-0.5s" repeatCount="indefinite" /></path>
+								<path d="m1346.5 896.12m183.9-106.17-183.9-106.17-183.9 106.17v212.35l183.9 106.17 183.9-106.17z" fill="black"><animate attributeName="opacity" values="1;0;0" keyTimes="0;0.7;1" dur="1s" begin="-0.3333s" repeatCount="indefinite" /></path>
+								<path d="m1162.6 1214.6m183.9-106.17-183.9-106.17-183.9 106.17v212.35l183.9 106.17 183.9-106.17z" fill="black"><animate attributeName="opacity" values="1;0;0" keyTimes="0;0.7;1" dur="1s" begin="-0.1666s" repeatCount="indefinite" /></path>
+								<path d="m794.82 1214.6m183.9-106.17-183.9-106.17-183.9 106.17v212.35l183.9 106.17 183.9-106.17z" fill="black"><animate attributeName="opacity" values="1;0;0" keyTimes="0;0.7;1" dur="1s" begin="0s" repeatCount="indefinite" /></path>
+								</g>
+							</svg>
+						</div>
+					</div>
+					<div id="scale"></div>
+				</div>
+				<div id="scale-holder" class="toggleinput toggler">
+					<label for="scale-mode">Automatically adjust colour scale?</label>
+					<div id="scale-holder" class="toggleinput toggler">
+						<span class="toggle-label1" title="To compare the values of different areas for the current year">Yes</span><div class="toggle-bg">
+							<input type="checkbox" id="scale-mode" name="scale-mode" title="Select for an absolute scale" />
+							<span class="switch"></span>
+						</div><span class="toggle-label2" title="To compare the values of different areas across the the full range of years">No</span>
+					</div>
+				</div>
+				<div class="info-bubble warning">
+					<p>Select <strong>Yes</strong> and the colour scale at the bottom of the map will change depending on the year you have selected. This will help improve contrast for each area within your chosen year. Select <strong>No</strong> and the colour scale at the bottom of the map will stay the same as you move through the years.</p>
+				</div>
+				<div id="issues"><a href="#" onClick="saveDOMImage(document.getElementById('screenshot'));">Save map as PNG</a> | <a href="https://www.ukpowernetworks.co.uk/future-energy/dfes-2023">Get the data</a> | <a href="https://github.com/UK-Power-Networks/DFES-visualisation/issues">Report any issues you find</a> with our tool</div>
+			</div>
+		</div>
+	</div>
+	<div class="scenario thickline"></div>
+	<div class="about tallpadded" id="FAQ">
+		<div class="holder">
+			<h2>Frequently Asked Questions</h2>
+			<h3>When do the years refer to?</h3>
+			<p>Each forecast value is the value as at the end of the regulatory year which runs from April to March the following year. Taking the year 2030 as an example: 2030/31 is the relevant regulatory year; the forecast value is as of March 2031 (being the end of the regulatory year).</p>
+			<h3>How did you choose the different scenarios?</h3>
+			<p>All DNOs have agreed to align to a common scenario framework to allow comparability between the licence areas. The framework was developed as part of the Energy Networks Association’s Open Networks project and was published by National Grid in July 2021, and annually since then.</p>
+			<h3>How are the Distribution Future Energy Scenarios forecasted?</h3>
+			<p>The Distribution Future Energy Scenarios forecasts are built bottom up by combining specialist knowledge and modelling by UK Power Network’s consultants ERM using their bespoke forecasting tools”. Different drivers are forecasted in different ways, for example the EV forecasts are created using the ERM Car Consumer model, which takes in scenarios for a full suite of parameters that influence the decisions made by vehicle purchasers such as vehicle costs, fuel costs, government subsidy, model availability and more. Meanwhile, some of the distributed generation forecasts, such as Open Cycle Gas Turbine generation, is disaggregated from National Grid’s Future Energy Scenarios forecasts.</p>
+			<h3>What is the purpose of this information/why is this helpful?</h3>
+			<p>As different areas decarbonise at different rates, we will start to see clusters of low-carbon technologies (LCTs) emerge. This represents a challenge for the network in being able to connect these technologies whilst maintaining a safe and reliable source of power. It takes time to reinforce the network or deploy smart solutions to accommodate any sudden influx of LCTs. Which is why we need geographically specific forecasting to know where these clusters are going to be, allowing us to ensure our network is ready.
+In addition to the DFES being used by ourselves to plan our network investment strategy. We believe it represents a useful resource for regional governmental bodies to help plan their climate strategies. Previous engagement has shown that 90% of local authorities who responded to our survey said they plan to use DFES data to inform their climate action plans.</p>
+			<h3>Why are some Local Authorities only partially shown?</h3>
+			<p>We only forecast for regions within our licence area, which does not match up exactly with Local Authority boundaries. This is why, if you select "View by: Local Authorities" and click "Download CSV for this view", the values shown will only correspond to the portion of the Local Authority within our licence area.</p>
+			<h3>What’s different from last year's DFES?</h3>
+			<p>Within this latest edition, notable enhancements have been made to our baseline data, and the forecast is incorporating revised assumptions related to reduced availability of electric vehicles (EVs) and higher grants for heat pumps.
+				There is deeper analysis of battery storage. Grid-scale storage connections grew from 530MW to 830MW over just six months in 2023, and we assessed a pipeline of 15GW to form realistic uptake profiles. We also horizon scan, and assess for the first time the prospects for long duration energy storage.
+				New for this year, our analysis is stated on the latest Census 2021 spatial geography of 11,000 Lower Layer Super Output Areas (LSOAs), updating from the 2011 definitions.  
+				</p>
+			
+		</div>
+	</div>
+	<div class="scenario thickline"></div>
+	<footer class="tallpadded">
+		<div class="holder">
+			<h2>Credits</h2>
+			<h3>Interactive visualisation</h3>
+			<p>&copy; Open Innovations 2020-2. Released under an <a href="https://github.com/open-innovations/ukpn-dfes/blob/main/LICENSE">MIT licence</a>. View the <a href="https://github.com/UK-Power-Networks/DFES-visualisation">repository on Github</a>.</p>
+			<h3>Energy scenario data</h3>
+			<p>&copy; UK Power Networks &amp; ERM 2024. Released under a Creative Commons Attribution Licence.</p>
+			<h3>Geography</h3>
+			<p>Middle-Layer Super Output Areas (MSOAs) names come from <a href="https://houseofcommonslibrary.github.io/msoanames/">version 2.20 of the 2021 MSOA Names</a> by the House of Commons Library. Released under the <a href="https://www.parliament.uk/site-information/copyright/open-parliament-licence">Open Parliament Licence</a>.</p>
+			<p><a href="https://geoportal.statistics.gov.uk/datasets/17b29f83b4bd4bd1854322f3785bb28d/explore">Local Enterprise Partnership boundaries (May 2021)</a>, and <a href="https://geoportal.statistics.gov.uk/datasets/bb427d36197443959de8a1462c8f1c55_0/explore">LSOA boundaries (December 2021)</a> use data from the ONS geo service. They are <a href="https://www.ons.gov.uk/methodology/geography/licences">released under the OGL</a>:</p>
+			<ul>
+				<li>Contains National Statistics data © Crown copyright and database right 2023</li>
+				<li>Contains OS data © Crown copyright and database right 2023</li>
+			</ul>
+
+		</div>
+	</footer>
+	<div id="cookie_banner">
+		<div class="scenario thinline"></div>
+		<div class="holder">
+			<div class="close"></div>
+			<h4>Cookies</h4>
+			<p>We take your data privacy seriously. View our <a href="https://www.ukpowernetworks.co.uk/internet/en/privacy-policy/">Privacy Policy</a>. This site uses cookies to improve your visitor experience and by using this site you agree to these cookies being set. View our <a href="https://www.ukpowernetworks.co.uk/internet/en/cookie-policy/">Cookie Policy</a>.</p>
+		</div>
+		<a href="#" id="cookie_banner_close">Close &times;</a>
+	</div>
+	<div class="scenario thickline"></div>
+	<script>
+	var banner,pad,body,close;
+	body = document.body;
+	banner = document.getElementById('cookie_banner');
+	close = document.getElementById('cookie_banner_close');
+	if(banner && body && close){
+		pad = body.style['padding-bottom'];
+		body.style['padding-bottom'] = banner.offsetHeight+'px';
+		if(close) close.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); banner.style.display = "none"; body.style['padding-bottom'] = pad; });
+	}
+	</script>
+</body>
+</html>

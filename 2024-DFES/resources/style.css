@@ -313,7 +313,7 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 
 /* DFES colours */
 .Falling-Short { background-color: #555; color: white; }
-.consumer-transformation { background-color: #FFC000; color: black; }
+.electric-engagement { background-color: #FFC000; color: black; }
 .system-transformation { background-color: #00B0F0; color: black; }
 .leading-the-way { background-color: #92D050; color: black; }
 .deep-electrification { background-color: #AB1236!important; color: white!important; }

@@ -32,7 +32,7 @@ S(document).ready(function(){
 
 	dfes = new FES({
 		"options": {
-			"scenario": "Electric Engagement",
+			"scenario": "Holistic Transition",
 			"view": "LAD",
 			"key": (new Date()).getFullYear()+"",
 			"parameter": "bev",

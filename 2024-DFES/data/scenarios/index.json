@@ -53,7 +53,7 @@
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Electric Engagement_BEV cars.csv", "key": "LSOA21CD" },
 			"phev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Electric Engagement_PHEV cars.csv", "key": "LSOA21CD" },
-			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus__Electric Engagement_BEV buses.csv","key":"LSOA21CD" },
+			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus_Electric Engagement_BEV buses.csv","key":"LSOA21CD" },
 			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Electric Engagement_Domestic electric resistive heating.csv", "key": "LSOA21CD" },
 			"domestic-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Electric Engagement_Domestic heat pump.csv", "key": "LSOA21CD" },
 			"domestic-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Electric Engagement_Domestic hybrid heat pump.csv", "key": "LSOA21CD" },
@@ -104,7 +104,7 @@
 			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus_Hydrogen Evolution_BEV buses.csv","key":"LSOA21CD" },
 			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Hydrogen Evolution_Domestic electric resistive heating.csv", "key": "LSOA21CD" },
 			"domestic-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Hydrogen Evolution_Domestic heat pump.csv", "key": "LSOA21CD" },
-			"domestic-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Hydrogen Evolutionn_Domestic hybrid heat pump.csv", "key": "LSOA21CD" },
+			"domestic-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Hydrogen Evolution_Domestic hybrid heat pump.csv", "key": "LSOA21CD" },
 			"Coach": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Coach_Hydrogen Evolution_BEV coaches.csv", "key": "LSOA21CD" },
 			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C District Heat_Hydrogen Evolution_Non-domestic district heating.csv", "key": "LSOA21CD" },
 			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_Hydrogen Evolution_Domestic battery capacity.csv", "key": "LSOA21CD" },

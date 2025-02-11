@@ -312,7 +312,7 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 .title {font-size: 24px; font-weight: bold; text-align: center; border-bottom: .0625rem solid #e0e0e0; color: #F04F14; background-color: white; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://innovation.ukpowernetworks.co.uk/wp-content/themes/ukpn-innov-theme/assets/images/home-banner_parallax_bg_desktop.png"); }
 
 /* DFES colours */
-.counterfactual { background-color: #555; color: white; }
+.counterfactual { background-color: #CBD449; color: white; }
 .electric-engagement { background-color: #F26522; color: black; }
 .hydrogen-evolution { background-color: #0079C1; color: black; }
 .holistic-transition { background-color: #454546; color: black; }

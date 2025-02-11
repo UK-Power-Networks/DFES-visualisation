@@ -44,8 +44,7 @@
 			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Counterfactual_Standalone - Grid Services.csv", "key": "MSOA21CD" },
 			"Waste_incineration": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Waste incineration (including CHP).csv", "key": "MSOA21CD" }
 }
-			}
-	}
+			},
 	"Electric Engagement": {
 		"description": "<ul><li>Reaches 2050 Net Zero target thanks to widespread electrification</li></ul>",
 		"color": "#FFC000",

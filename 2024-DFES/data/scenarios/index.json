@@ -1,7 +1,7 @@
 {
 	"Counterfactual": {
 		"description": "<ul><li>Business as usual scenario, does not meet the 2050 Net Zero target</li></ul>",
-		"color": "#555555",
+		"color": "#454546",
 		"css": "counterfactual",
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Counterfactual_BEV cars.csv", "key": "LSOA21CD" },
@@ -47,7 +47,7 @@
 			},
 	"Electric Engagement": {
 		"description": "<ul><li>Reaches 2050 Net Zero target thanks to widespread electrification</li></ul>",
-		"color": "#FFC000",
+		"color": "#F26522",
 		"css": "electric-engagement",
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Electric Engagement_BEV cars.csv", "key": "LSOA21CD" },
@@ -95,7 +95,7 @@
 	},
 	"Hydrogen Evolution": {
 		"description": "<ul><li>Reaches 2050 Net Zero target by relying on hydrogen to decarbonise the more difficult sectors of heat and heavy transport</li></ul>",
-		"color": "#00B0F0",
+		"color": "#0079C1",
 		"css": "hydrogen-evolution",
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Hydrogen Evolution_BEV cars.csv", "key": "LSOA21CD" },
@@ -142,7 +142,7 @@
 	},
 	"Holistic Transition": {
 		"description": "<ul><li>Achieves Net Zero ahead of the 2050 target thanks to a combination of electric and hydrogen technologies</li></ul>",
-		"color": "#92D050",
+		"color": "#C2CD23",
 		"css": "holistic-transition",
 		"data": {
 			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Holistic Transition_BEV cars.csv", "key": "LSOA21CD" },

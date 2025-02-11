@@ -440,7 +440,13 @@ stuQuery.prototype.ajax = function(url,attrs){
 	function complete(evt) {
 		if(oReq.status === 200) {
 			attrs.header = oReq.getAllResponseHeaders();
-			var rsp = oReq.response || oReq.responseText;
+			var rsp;
+			if (oReq.responseType === "" || oReq.responseType === "text") {
+    			rsp = oReq.responseText;  // Use responseText for text
+			} else {
+    			rsp = oReq.response;  // Use response for JSON
+			}
+
 			// Parse out content in the appropriate callback
 			if(attrs['dataType']=="json") try { rsp = JSON.parse(rsp.replace(/[\n\r]/g,"\\n").replace(/^([^\(]+)\((.*)\)([^\)]*)$/,function(e,a,b,c){ return (a==cb) ? b:''; }).replace(/\\n/g,"\n")) } catch(e){};
 			if(attrs['dataType']=="script"){

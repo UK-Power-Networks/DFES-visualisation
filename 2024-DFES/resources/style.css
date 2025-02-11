@@ -313,9 +313,9 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 
 /* DFES colours */
 .counterfactual { background-color: #555; color: white; }
-.electric-engagement { background-color: #FFC000; color: black; }
-.hydrogen-evolution { background-color: #00B0F0; color: black; }
-.holistic-transition { background-color: #92D050; color: black; }
+.electric-engagement { background-color: #F26522; color: black; }
+.hydrogen-evolution { background-color: #0079C1; color: black; }
+.holistic-transition { background-color: #454546; color: black; }
 .deep-electrification { background-color: #AB1236!important; color: white!important; }
 .deep-electrification-text { color: #AB1236!important; }
 .high-hydrogen { background-color: #0085CA!important; color: white!important; }

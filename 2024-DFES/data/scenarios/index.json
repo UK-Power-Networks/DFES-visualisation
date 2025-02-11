@@ -147,7 +147,7 @@
 		}
 	},
 	"Holistic Transition": {
-		"description": "<ul><li>Achieves Net Zero ahead of the 2050 target thanks to a combination of electric and hydrogen technologies</li></ul>",
+		"description": "<ul><li>Achieves Net Zero by 2050 thanks to a combination of electric and hydrogen technologies</li></ul>",
 		"color": "#C2CD23",
 		"css": "holistic-transition",
 		"data": {

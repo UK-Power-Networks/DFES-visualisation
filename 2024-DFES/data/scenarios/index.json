@@ -122,7 +122,7 @@
 			"Motorcycles": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/motorcycles_Hydrogen Evolution_EV motorcycles.csv", "key": "LSOA21CD" },
 			"PHV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/PHV_Hydrogen Evolution_EV PHVs.csv", "key": "LSOA21CD" },
 			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Hydrogen Evolution_Solar Generation (Small rooftop less than=4kW).csv", "key": "LSOA21CD" },
-			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Hydrgen Evolution_Solar Generation (Large rooftop _4 kW, less than=150kW).csv, "key": "LSOA21CD" },
+			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Hydrogen Evolution_Solar Generation (Large rooftop _4 kW, less than=150kW).csv, "key": "LSOA21CD" },
 			"Taxi": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Taxi_Hydrogen Evolution_EV taxis.csv", "key": "LSOA21CD" },
 			"bev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Hydrogen Evolution_BEV Vans.csv", "key": "LSOA21CD" },
 			"phev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Hydrogen Evolution_PHEV Vans.csv", "key": "LSOA21CD" },

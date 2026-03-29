@@ -1,0 +1,319 @@
+---
+Date: 2022-01-21T11:55:22
+---
+
+Results of validate.pl
+
+## Warnings:
+
+WARNING: No parameter I&C-Floorspace has been defined in config.json but is defined for Consumer Transformation
+WARNING: File "lsoa/2021-DFES/Domestic Connection Count_Central_Domestic connection count.csv" referenced in index.json doesn't appear to exist.
+WARNING: No parameter I&C-Floorspace has been defined in config.json but is defined for Leading the Way
+WARNING: File "lsoa/2020-DFES/I_C Floorspace_Central_Floorspace.csv" referenced in index.json doesn't appear to exist.
+WARNING: File "lsoa/2021-DFES/I&C connections_Central_I&C connections.csv" referenced in index.json doesn't appear to exist.
+WARNING: File "lsoa/2021-DFES/Domestic Connection Count_Central_Domestic connection count.csv" referenced in index.json doesn't appear to exist.
+WARNING: No parameter I&C-Floorspace has been defined in config.json but is defined for Steady Progression
+WARNING: File "lsoa/2020-DFES/I_C Floorspace_Central_Floorspace.csv" referenced in index.json doesn't appear to exist.
+WARNING: File "lsoa/2021-DFES/I&C Connection Count_Central_I&C connection count.csv" referenced in index.json doesn't appear to exist.
+WARNING: File "lsoa/2021-DFES/Domestic Connection Count_Central_Domestic connection count.csv" referenced in index.json doesn't appear to exist.
+WARNING: No parameter I&C-Floorspace has been defined in config.json but is defined for System Transformation
+WARNING: File "lsoa/2020-DFES/I_C Floorspace_Central_Floorspace.csv" referenced in index.json doesn't appear to exist.
+WARNING: File "lsoa/2021-DFES/I&C connections_Central_I&C connections.csv" referenced in index.json doesn't appear to exist.
+
+
+## Updates
+
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Biomass & energy crops (including CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Biomass__and__energy_crops__including_CHP.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Biomass & energy crops (including CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Biomass__and__energy_crops__including_CHP.csv/' index.json
+git mv "lsoa/2021-DFES/Bus_Consumer Transformation_Electric bus.csv" "lsoa/2021-DFES/Bus_Consumer_Transformation_Electric_bus.csv"
+sed -i 's/lsoa\/2021-DFES\/Bus_Consumer Transformation_Electric bus.csv/lsoa\/2021-DFES\/Bus_Consumer_Transformation_Electric_bus.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Co-located storage.csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Co-located_storage.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Co-located storage.csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Co-located_storage.csv/' index.json
+git mv "lsoa/2021-DFES/Coach_Consumer Transformation_Electric coach.csv" "lsoa/2021-DFES/Coach_Consumer_Transformation_Electric_coach.csv"
+sed -i 's/lsoa\/2021-DFES\/Coach_Consumer Transformation_Electric coach.csv/lsoa\/2021-DFES\/Coach_Consumer_Transformation_Electric_coach.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Non-renewable engines (Diesel) (non-CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Non-renewable_engines_(Diesel)_(non-CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Non-renewable engines (Diesel) (non-CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Non-renewable_engines_(Diesel)_(non-CHP).csv/' index.json
+git mv "lsoa/2021-DFES/Domestic district heating_Consumer Transformation_District Heating.csv" "lsoa/2021-DFES/Domestic_district_heating_Consumer_Transformation_District_Heating.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic district heating_Consumer Transformation_District Heating.csv/lsoa\/2021-DFES\/Domestic_district_heating_Consumer_Transformation_District_Heating.csv/' index.json
+git mv "lsoa/2021-DFES/Small scale PV_Consumer Transformation_Domestic PV capacity.csv" "lsoa/2021-DFES/Small_scale_PV_Consumer_Transformation_Domestic_PV_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Small scale PV_Consumer Transformation_Domestic PV capacity.csv/lsoa\/2021-DFES\/Small_scale_PV_Consumer_Transformation_Domestic_PV_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic batteries_Consumer Transformation_Domestic battery capacity.csv" "lsoa/2021-DFES/Domestic_batteries_Consumer_Transformation_Domestic_battery_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic batteries_Consumer Transformation_Domestic battery capacity.csv/lsoa\/2021-DFES\/Domestic_batteries_Consumer_Transformation_Domestic_battery_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic Connection Count_Central_Domestic connection count.csv" "lsoa/2021-DFES/Domestic_Connection_Count_Central_Domestic_connection_count.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic Connection Count_Central_Domestic connection count.csv/lsoa\/2021-DFES\/Domestic_Connection_Count_Central_Domestic_connection_count.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Fuel cells.csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Fuel_cells.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Fuel cells.csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Fuel_cells.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Non-renewable engines (Gas) (non-CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Non-renewable_engines_(Gas)_(non-CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Non-renewable engines (Gas) (non-CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Non-renewable_engines_(Gas)_(non-CHP).csv/' index.json
+git mv "lsoa/2021-DFES/HGV_Consumer Transformation_Electric HGV.csv" "lsoa/2021-DFES/HGV_Consumer_Transformation_Electric_HGV.csv"
+sed -i 's/lsoa\/2021-DFES\/HGV_Consumer Transformation_Electric HGV.csv/lsoa\/2021-DFES\/HGV_Consumer_Transformation_Electric_HGV.csv/' index.json
+git mv "lsoa/2021-DFES/District heating_Consumer Transformation_I&C District Heating.csv" "lsoa/2021-DFES/District_heating_Consumer_Transformation_I_and_C_District_Heating.csv"
+sed -i 's/lsoa\/2021-DFES\/District heating_Consumer Transformation_I&C District Heating.csv/lsoa\/2021-DFES\/District_heating_Consumer_Transformation_I_and_C_District_Heating.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_Consumer Transformation_Electric.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_Consumer_Transformation_Electric.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_Consumer Transformation_Electric.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_Consumer_Transformation_Electric.csv/' index.json
+git mv "lsoa/2020-DFES/I_C Floorspace_Central_Floorspace.csv" "lsoa/2020-DFES/I_C_Floorspace_Central_Floorspace.csv"
+sed -i 's/lsoa\/2020-DFES\/I_C Floorspace_Central_Floorspace.csv/lsoa\/2020-DFES\/I_C_Floorspace_Central_Floorspace.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_Consumer Transformation_Heat Pump.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_Consumer_Transformation_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_Consumer Transformation_Heat Pump.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_Consumer_Transformation_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_Consumer Transformation_Hybrid Heat Pump.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_Consumer_Transformation_Hybrid_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_Consumer Transformation_Hybrid Heat Pump.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_Consumer_Transformation_Hybrid_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Small scale PV_Consumer Transformation_I&C PV capacity.csv" "lsoa/2021-DFES/Small_scale_PV_Consumer_Transformation_I_and_C_PV_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Small scale PV_Consumer Transformation_I&C PV capacity.csv/lsoa\/2021-DFES\/Small_scale_PV_Consumer_Transformation_I_and_C_PV_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/I C batteries_Consumer Transformation_I&C battery capacity.csv" "lsoa/2021-DFES/I_C_batteries_Consumer_Transformation_I_and_C_battery_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/I C batteries_Consumer Transformation_I&C battery capacity.csv/lsoa\/2021-DFES\/I_C_batteries_Consumer_Transformation_I_and_C_battery_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/I&C Connection Count_Central_I&C connection count.csv" "lsoa/2021-DFES/I_and_C_Connection_Count_Central_I_and_C_connection_count.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C Connection Count_Central_I&C connection count.csv/lsoa\/2021-DFES\/I_and_C_Connection_Count_Central_I_and_C_connection_count.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Non-renewable CHP (greater than1 MW).csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Non-renewable_CHP_(greater_than1_MW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Non-renewable CHP (greater than1 MW).csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Non-renewable_CHP_(greater_than1_MW).csv/' index.json
+git mv "lsoa/2021-DFES/Minibus_Consumer Transformation_Electric minibus.csv" "lsoa/2021-DFES/Minibus_Consumer_Transformation_Electric_minibus.csv"
+sed -i 's/lsoa\/2021-DFES\/Minibus_Consumer Transformation_Electric minibus.csv/lsoa\/2021-DFES\/Minibus_Consumer_Transformation_Electric_minibus.csv/' index.json
+git mv "lsoa/2021-DFES/Motorcycles_Consumer Transformation_EV motorcycles.csv" "lsoa/2021-DFES/Motorcycles_Consumer_Transformation_EV_motorcycles.csv"
+sed -i 's/lsoa\/2021-DFES\/Motorcycles_Consumer Transformation_EV motorcycles.csv/lsoa\/2021-DFES\/Motorcycles_Consumer_Transformation_EV_motorcycles.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_OCGT and CCGT.csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_OCGT_and_CCGT.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_OCGT and CCGT.csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_OCGT_and_CCGT.csv/' index.json
+git mv "lsoa/2021-DFES/PHV_Consumer Transformation_Electric PHVs.csv" "lsoa/2021-DFES/PHV_Consumer_Transformation_Electric_PHVs.csv"
+sed -i 's/lsoa\/2021-DFES\/PHV_Consumer Transformation_Electric PHVs.csv/lsoa\/2021-DFES\/PHV_Consumer_Transformation_Electric_PHVs.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Renewable_engines_(Landfill_gas,_Sewage_Gas,_Biogas).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Renewable_engines_(Landfill_gas,_Sewage_Gas,_Biogas).csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Non-renewable CHP (less than=1 MW).csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Non-renewable_CHP_(less_than=1_MW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Non-renewable CHP (less than=1 MW).csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Non-renewable_CHP_(less_than=1_MW).csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Storage.csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Storage.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Storage.csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Storage.csv/' index.json
+git mv "lsoa/2021-DFES/Taxi_Consumer Transformation_Electric Taxis.csv" "lsoa/2021-DFES/Taxi_Consumer_Transformation_Electric_Taxis.csv"
+sed -i 's/lsoa\/2021-DFES\/Taxi_Consumer Transformation_Electric Taxis.csv/lsoa\/2021-DFES\/Taxi_Consumer_Transformation_Electric_Taxis.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Waste incineration (including CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Waste_incineration_(including_CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Waste incineration (including CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Waste_incineration_(including_CHP).csv/' index.json
+git mv "lsoa/2021-DFES/Cars_Consumer Transformation_BEV cars.csv" "lsoa/2021-DFES/Cars_Consumer_Transformation_BEV_cars.csv"
+sed -i 's/lsoa\/2021-DFES\/Cars_Consumer Transformation_BEV cars.csv/lsoa\/2021-DFES\/Cars_Consumer_Transformation_BEV_cars.csv/' index.json
+git mv "lsoa/2021-DFES/Vans_Consumer Transformation_BEV vans.csv" "lsoa/2021-DFES/Vans_Consumer_Transformation_BEV_vans.csv"
+sed -i 's/lsoa\/2021-DFES\/Vans_Consumer Transformation_BEV vans.csv/lsoa\/2021-DFES\/Vans_Consumer_Transformation_BEV_vans.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_Consumer Transformation_Electric.csv" "lsoa/2021-DFES/Domestic_heating_technologies_Consumer_Transformation_Electric.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_Consumer Transformation_Electric.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_Consumer_Transformation_Electric.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_Consumer Transformation_Heat Pump.csv" "lsoa/2021-DFES/Domestic_heating_technologies_Consumer_Transformation_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_Consumer Transformation_Heat Pump.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_Consumer_Transformation_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_Consumer Transformation_Hybrid Heat Pump.csv" "lsoa/2021-DFES/Domestic_heating_technologies_Consumer_Transformation_Hybrid_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_Consumer Transformation_Hybrid Heat Pump.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_Consumer_Transformation_Hybrid_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Solar Generation (Large greater than150 kW).csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Solar_Generation_(Large_greater_than150_kW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Solar Generation (Large greater than150 kW).csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Solar_Generation_(Large_greater_than150_kW).csv/' index.json
+git mv "lsoa/2021-DFES/Cars_Consumer Transformation_PHEV cars.csv" "lsoa/2021-DFES/Cars_Consumer_Transformation_PHEV_cars.csv"
+sed -i 's/lsoa\/2021-DFES\/Cars_Consumer Transformation_PHEV cars.csv/lsoa\/2021-DFES\/Cars_Consumer_Transformation_PHEV_cars.csv/' index.json
+git mv "lsoa/2021-DFES/Vans_Consumer Transformation_PHEV vans.csv" "lsoa/2021-DFES/Vans_Consumer_Transformation_PHEV_vans.csv"
+sed -i 's/lsoa\/2021-DFES\/Vans_Consumer Transformation_PHEV vans.csv/lsoa\/2021-DFES\/Vans_Consumer_Transformation_PHEV_vans.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Consumer Transformation_Onshore wind.csv" "lsoa/2021-DFES/Distributed_Generation_Consumer_Transformation_Onshore_wind.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Consumer Transformation_Onshore wind.csv/lsoa\/2021-DFES\/Distributed_Generation_Consumer_Transformation_Onshore_wind.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Biomass & energy crops (including CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Biomass__and__energy_crops__including_CHP.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Biomass & energy crops (including CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Biomass__and__energy_crops__including_CHP.csv/' index.json
+git mv "lsoa/2021-DFES/Bus_Leading the Way_Electric bus.csv" "lsoa/2021-DFES/Bus_Leading_the_Way_Electric_bus.csv"
+sed -i 's/lsoa\/2021-DFES\/Bus_Leading the Way_Electric bus.csv/lsoa\/2021-DFES\/Bus_Leading_the_Way_Electric_bus.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Co-located storage.csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Co-located_storage.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Co-located storage.csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Co-located_storage.csv/' index.json
+git mv "lsoa/2021-DFES/Coach_Leading the Way_Electric coach.csv" "lsoa/2021-DFES/Coach_Leading_the_Way_Electric_coach.csv"
+sed -i 's/lsoa\/2021-DFES\/Coach_Leading the Way_Electric coach.csv/lsoa\/2021-DFES\/Coach_Leading_the_Way_Electric_coach.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Non-renewable engines (Diesel) (non-CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Non-renewable_engines_(Diesel)_(non-CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Non-renewable engines (Diesel) (non-CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Non-renewable_engines_(Diesel)_(non-CHP).csv/' index.json
+git mv "lsoa/2021-DFES/Domestic district heating_Leading the Way_District Heating.csv" "lsoa/2021-DFES/Domestic_district_heating_Leading_the_Way_District_Heating.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic district heating_Leading the Way_District Heating.csv/lsoa\/2021-DFES\/Domestic_district_heating_Leading_the_Way_District_Heating.csv/' index.json
+git mv "lsoa/2021-DFES/Small scale PV_Leading the Way_Domestic PV capacity.csv" "lsoa/2021-DFES/Small_scale_PV_Leading_the_Way_Domestic_PV_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Small scale PV_Leading the Way_Domestic PV capacity.csv/lsoa\/2021-DFES\/Small_scale_PV_Leading_the_Way_Domestic_PV_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic batteries_Leading the Way_Domestic battery capacity.csv" "lsoa/2021-DFES/Domestic_batteries_Leading_the_Way_Domestic_battery_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic batteries_Leading the Way_Domestic battery capacity.csv/lsoa\/2021-DFES\/Domestic_batteries_Leading_the_Way_Domestic_battery_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Fuel cells.csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Fuel_cells.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Fuel cells.csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Fuel_cells.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Non-renewable engines (Gas) (non-CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Non-renewable_engines_(Gas)_(non-CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Non-renewable engines (Gas) (non-CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Non-renewable_engines_(Gas)_(non-CHP).csv/' index.json
+git mv "lsoa/2021-DFES/HGV_Leading the Way_Electric HGV.csv" "lsoa/2021-DFES/HGV_Leading_the_Way_Electric_HGV.csv"
+sed -i 's/lsoa\/2021-DFES\/HGV_Leading the Way_Electric HGV.csv/lsoa\/2021-DFES\/HGV_Leading_the_Way_Electric_HGV.csv/' index.json
+git mv "lsoa/2021-DFES/District heating_Leading the Way_I&C District Heating.csv" "lsoa/2021-DFES/District_heating_Leading_the_Way_I_and_C_District_Heating.csv"
+sed -i 's/lsoa\/2021-DFES\/District heating_Leading the Way_I&C District Heating.csv/lsoa\/2021-DFES\/District_heating_Leading_the_Way_I_and_C_District_Heating.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_Leading the Way_Electric.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_Leading_the_Way_Electric.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_Leading the Way_Electric.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_Leading_the_Way_Electric.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_Leading the Way_Heat Pump.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_Leading_the_Way_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_Leading the Way_Heat Pump.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_Leading_the_Way_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_Leading the Way_Hybrid Heat Pump.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_Leading_the_Way_Hybrid_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_Leading the Way_Hybrid Heat Pump.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_Leading_the_Way_Hybrid_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Small scale PV_Leading the Way_I&C PV capacity.csv" "lsoa/2021-DFES/Small_scale_PV_Leading_the_Way_I_and_C_PV_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Small scale PV_Leading the Way_I&C PV capacity.csv/lsoa\/2021-DFES\/Small_scale_PV_Leading_the_Way_I_and_C_PV_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/I C batteries_Leading the Way_I&C battery capacity.csv" "lsoa/2021-DFES/I_C_batteries_Leading_the_Way_I_and_C_battery_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/I C batteries_Leading the Way_I&C battery capacity.csv/lsoa\/2021-DFES\/I_C_batteries_Leading_the_Way_I_and_C_battery_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Non-renewable CHP (greater than1 MW).csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Non-renewable_CHP_(greater_than1_MW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Non-renewable CHP (greater than1 MW).csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Non-renewable_CHP_(greater_than1_MW).csv/' index.json
+git mv "lsoa/2021-DFES/Minibus_Leading the Way_Electric minibus.csv" "lsoa/2021-DFES/Minibus_Leading_the_Way_Electric_minibus.csv"
+sed -i 's/lsoa\/2021-DFES\/Minibus_Leading the Way_Electric minibus.csv/lsoa\/2021-DFES\/Minibus_Leading_the_Way_Electric_minibus.csv/' index.json
+git mv "lsoa/2021-DFES/Motorcycles_Leading the Way_EV motorcycles.csv" "lsoa/2021-DFES/Motorcycles_Leading_the_Way_EV_motorcycles.csv"
+sed -i 's/lsoa\/2021-DFES\/Motorcycles_Leading the Way_EV motorcycles.csv/lsoa\/2021-DFES\/Motorcycles_Leading_the_Way_EV_motorcycles.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_OCGT and CCGT.csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_OCGT_and_CCGT.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_OCGT and CCGT.csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_OCGT_and_CCGT.csv/' index.json
+git mv "lsoa/2021-DFES/PHV_Leading the Way_Electric PHVs.csv" "lsoa/2021-DFES/PHV_Leading_the_Way_Electric_PHVs.csv"
+sed -i 's/lsoa\/2021-DFES\/PHV_Leading the Way_Electric PHVs.csv/lsoa\/2021-DFES\/PHV_Leading_the_Way_Electric_PHVs.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Renewable_engines_(Landfill_gas,_Sewage_Gas,_Biogas).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Renewable_engines_(Landfill_gas,_Sewage_Gas,_Biogas).csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Non-renewable CHP (less than=1 MW).csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Non-renewable_CHP_(less_than=1_MW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Non-renewable CHP (less than=1 MW).csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Non-renewable_CHP_(less_than=1_MW).csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Storage.csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Storage.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Storage.csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Storage.csv/' index.json
+git mv "lsoa/2021-DFES/Taxi_Leading the Way_Electric Taxis.csv" "lsoa/2021-DFES/Taxi_Leading_the_Way_Electric_Taxis.csv"
+sed -i 's/lsoa\/2021-DFES\/Taxi_Leading the Way_Electric Taxis.csv/lsoa\/2021-DFES\/Taxi_Leading_the_Way_Electric_Taxis.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Waste incineration (including CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Waste_incineration_(including_CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Waste incineration (including CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Waste_incineration_(including_CHP).csv/' index.json
+git mv "lsoa/2021-DFES/Cars_Leading the Way_BEV cars.csv" "lsoa/2021-DFES/Cars_Leading_the_Way_BEV_cars.csv"
+sed -i 's/lsoa\/2021-DFES\/Cars_Leading the Way_BEV cars.csv/lsoa\/2021-DFES\/Cars_Leading_the_Way_BEV_cars.csv/' index.json
+git mv "lsoa/2021-DFES/Vans_Leading the Way_BEV vans.csv" "lsoa/2021-DFES/Vans_Leading_the_Way_BEV_vans.csv"
+sed -i 's/lsoa\/2021-DFES\/Vans_Leading the Way_BEV vans.csv/lsoa\/2021-DFES\/Vans_Leading_the_Way_BEV_vans.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_Leading the Way_Electric.csv" "lsoa/2021-DFES/Domestic_heating_technologies_Leading_the_Way_Electric.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_Leading the Way_Electric.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_Leading_the_Way_Electric.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_Leading the Way_Heat Pump.csv" "lsoa/2021-DFES/Domestic_heating_technologies_Leading_the_Way_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_Leading the Way_Heat Pump.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_Leading_the_Way_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_Leading the Way_Hybrid Heat Pump.csv" "lsoa/2021-DFES/Domestic_heating_technologies_Leading_the_Way_Hybrid_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_Leading the Way_Hybrid Heat Pump.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_Leading_the_Way_Hybrid_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Solar Generation (Large greater than150 kW).csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Solar_Generation_(Large_greater_than150_kW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Solar Generation (Large greater than150 kW).csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Solar_Generation_(Large_greater_than150_kW).csv/' index.json
+git mv "lsoa/2021-DFES/Cars_Leading the Way_PHEV cars.csv" "lsoa/2021-DFES/Cars_Leading_the_Way_PHEV_cars.csv"
+sed -i 's/lsoa\/2021-DFES\/Cars_Leading the Way_PHEV cars.csv/lsoa\/2021-DFES\/Cars_Leading_the_Way_PHEV_cars.csv/' index.json
+git mv "lsoa/2021-DFES/Vans_Leading the Way_PHEV vans.csv" "lsoa/2021-DFES/Vans_Leading_the_Way_PHEV_vans.csv"
+sed -i 's/lsoa\/2021-DFES\/Vans_Leading the Way_PHEV vans.csv/lsoa\/2021-DFES\/Vans_Leading_the_Way_PHEV_vans.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Leading the Way_Onshore wind.csv" "lsoa/2021-DFES/Distributed_Generation_Leading_the_Way_Onshore_wind.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Leading the Way_Onshore wind.csv/lsoa\/2021-DFES\/Distributed_Generation_Leading_the_Way_Onshore_wind.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Biomass & energy crops (including CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Biomass__and__energy_crops__including_CHP.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Biomass & energy crops (including CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Biomass__and__energy_crops__including_CHP.csv/' index.json
+git mv "lsoa/2021-DFES/Bus_Steady Progression_Electric bus.csv" "lsoa/2021-DFES/Bus_Steady_Progression_Electric_bus.csv"
+sed -i 's/lsoa\/2021-DFES\/Bus_Steady Progression_Electric bus.csv/lsoa\/2021-DFES\/Bus_Steady_Progression_Electric_bus.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Co-located storage.csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Co-located_storage.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Co-located storage.csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Co-located_storage.csv/' index.json
+git mv "lsoa/2021-DFES/Coach_Steady Progression_Electric coach.csv" "lsoa/2021-DFES/Coach_Steady_Progression_Electric_coach.csv"
+sed -i 's/lsoa\/2021-DFES\/Coach_Steady Progression_Electric coach.csv/lsoa\/2021-DFES\/Coach_Steady_Progression_Electric_coach.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Non-renewable engines (Diesel) (non-CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Non-renewable_engines_(Diesel)_(non-CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Non-renewable engines (Diesel) (non-CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Non-renewable_engines_(Diesel)_(non-CHP).csv/' index.json
+git mv "lsoa/2021-DFES/Domestic district heating_Steady Progression_District Heating.csv" "lsoa/2021-DFES/Domestic_district_heating_Steady_Progression_District_Heating.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic district heating_Steady Progression_District Heating.csv/lsoa\/2021-DFES\/Domestic_district_heating_Steady_Progression_District_Heating.csv/' index.json
+git mv "lsoa/2021-DFES/Small scale PV_Steady Progression_Domestic PV capacity.csv" "lsoa/2021-DFES/Small_scale_PV_Steady_Progression_Domestic_PV_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Small scale PV_Steady Progression_Domestic PV capacity.csv/lsoa\/2021-DFES\/Small_scale_PV_Steady_Progression_Domestic_PV_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic batteries_Steady Progression_Domestic battery capacity.csv" "lsoa/2021-DFES/Domestic_batteries_Steady_Progression_Domestic_battery_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic batteries_Steady Progression_Domestic battery capacity.csv/lsoa\/2021-DFES\/Domestic_batteries_Steady_Progression_Domestic_battery_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Fuel cells.csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Fuel_cells.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Fuel cells.csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Fuel_cells.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Non-renewable engines (Gas) (non-CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Non-renewable_engines_(Gas)_(non-CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Non-renewable engines (Gas) (non-CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Non-renewable_engines_(Gas)_(non-CHP).csv/' index.json
+git mv "lsoa/2021-DFES/HGV_Steady Progression_Electric HGV.csv" "lsoa/2021-DFES/HGV_Steady_Progression_Electric_HGV.csv"
+sed -i 's/lsoa\/2021-DFES\/HGV_Steady Progression_Electric HGV.csv/lsoa\/2021-DFES\/HGV_Steady_Progression_Electric_HGV.csv/' index.json
+git mv "lsoa/2021-DFES/District heating_Steady Progression_I&C District Heating.csv" "lsoa/2021-DFES/District_heating_Steady_Progression_I_and_C_District_Heating.csv"
+sed -i 's/lsoa\/2021-DFES\/District heating_Steady Progression_I&C District Heating.csv/lsoa\/2021-DFES\/District_heating_Steady_Progression_I_and_C_District_Heating.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_Steady Progression_Electric.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_Steady_Progression_Electric.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_Steady Progression_Electric.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_Steady_Progression_Electric.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_Steady Progression_Heat Pump.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_Steady_Progression_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_Steady Progression_Heat Pump.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_Steady_Progression_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_Steady Progression_Hybrid Heat Pump.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_Steady_Progression_Hybrid_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_Steady Progression_Hybrid Heat Pump.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_Steady_Progression_Hybrid_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Small scale PV_Steady Progression_I&C PV capacity.csv" "lsoa/2021-DFES/Small_scale_PV_Steady_Progression_I_and_C_PV_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Small scale PV_Steady Progression_I&C PV capacity.csv/lsoa\/2021-DFES\/Small_scale_PV_Steady_Progression_I_and_C_PV_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/I C batteries_Steady Progression_I&C battery capacity.csv" "lsoa/2021-DFES/I_C_batteries_Steady_Progression_I_and_C_battery_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/I C batteries_Steady Progression_I&C battery capacity.csv/lsoa\/2021-DFES\/I_C_batteries_Steady_Progression_I_and_C_battery_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Non-renewable CHP (greater than1 MW).csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Non-renewable_CHP_(greater_than1_MW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Non-renewable CHP (greater than1 MW).csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Non-renewable_CHP_(greater_than1_MW).csv/' index.json
+git mv "lsoa/2021-DFES/Minibus_Steady Progression_Electric minibus.csv" "lsoa/2021-DFES/Minibus_Steady_Progression_Electric_minibus.csv"
+sed -i 's/lsoa\/2021-DFES\/Minibus_Steady Progression_Electric minibus.csv/lsoa\/2021-DFES\/Minibus_Steady_Progression_Electric_minibus.csv/' index.json
+git mv "lsoa/2021-DFES/Motorcycles_Steady Progression_EV motorcycles.csv" "lsoa/2021-DFES/Motorcycles_Steady_Progression_EV_motorcycles.csv"
+sed -i 's/lsoa\/2021-DFES\/Motorcycles_Steady Progression_EV motorcycles.csv/lsoa\/2021-DFES\/Motorcycles_Steady_Progression_EV_motorcycles.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_OCGT and CCGT.csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_OCGT_and_CCGT.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_OCGT and CCGT.csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_OCGT_and_CCGT.csv/' index.json
+git mv "lsoa/2021-DFES/PHV_Steady Progression_Electric PHVs.csv" "lsoa/2021-DFES/PHV_Steady_Progression_Electric_PHVs.csv"
+sed -i 's/lsoa\/2021-DFES\/PHV_Steady Progression_Electric PHVs.csv/lsoa\/2021-DFES\/PHV_Steady_Progression_Electric_PHVs.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Renewable_engines_(Landfill_gas,_Sewage_Gas,_Biogas).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Renewable_engines_(Landfill_gas,_Sewage_Gas,_Biogas).csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Non-renewable CHP (less than=1 MW).csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Non-renewable_CHP_(less_than=1_MW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Non-renewable CHP (less than=1 MW).csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Non-renewable_CHP_(less_than=1_MW).csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Storage.csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Storage.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Storage.csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Storage.csv/' index.json
+git mv "lsoa/2021-DFES/Taxi_Steady Progression_Electric Taxis.csv" "lsoa/2021-DFES/Taxi_Steady_Progression_Electric_Taxis.csv"
+sed -i 's/lsoa\/2021-DFES\/Taxi_Steady Progression_Electric Taxis.csv/lsoa\/2021-DFES\/Taxi_Steady_Progression_Electric_Taxis.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Waste incineration (including CHP).csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Waste_incineration_(including_CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Waste incineration (including CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Waste_incineration_(including_CHP).csv/' index.json
+git mv "lsoa/2021-DFES/Cars_Steady Progression_BEV cars.csv" "lsoa/2021-DFES/Cars_Steady_Progression_BEV_cars.csv"
+sed -i 's/lsoa\/2021-DFES\/Cars_Steady Progression_BEV cars.csv/lsoa\/2021-DFES\/Cars_Steady_Progression_BEV_cars.csv/' index.json
+git mv "lsoa/2021-DFES/Vans_Steady Progression_BEV vans.csv" "lsoa/2021-DFES/Vans_Steady_Progression_BEV_vans.csv"
+sed -i 's/lsoa\/2021-DFES\/Vans_Steady Progression_BEV vans.csv/lsoa\/2021-DFES\/Vans_Steady_Progression_BEV_vans.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_Steady Progression_Electric.csv" "lsoa/2021-DFES/Domestic_heating_technologies_Steady_Progression_Electric.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_Steady Progression_Electric.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_Steady_Progression_Electric.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_Steady Progression_Heat Pump.csv" "lsoa/2021-DFES/Domestic_heating_technologies_Steady_Progression_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_Steady Progression_Heat Pump.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_Steady_Progression_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_Steady Progression_Hybrid Heat Pump.csv" "lsoa/2021-DFES/Domestic_heating_technologies_Steady_Progression_Hybrid_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_Steady Progression_Hybrid Heat Pump.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_Steady_Progression_Hybrid_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Solar Generation (Large greater than150 kW).csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Solar_Generation_(Large_greater_than150_kW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Solar Generation (Large greater than150 kW).csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Solar_Generation_(Large_greater_than150_kW).csv/' index.json
+git mv "lsoa/2021-DFES/Cars_Steady Progression_PHEV cars.csv" "lsoa/2021-DFES/Cars_Steady_Progression_PHEV_cars.csv"
+sed -i 's/lsoa\/2021-DFES\/Cars_Steady Progression_PHEV cars.csv/lsoa\/2021-DFES\/Cars_Steady_Progression_PHEV_cars.csv/' index.json
+git mv "lsoa/2021-DFES/Vans_Steady Progression_PHEV vans.csv" "lsoa/2021-DFES/Vans_Steady_Progression_PHEV_vans.csv"
+sed -i 's/lsoa\/2021-DFES\/Vans_Steady Progression_PHEV vans.csv/lsoa\/2021-DFES\/Vans_Steady_Progression_PHEV_vans.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_Steady Progression_Onshore wind.csv" "lsoa/2021-DFES/Distributed_Generation_Steady_Progression_Onshore_wind.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_Steady Progression_Onshore wind.csv/lsoa\/2021-DFES\/Distributed_Generation_Steady_Progression_Onshore_wind.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Biomass & energy crops (including CHP).csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Biomass__and__energy_crops__including_CHP.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Biomass & energy crops (including CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Biomass__and__energy_crops__including_CHP.csv/' index.json
+git mv "lsoa/2021-DFES/Bus_System Transformation_Electric bus.csv" "lsoa/2021-DFES/Bus_System_Transformation_Electric_bus.csv"
+sed -i 's/lsoa\/2021-DFES\/Bus_System Transformation_Electric bus.csv/lsoa\/2021-DFES\/Bus_System_Transformation_Electric_bus.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Co-located storage.csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Co-located_storage.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Co-located storage.csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Co-located_storage.csv/' index.json
+git mv "lsoa/2021-DFES/Coach_System Transformation_Electric coach.csv" "lsoa/2021-DFES/Coach_System_Transformation_Electric_coach.csv"
+sed -i 's/lsoa\/2021-DFES\/Coach_System Transformation_Electric coach.csv/lsoa\/2021-DFES\/Coach_System_Transformation_Electric_coach.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Non-renewable engines (Diesel) (non-CHP).csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Non-renewable_engines_(Diesel)_(non-CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Non-renewable engines (Diesel) (non-CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Non-renewable_engines_(Diesel)_(non-CHP).csv/' index.json
+git mv "lsoa/2021-DFES/Domestic district heating_System Transformation_District Heating.csv" "lsoa/2021-DFES/Domestic_district_heating_System_Transformation_District_Heating.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic district heating_System Transformation_District Heating.csv/lsoa\/2021-DFES\/Domestic_district_heating_System_Transformation_District_Heating.csv/' index.json
+git mv "lsoa/2021-DFES/Small scale PV_System Transformation_Domestic PV capacity.csv" "lsoa/2021-DFES/Small_scale_PV_System_Transformation_Domestic_PV_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Small scale PV_System Transformation_Domestic PV capacity.csv/lsoa\/2021-DFES\/Small_scale_PV_System_Transformation_Domestic_PV_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic batteries_System Transformation_Domestic battery capacity.csv" "lsoa/2021-DFES/Domestic_batteries_System_Transformation_Domestic_battery_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic batteries_System Transformation_Domestic battery capacity.csv/lsoa\/2021-DFES\/Domestic_batteries_System_Transformation_Domestic_battery_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Fuel cells.csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Fuel_cells.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Fuel cells.csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Fuel_cells.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Non-renewable engines (Gas) (non-CHP).csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Non-renewable_engines_(Gas)_(non-CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Non-renewable engines (Gas) (non-CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Non-renewable_engines_(Gas)_(non-CHP).csv/' index.json
+git mv "lsoa/2021-DFES/HGV_System Transformation_Electric HGV.csv" "lsoa/2021-DFES/HGV_System_Transformation_Electric_HGV.csv"
+sed -i 's/lsoa\/2021-DFES\/HGV_System Transformation_Electric HGV.csv/lsoa\/2021-DFES\/HGV_System_Transformation_Electric_HGV.csv/' index.json
+git mv "lsoa/2021-DFES/District heating_System Transformation_I&C District Heating.csv" "lsoa/2021-DFES/District_heating_System_Transformation_I_and_C_District_Heating.csv"
+sed -i 's/lsoa\/2021-DFES\/District heating_System Transformation_I&C District Heating.csv/lsoa\/2021-DFES\/District_heating_System_Transformation_I_and_C_District_Heating.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_System Transformation_Electric.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_System_Transformation_Electric.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_System Transformation_Electric.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_System_Transformation_Electric.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_System Transformation_Heat Pump.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_System_Transformation_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_System Transformation_Heat Pump.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_System_Transformation_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/I&C heating technologies_System Transformation_Hybrid Heat Pump.csv" "lsoa/2021-DFES/I_and_C_heating_technologies_System_Transformation_Hybrid_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/I&C heating technologies_System Transformation_Hybrid Heat Pump.csv/lsoa\/2021-DFES\/I_and_C_heating_technologies_System_Transformation_Hybrid_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Small scale PV_System Transformation_I&C PV capacity.csv" "lsoa/2021-DFES/Small_scale_PV_System_Transformation_I_and_C_PV_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/Small scale PV_System Transformation_I&C PV capacity.csv/lsoa\/2021-DFES\/Small_scale_PV_System_Transformation_I_and_C_PV_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/I C batteries_System Transformation_I&C battery capacity.csv" "lsoa/2021-DFES/I_C_batteries_System_Transformation_I_and_C_battery_capacity.csv"
+sed -i 's/lsoa\/2021-DFES\/I C batteries_System Transformation_I&C battery capacity.csv/lsoa\/2021-DFES\/I_C_batteries_System_Transformation_I_and_C_battery_capacity.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Non-renewable CHP (greater than1 MW).csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Non-renewable_CHP_(greater_than1_MW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Non-renewable CHP (greater than1 MW).csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Non-renewable_CHP_(greater_than1_MW).csv/' index.json
+git mv "lsoa/2021-DFES/Minibus_System Transformation_Electric minibus.csv" "lsoa/2021-DFES/Minibus_System_Transformation_Electric_minibus.csv"
+sed -i 's/lsoa\/2021-DFES\/Minibus_System Transformation_Electric minibus.csv/lsoa\/2021-DFES\/Minibus_System_Transformation_Electric_minibus.csv/' index.json
+git mv "lsoa/2021-DFES/Motorcycles_System Transformation_EV motorcycles.csv" "lsoa/2021-DFES/Motorcycles_System_Transformation_EV_motorcycles.csv"
+sed -i 's/lsoa\/2021-DFES\/Motorcycles_System Transformation_EV motorcycles.csv/lsoa\/2021-DFES\/Motorcycles_System_Transformation_EV_motorcycles.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_OCGT and CCGT.csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_OCGT_and_CCGT.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_OCGT and CCGT.csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_OCGT_and_CCGT.csv/' index.json
+git mv "lsoa/2021-DFES/PHV_System Transformation_Electric PHVs.csv" "lsoa/2021-DFES/PHV_System_Transformation_Electric_PHVs.csv"
+sed -i 's/lsoa\/2021-DFES\/PHV_System Transformation_Electric PHVs.csv/lsoa\/2021-DFES\/PHV_System_Transformation_Electric_PHVs.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Renewable_engines_(Landfill_gas,_Sewage_Gas,_Biogas).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Renewable_engines_(Landfill_gas,_Sewage_Gas,_Biogas).csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Non-renewable CHP (less than=1 MW).csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Non-renewable_CHP_(less_than=1_MW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Non-renewable CHP (less than=1 MW).csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Non-renewable_CHP_(less_than=1_MW).csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Storage.csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Storage.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Storage.csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Storage.csv/' index.json
+git mv "lsoa/2021-DFES/Taxi_System Transformation_Electric Taxis.csv" "lsoa/2021-DFES/Taxi_System_Transformation_Electric_Taxis.csv"
+sed -i 's/lsoa\/2021-DFES\/Taxi_System Transformation_Electric Taxis.csv/lsoa\/2021-DFES\/Taxi_System_Transformation_Electric_Taxis.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Waste incineration (including CHP).csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Waste_incineration_(including_CHP).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Waste incineration (including CHP).csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Waste_incineration_(including_CHP).csv/' index.json
+git mv "lsoa/2021-DFES/Cars_System Transformation_BEV cars.csv" "lsoa/2021-DFES/Cars_System_Transformation_BEV_cars.csv"
+sed -i 's/lsoa\/2021-DFES\/Cars_System Transformation_BEV cars.csv/lsoa\/2021-DFES\/Cars_System_Transformation_BEV_cars.csv/' index.json
+git mv "lsoa/2021-DFES/Vans_System Transformation_BEV vans.csv" "lsoa/2021-DFES/Vans_System_Transformation_BEV_vans.csv"
+sed -i 's/lsoa\/2021-DFES\/Vans_System Transformation_BEV vans.csv/lsoa\/2021-DFES\/Vans_System_Transformation_BEV_vans.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_System Transformation_Electric.csv" "lsoa/2021-DFES/Domestic_heating_technologies_System_Transformation_Electric.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_System Transformation_Electric.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_System_Transformation_Electric.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_System Transformation_Heat Pump.csv" "lsoa/2021-DFES/Domestic_heating_technologies_System_Transformation_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_System Transformation_Heat Pump.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_System_Transformation_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Domestic heating technologies_System Transformation_Hybrid Heat Pump.csv" "lsoa/2021-DFES/Domestic_heating_technologies_System_Transformation_Hybrid_Heat_Pump.csv"
+sed -i 's/lsoa\/2021-DFES\/Domestic heating technologies_System Transformation_Hybrid Heat Pump.csv/lsoa\/2021-DFES\/Domestic_heating_technologies_System_Transformation_Hybrid_Heat_Pump.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Solar Generation (Large greater than150 kW).csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Solar_Generation_(Large_greater_than150_kW).csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Solar Generation (Large greater than150 kW).csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Solar_Generation_(Large_greater_than150_kW).csv/' index.json
+git mv "lsoa/2021-DFES/Cars_System Transformation_PHEV cars.csv" "lsoa/2021-DFES/Cars_System_Transformation_PHEV_cars.csv"
+sed -i 's/lsoa\/2021-DFES\/Cars_System Transformation_PHEV cars.csv/lsoa\/2021-DFES\/Cars_System_Transformation_PHEV_cars.csv/' index.json
+git mv "lsoa/2021-DFES/Vans_System Transformation_PHEV vans.csv" "lsoa/2021-DFES/Vans_System_Transformation_PHEV_vans.csv"
+sed -i 's/lsoa\/2021-DFES\/Vans_System Transformation_PHEV vans.csv/lsoa\/2021-DFES\/Vans_System_Transformation_PHEV_vans.csv/' index.json
+git mv "lsoa/2021-DFES/Distributed Generation_System Transformation_Onshore wind.csv" "lsoa/2021-DFES/Distributed_Generation_System_Transformation_Onshore_wind.csv"
+sed -i 's/lsoa\/2021-DFES\/Distributed Generation_System Transformation_Onshore wind.csv/lsoa\/2021-DFES\/Distributed_Generation_System_Transformation_Onshore_wind.csv/' index.json

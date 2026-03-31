@@ -1,0 +1,214 @@
+{
+  "Acton Lane 22kV": {
+    "LPN": 1.0
+  },
+  "Amersham": {
+    "EPN": 0.933333333333
+  },
+  "Barking 132": {
+    "EPN": 0.985074626866,
+    "LPN": 0.014925373134
+  },
+  "Barking 132kV GIS": {
+    "LPN": 1.0
+  },
+  "Barking West (EPN)": {
+    "EPN": 0.909090909091,
+    "LPN": 0.090909090909
+  },
+  "Barking West 33kV": {
+    "EPN": 0.007407407407,
+    "LPN": 0.992592592593
+  },
+  "Beddington 132kV Hurst 132kV": {
+    "LPN": 0.5
+  },
+  "Beddington SGT": {
+    "LPN": 0.176759410802,
+    "SPN": 0.823240589198
+  },
+  "Bengeworth Road 132kV GIS": {
+    "LPN": 1.0
+  },
+  "Biggleswade": {
+    "EPN": 0.987179487179
+  },
+  "Bolney SGT": {
+    "SPN": 0.990712074303
+  },
+  "Bourne": {
+    "EPN": 1.0
+  },
+  "Braintree": {
+    "EPN": 1.0
+  },
+  "Bramford": {
+    "EPN": 1.0
+  },
+  "Brimsdown": {
+    "LPN": 1.0
+  },
+  "Brimsdown (EPN)": {
+    "EPN": 0.923828125,
+    "LPN": 0.076171875
+  },
+  "Burwell": {
+    "EPN": 1.0
+  },
+  "Canterbury SGT": {
+    "SPN": 1.0
+  },
+  "Chessington SGT 1 & SGT 4A": {
+    "SPN": 1.0
+  },
+  "Chessington SGT 2 & SGT 4B": {
+    "SPN": 0.969696969697
+  },
+  "City Road 132kV": {
+    "LPN": 1.0
+  },
+  "Eaton Socon": {
+    "EPN": 0.987179487179
+  },
+  "Elstree 1&2 and 8&9 and Watford South 3A&3B": {
+    "EPN": 0.973933649289
+  },
+  "Elstree 3&4": {
+    "EPN": 1.0
+  },
+  "Grendon": {
+    "EPN": 0.982142857143
+  },
+  "Hackney 132kV": {
+    "LPN": 1.0
+  },
+  "Hackney Supergrid 66kV": {
+    "LPN": 1.0
+  },
+  "Islington 132kV": {
+    "LPN": 1.0
+  },
+  "Kemsley SGT": {
+    "SPN": 1.0
+  },
+  "Kemsley SGT 3A": {
+    "SPN": 1.0
+  },
+  "Kemsley SGT1 & 2": {
+    "SPN": 1.0
+  },
+  "Kingsnorth SGT": {
+    "SPN": 1.0
+  },
+  "Laleham SGT": {
+    "LPN": 0.013888888889,
+    "SPN": 0.861111111111
+  },
+  "Little Horsted SGT": {
+    "SPN": 1.0
+  },
+  "Littlebrook 132kV": {
+    "LPN": 0.96,
+    "SPN": 0.04
+  },
+  "Littlebrook SGT": {
+    "LPN": 0.04,
+    "SPN": 0.96
+  },
+  "Lodge Road 66kV": {
+    "LPN": 1.0
+  },
+  "Mill Hill and Hendon": {
+    "EPN": 1.0
+  },
+  "New Cross 132kV": {
+    "LPN": 1.0
+  },
+  "New Cross 132kV to Wimbledon 1 and 2 132kV": {
+    "LPN": 1.0
+  },
+  "New Cross 66kV": {
+    "LPN": 1.0
+  },
+  "Ninfield SGT": {
+    "SPN": 1.0
+  },
+  "Northfleet SGT": {
+    "EPN": 0.013487475915,
+    "LPN": 0.416184971098,
+    "SPN": 0.570327552987
+  },
+  "Norwich": {
+    "EPN": 1.0
+  },
+  "Pelham and Wymondley": {
+    "EPN": 1.0
+  },
+  "Pelham and Wymondley and Twinstead Green": {
+    "EPN": 1.0
+  },
+  "Rayleigh": {
+    "EPN": 1.0
+  },
+  "Redbridge Supergrid 33kV": {
+    "EPN": 0.016806722689,
+    "LPN": 0.983193277311
+  },
+  "Rye House": {
+    "EPN": 1.0
+  },
+  "Sellindge SGT2 & 3 & Richborough SGT": {
+    "SPN": 1.0
+  },
+  "Sellindge SGT5A SGT6": {
+    "SPN": 1.0
+  },
+  "St Johns Wood 132kV": {
+    "LPN": 1.0
+  },
+  "Sundon": {
+    "EPN": 0.982142857143
+  },
+  "Tilbury 1&7": {
+    "EPN": 1.0
+  },
+  "Tilbury 2&8": {
+    "EPN": 1.0
+  },
+  "Tottenham": {
+    "EPN": 0.671111111111,
+    "LPN": 0.328888888889
+  },
+  "Walpole": {
+    "EPN": 1.0
+  },
+  "Warley": {
+    "EPN": 1.0
+  },
+  "Watford South 2 and 4": {
+    "EPN": 0.880952380952
+  },
+  "West Ham 132kV": {
+    "LPN": 1.0
+  },
+  "West Thurrock": {
+    "EPN": 1.0
+  },
+  "West Weybridge SGT": {
+    "SPN": 0.977011494253
+  },
+  "Willesden": {
+    "EPN": 0.93023255814,
+    "LPN": 0.046511627907
+  },
+  "Willesden Grid 132kV": {
+    "LPN": 0.992700729927
+  },
+  "Willesden Grid 66 kV": {
+    "LPN": 0.942857142857
+  },
+  "Wimbledon Grid South 3/4": {
+    "LPN": 0.992857142857,
+    "SPN": 0.007142857143
+  }
+}

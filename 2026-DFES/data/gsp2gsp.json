@@ -1,0 +1,204 @@
+{
+  "Acton Lane 22kV": {
+    "Acton Lane 22kV": 1.0
+  },
+  "Amersham": {
+    "Amersham": 1.0
+  },
+  "Barking 132": {
+    "Barking 132 (EPN)": 1.0
+  },
+  "Barking 132kV GIS": {
+    "Barking C 132kV (LPN)": 1.0
+  },
+  "Barking West (EPN)": {
+    "Barking West (EPN)": 1.0
+  },
+  "Barking West 33kV": {
+    "Barking West 33kV (LPN)": 1.0
+  },
+  "Beddington 132kV Hurst 132kV": {
+    "Beddington 132kV Hurst 132kV": 0.5,
+    "Hurst (SPN)": 0.5
+  },
+  "Beddington SGT": {
+    "Beddington SGT (SPN)": 1.0
+  },
+  "Bengeworth Road 132kV GIS": {
+    "New Cross 132kV": 0.5,
+    "Wimbledon Grid South 1/2 132kV": 0.5
+  },
+  "Biggleswade": {
+    "Eaton Socon": 1.0
+  },
+  "Bolney SGT": {
+    "Bolney SGT": 1.0
+  },
+  "Bourne": {
+    "Walpole": 1.0
+  },
+  "Braintree": {
+    "Braintree and Rayleigh": 1.0
+  },
+  "Bramford": {
+    "Bramford": 1.0
+  },
+  "Brimsdown": {
+    "Brimsdown (LPN)": 1.0
+  },
+  "Brimsdown (EPN)": {
+    "Brimsdown (EPN)": 1.0
+  },
+  "Burwell": {
+    "Burwell": 1.0
+  },
+  "Canterbury SGT": {
+    "Canterbury SGT": 1.0
+  },
+  "Chessington SGT 1 & SGT 4A": {
+    "Chessington SGT 1 & SGT 4A": 1.0
+  },
+  "Chessington SGT 2 & SGT 4B": {
+    "Chessington SGT 2 & SGT 4B": 1.0
+  },
+  "City Road 132kV": {
+    "City Road 132kV": 1.0
+  },
+  "Eaton Socon": {
+    "Eaton Socon": 1.0
+  },
+  "Elstree 1&2 and 8&9 and Watford South 3A&3B": {
+    "Elstree 1&2 and 8&9 and Watford South 3A&3B": 1.0
+  },
+  "Elstree 3&4": {
+    "Elstree 3 & 4": 1.0
+  },
+  "Grendon": {
+    "Sundon": 1.0
+  },
+  "Hackney 132kV": {
+    "Hackney 132kV": 1.0
+  },
+  "Hackney Supergrid 66kV": {
+    "Hackney Supergrid 66kV": 1.0
+  },
+  "Islington 132kV": {
+    "Islington 132kV": 1.0
+  },
+  "Kemsley SGT": {
+    "Kemsley SGT": 1.0
+  },
+  "Kemsley SGT 3A": {
+    "Kemsley SGT": 1.0
+  },
+  "Kemsley SGT1 & 2": {
+    "Kemsley SGT": 1.0
+  },
+  "Kingsnorth SGT": {
+    "Kingsnorth SGT": 1.0
+  },
+  "Laleham SGT": {
+    "Laleham SGT": 1.0
+  },
+  "Little Horsted SGT": {
+    "Ninfield SGT": 1.0
+  },
+  "Littlebrook 132kV": {
+    "Littlebrook 132kV (LPN)": 1.0
+  },
+  "Littlebrook SGT": {
+    "Littlebrook SGT (SPN)": 1.0
+  },
+  "Lodge Road 66kV": {
+    "Lodge Road 66kV": 1.0
+  },
+  "Mill Hill and Hendon": {
+    "Mill Hill and Hendon": 1.0
+  },
+  "New Cross 132kV": {
+    "New Cross 132kV": 0.5,
+    "Wimbledon Grid South 1/2 132kV": 0.5
+  },
+  "New Cross 132kV to Wimbledon 1 and 2 132kV": {
+    "New Cross 132kV": 0.5,
+    "Wimbledon Grid South 1/2 132kV": 0.5
+  },
+  "New Cross 66kV": {
+    "New Cross 66kV": 1.0
+  },
+  "Ninfield SGT": {
+    "Ninfield SGT": 1.0
+  },
+  "Northfleet SGT": {
+    "Northfleet SGT": 1.0
+  },
+  "Norwich": {
+    "Norwich": 1.0
+  },
+  "Pelham and Wymondley": {
+    "Pelham and Wymondley": 1.0
+  },
+  "Pelham and Wymondley and Twinstead Green": {
+    "Pelham and Wymondley": 1.0
+  },
+  "Rayleigh": {
+    "Braintree and Rayleigh": 1.0
+  },
+  "Redbridge Supergrid 33kV": {
+    "Redbridge Supergrid 33kV": 1.0
+  },
+  "Rye House": {
+    "Rye House": 1.0
+  },
+  "Sellindge SGT2 & 3 & Richborough SGT": {
+    "Sellindge SGT2 & 3 & Richborough SGT": 1.0
+  },
+  "Sellindge SGT5A SGT6": {
+    "Sellindge SGT2 & 3 & Richborough SGT": 1.0
+  },
+  "St Johns Wood 132kV": {
+    "St Johns Wood 132kV": 1.0
+  },
+  "Sundon": {
+    "Sundon": 1.0
+  },
+  "Tilbury 1&7": {
+    "Tilbury 1&7": 1.0
+  },
+  "Tilbury 2&8": {
+    "Tilbury 2&8": 1.0
+  },
+  "Tottenham": {
+    "Tottenham": 1.0
+  },
+  "Walpole": {
+    "Walpole": 1.0
+  },
+  "Warley": {
+    "Warley": 1.0
+  },
+  "Watford South 2 and 4": {
+    "Watford South 2 and 4": 1.0
+  },
+  "West Ham 132kV": {
+    "West Ham 132kV": 1.0
+  },
+  "West Thurrock": {
+    "West Thurrock": 1.0
+  },
+  "West Weybridge SGT": {
+    "West Weybridge SGT": 1.0
+  },
+  "Willesden": {
+    "Willesden 132kV (EPN)": 1.0
+  },
+  "Willesden Grid 132kV": {
+    "Willesden 132kV (LPN)": 1.0
+  },
+  "Willesden Grid 66 kV": {
+    "Willesden Grid 66 kV": 1.0
+  },
+  "Wimbledon Grid South 3/4": {
+    "Wimbledon Grid South 3/4 132kV": 1.0
+  }
+}

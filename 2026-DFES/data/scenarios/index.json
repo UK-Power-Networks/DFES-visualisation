@@ -1,200 +1,750 @@
 {
-	"Counterfactual": {
-		"description": "<ul><li>Business as usual scenario, does not meet the 2050 Net Zero target</li></ul>",
-		"color": "#454546",
-		"css": "counterfactual",
-		"data": {
-			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Counterfactual_BEV cars.csv", "key": "LSOA21CD" },
-			"phev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Counterfactual_PHEV cars.csv", "key": "LSOA21CD" },
-			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus_Counterfactual_BEV buses.csv","key":"LSOA21CD" },
-			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Counterfactual_Domestic electric resistive heating.csv", "key": "LSOA21CD" },
-			"domestic-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Counterfactual_Domestic heat pump.csv", "key": "LSOA21CD" },
-			"domestic-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Counterfactual_Domestic hybrid heat pump.csv", "key": "LSOA21CD" },
-			"Coach": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Coach_Counterfactual_BEV coaches.csv", "key": "LSOA21CD" },
-			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C District Heat_Counterfactual_Non-domestic district heating.csv", "key": "LSOA21CD" },
-			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_Counterfactual_Domestic battery capacity.csv", "key": "LSOA21CD" },
-			"Domestic-connection-count": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic connection counts_Medium_Domestic connection count.csv", "key": "LSOA21CD" },
-			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic District Heat_Counterfactual_Domestic district heating.csv", "key": "LSOA21CD" },
-			"HGV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/HGV_Counterfactual_BEV HGVs.csv", "key": "LSOA21CD" },
-			"I&C-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C batteries_Counterfactual_I&C battery capacity.csv", "key": "LSOA21CD" },
-			"I&C-connections": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Connection Counts_Medium_I&C connection count.csv", "key": "LSOA21CD" },
-			"I&C-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Counterfactual_Non-domestic electric resistive heating.csv", "key": "LSOA21CD" },
-			"I&C-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Counterfactual_Non-domestic heat pump.csv", "key": "LSOA21CD" },
-			"I&C-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Counterfactual_Non-domestic hybrid heat pump.csv", "key": "LSOA21CD" },
-			"Motorcycles": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/motorcycles_Counterfactual_EV motorcycles.csv", "key": "LSOA21CD" },
-			"PHV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/PHV_Counterfactual_EV PHVs.csv", "key": "LSOA21CD" },
-			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Counterfactual_Solar Generation (Small rooftop less than=4kW).csv", "key": "LSOA21CD" },
-			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "Rooftop solar PV_Counterfactual_Solar Generation (Large rooftop _4 kW, less than=150kW).csv", "key": "LSOA21CD" },
-			"Taxi": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Taxi_Counterfactual_EV taxis.csv", "key": "LSOA21CD" },
-			"bev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Counterfactual_BEV Vans.csv", "key": "LSOA21CD" },
-			"phev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Counterfactual_PHEV Vans.csv", "key": "LSOA21CD" },
-			"Dom-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Air Conditioning_Counterfactual_Domestic AC.csv", "key": "LSOA21CD" },
-			"I&C-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Air Conditioning_Counterfactual_Non-domestic AC.csv", "key": "LSOA21CD" },
-		  	"Biomass": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Biomass & energy crops (including CHP).csv", "key": "MSOA21CD" },
-			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Counterfactual_Generation Co-Location.csv", "key": "MSOA21CD" },
-			"Hydrogen": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Hydrogen fuelled generation.csv", "key": "MSOA21CD" },
-			"Large-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Non-renewable CHP (greater than=1 MW).csv", "key": "MSOA21CD" },
-			"Small-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Non-renewable CHP (less than1 MW).csv", "key": "MSOA21CD" },
-			"Diesel": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Non-renewable engines (Diesel) (non-CHP).csv", "key": "MSOA21CD" },
-			"Gas": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Non-renewable engines (Gas) (non-CHP).csv", "key": "MSOA21CD" },
-			"CCGT": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_CCGTs (non CHP).csv", "key": "MSOA21CD" },
-			"OCGT": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_OCGTs (non CHP).csv", "key": "MSOA21CD" },
-			"wind": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Onshore wind.csv", "key": "MSOA21CD" },
-			"Other generation": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Other.csv", "key": "MSOA21CD" },
-			"Renewable_engines": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA21CD" },
-			"large-solar": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Solar Generation (Large greater than150 kW).csv", "key": "MSOA21CD" },
-			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Counterfactual_Standalone - Grid Services.csv", "key": "MSOA21CD" },
-			"Waste_incineration": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Counterfactual_Waste incineration (including CHP).csv", "key": "MSOA21CD" }
-}
-			},
-	"Electric Engagement": {
-		"description": "<ul><li>Reaches 2050 Net Zero target thanks to widespread electrification</li></ul>",
-		"color": "#F26522",
-		"css": "electric-engagement",
-		"data": {
-			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Electric Engagement_BEV cars.csv", "key": "LSOA21CD" },
-			"phev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Electric Engagement_PHEV cars.csv", "key": "LSOA21CD" },
-			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus_Electric Engagement_BEV buses.csv","key":"LSOA21CD" },
-			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Electric Engagement_Domestic electric resistive heating.csv", "key": "LSOA21CD" },
-			"domestic-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Electric Engagement_Domestic heat pump.csv", "key": "LSOA21CD" },
-			"domestic-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Electric Engagement_Domestic hybrid heat pump.csv", "key": "LSOA21CD" },
-			"Coach": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Coach_Electric Engagement_BEV coaches.csv", "key": "LSOA21CD" },
-			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C District Heat_Electric Engagement_Non-domestic district heating.csv", "key": "LSOA21CD" },
-			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_Electric Engagement_Domestic battery capacity.csv", "key": "LSOA21CD" },
-			"Domestic-connection-count": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic connection counts_Medium_Domestic connection count.csv", "key": "LSOA21CD" },
-			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic District Heat_Electric Engagement_Domestic district heating.csv", "key": "LSOA21CD" },
-			"HGV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/HGV_Electric Engagement_BEV HGVs.csv", "key": "LSOA21CD" },
-			"I&C-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C batteries_Electric Engagement_I&C battery capacity.csv", "key": "LSOA21CD" },
-			"I&C-connections": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Connection Counts_Medium_I&C connection count.csv", "key": "LSOA21CD" },
-			"I&C-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Electric Engagement_Non-domestic electric resistive heating.csv", "key": "LSOA21CD" },
-			"I&C-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Electric Engagement_Non-domestic heat pump.csv", "key": "LSOA21CD" },
-			"I&C-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Electric Engagement_Non-domestic hybrid heat pump.csv", "key": "LSOA21CD" },
-			"Motorcycles": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/motorcycles_Electric Engagement_EV motorcycles.csv", "key": "LSOA21CD" },
-			"PHV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/PHV_Electric Engagement_EV PHVs.csv", "key": "LSOA21CD" },
-			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Electric Engagement_Solar Generation (Small rooftop less than=4kW).csv", "key": "LSOA21CD" },
-			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Electric Engagement_Solar Generation (Large rooftop _4 kW, less than=150kW).csv", "key": "LSOA21CD" },
-			"Taxi": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Taxi_Electric Engagement_EV taxis.csv", "key": "LSOA21CD" },
-			"bev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Electric Engagement_BEV Vans.csv", "key": "LSOA21CD" },
-			"phev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Electric Engagement_PHEV Vans.csv", "key": "LSOA21CD" },
-			"Dom-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Air Conditioning_Electric Engagement_Domestic AC.csv", "key": "LSOA21CD" },
-			"I&C-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Air Conditioning_Electric Engagement_Non-domestic AC.csv", "key": "LSOA21CD" },
-			"Biomass": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Biomass & energy crops (including CHP).csv", "key": "MSOA21CD" },
-			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Electric Engagement_Generation Co-Location.csv", "key": "MSOA21CD" },
-			"Hydrogen": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Hydrogen fuelled generation.csv", "key": "MSOA21CD" },
-			"Large-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Non-renewable CHP (greater than=1 MW).csv", "key": "MSOA21CD" },
-			"Small-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Non-renewable CHP (less than1 MW).csv", "key": "MSOA21CD" },
-			"Diesel": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Non-renewable engines (Diesel) (non-CHP).csv", "key": "MSOA21CD" },
-			"Gas": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Non-renewable engines (Gas) (non-CHP).csv", "key": "MSOA21CD" },
-			"CCGT": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_CCGTs (non CHP).csv", "key": "MSOA21CD" },
-			"OCGT": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_OCGTs (non CHP).csv", "key": "MSOA21CD" },
-			"wind": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Onshore wind.csv", "key": "MSOA21CD" },
-			"Other generation": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Other.csv", "key": "MSOA21CD" },
-			"Renewable_engines": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA21CD" },
-			"large-solar": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Solar Generation (Large greater than150 kW).csv", "key": "MSOA21CD" },
-			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Electric Engagement_Standalone - Grid Services.csv", "key": "MSOA21CD" },
-			"Waste_incineration": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Electric Engagement_Waste incineration (including CHP).csv", "key": "MSOA21CD" }
-			
-
-			}
-	},
-	"Hydrogen Evolution": {
-		"description": "<ul><li>Reaches 2050 Net Zero target by relying on hydrogen to decarbonise the more difficult sectors of heat and heavy transport</li></ul>",
-		"color": "#0079C1",
-		"css": "hydrogen-evolution",
-		"data": {
-			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Hydrogen Evolution_BEV cars.csv", "key": "LSOA21CD" },
-			"phev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Hydrogen Evolution_PHEV cars.csv", "key": "LSOA21CD" },
-			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus_Hydrogen Evolution_BEV buses.csv","key":"LSOA21CD" },
-			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Hydrogen Evolution_Domestic electric resistive heating.csv", "key": "LSOA21CD" },
-			"domestic-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Hydrogen Evolution_Domestic heat pump.csv", "key": "LSOA21CD" },
-			"domestic-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Hydrogen Evolution_Domestic hybrid heat pump.csv", "key": "LSOA21CD" },
-			"Coach": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Coach_Hydrogen Evolution_BEV coaches.csv", "key": "LSOA21CD" },
-			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C District Heat_Hydrogen Evolution_Non-domestic district heating.csv", "key": "LSOA21CD" },
-			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_Hydrogen Evolution_Domestic battery capacity.csv", "key": "LSOA21CD" },
-			"Domestic-connection-count": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic connection counts_Medium_Domestic connection count.csv", "key": "LSOA21CD" },
-			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic District Heat_Hydrogen Evolution_Domestic district heating.csv", "key": "LSOA21CD" },
-			"HGV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/HGV_Hydrogen Evolution_BEV HGVs.csv", "key": "LSOA21CD" },
-			"I&C-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C batteries_Hydrogen Evolution_I&C battery capacity.csv", "key": "LSOA21CD" },
-			"I&C-connections": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Connection Counts_Medium_I&C connection count.csv", "key": "LSOA21CD" },
-			"I&C-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Hydrogen Evolution_Non-domestic electric resistive heating.csv", "key": "LSOA21CD" },
-			"I&C-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Hydrogen Evolution_Non-domestic heat pump.csv", "key": "LSOA21CD" },
-			"I&C-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Hydrogen Evolution_Non-domestic hybrid heat pump.csv", "key": "LSOA21CD" },
-			"Motorcycles": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/motorcycles_Hydrogen Evolution_EV motorcycles.csv", "key": "LSOA21CD" },
-			"PHV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/PHV_Hydrogen Evolution_EV PHVs.csv", "key": "LSOA21CD" },
-			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Hydrogen Evolution_Solar Generation (Small rooftop less than=4kW).csv", "key": "LSOA21CD" },
-			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Hydrogen Evolution_Solar Generation (Large rooftop _4 kW, less than=150kW).csv", "key": "LSOA21CD" },
-			"Taxi": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Taxi_Hydrogen Evolution_EV taxis.csv", "key": "LSOA21CD" },
-			"bev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Hydrogen Evolution_BEV Vans.csv", "key": "LSOA21CD" },
-			"phev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Hydrogen Evolution_PHEV Vans.csv", "key": "LSOA21CD" },
-			"Dom-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Air Conditioning_Hydrogen Evolution_Domestic AC.csv", "key": "LSOA21CD" },
-			"I&C-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Air Conditioning_Hydrogen Evolution_Non-domestic AC.csv", "key": "LSOA21CD" },
-			"Biomass": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Biomass & energy crops (including CHP).csv", "key": "MSOA21CD" },
-			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Hydrogen Evolution_Generation Co-Location.csv", "key": "MSOA21CD" },
-			"Hydrogen": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Hydrogen fuelled generation.csv", "key": "MSOA21CD" },
-			"Large-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Non-renewable CHP (greater than=1 MW).csv", "key": "MSOA21CD" },
-			"Small-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Non-renewable CHP (less than1 MW).csv", "key": "MSOA21CD" },
-			"Diesel": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Non-renewable engines (Diesel) (non-CHP).csv", "key": "MSOA21CD" },
-			"Gas": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Non-renewable engines (Gas) (non-CHP).csv", "key": "MSOA21CD" },
-			"CCGT": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_CCGTs (non CHP).csv", "key": "MSOA21CD" },
-			"OCGT": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_OCGTs (non CHP).csv", "key": "MSOA21CD" },
-			"wind": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Onshore wind.csv", "key": "MSOA21CD" },
-			"Other generation": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Other.csv", "key": "MSOA21CD" },
-			"Renewable_engines": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA21CD" },
-			"large-solar": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Solar Generation (Large greater than150 kW).csv", "key": "MSOA21CD" },
-			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Hydrogen Evolution_Standalone - Grid Services.csv", "key": "MSOA21CD" },
-			"Waste_incineration": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Hydrogen Evolution_Waste incineration (including CHP).csv", "key": "MSOA21CD" }
-			
-		}
-	},
-	"Holistic Transition": {
-		"description": "<ul><li>Achieves Net Zero by 2050 thanks to a combination of electric and hydrogen technologies</li></ul>",
-		"color": "#C2CD23",
-		"css": "holistic-transition",
-		"data": {
-			"bev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Holistic Transition_BEV cars.csv", "key": "LSOA21CD" },
-			"phev": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/cars_Holistic Transition_PHEV cars.csv", "key": "LSOA21CD" },
-			"Bus":{ "dataBy": "lsoa", "file":"lsoa/2021-DFES/Bus_Holistic Transition_BEV buses.csv","key":"LSOA21CD" },
-			"domestic-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Holistic Transition_Domestic electric resistive heating.csv", "key": "LSOA21CD" },
-			"domestic-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Holistic Transition_Domestic heat pump.csv", "key": "LSOA21CD" },
-			"domestic-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Heating_Holistic Transition_Domestic hybrid heat pump.csv", "key": "LSOA21CD" },
-			"Coach": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Coach_Holistic Transition_BEV coaches.csv", "key": "LSOA21CD" },
-			"I&C-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C District Heat_Holistic Transition_Non-domestic district heating.csv", "key": "LSOA21CD" },
-			"Domestic-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic batteries_Holistic Transition_Domestic battery capacity.csv", "key": "LSOA21CD" },
-			"Domestic-connection-count": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic connection counts_Medium_Domestic connection count.csv", "key": "LSOA21CD" },
-			"Domestic-District-Heat": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic District Heat_Holistic Transition_Domestic district heating.csv", "key": "LSOA21CD" },
-			"HGV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/HGV_Holistic Transition_BEV HGVs.csv", "key": "LSOA21CD" },
-			"I&C-batteries": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C batteries_Holistic Transition_I&C battery capacity.csv", "key": "LSOA21CD" },
-			"I&C-connections": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Connection Counts_Medium_I&C connection count.csv", "key": "LSOA21CD" },
-			"I&C-Electric": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Holistic Transition_Non-domestic electric resistive heating.csv", "key": "LSOA21CD" },
-			"I&C-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Holistic Transition_Non-domestic heat pump.csv", "key": "LSOA21CD" },
-			"I&C-Hybrid-Heat-Pump": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Heating_Holistic Transition_Non-domestic hybrid heat pump.csv", "key": "LSOA21CD" },
-			"Motorcycles": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/motorcycles_Holistic Transition_EV motorcycles.csv", "key": "LSOA21CD" },
-			"PHV": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/PHV_Holistic Transition_EV PHVs.csv", "key": "LSOA21CD" },
-			"Domestic-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Holistic Transition_Solar Generation (Small rooftop less than=4kW).csv", "key": "LSOA21CD" },
-			"I&C-PV-capacity": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Rooftop solar PV_Holistic Transition_Solar Generation (Large rooftop _4 kW, less than=150kW).csv", "key": "LSOA21CD" },
-			"Taxi": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Taxi_Holistic Transition_EV taxis.csv", "key": "LSOA21CD" },
-			"bev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Holistic Transition_BEV Vans.csv", "key": "LSOA21CD" },
-			"phev-vans": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/vans_Holistic Transition_PHEV Vans.csv", "key": "LSOA21CD" },
-			"Dom-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/Domestic Air Conditioning_Holistic Transition_Domestic AC.csv", "key": "LSOA21CD" },
-			"I&C-AC": { "dataBy": "lsoa", "file": "lsoa/2021-DFES/I&C Air Conditioning_Holistic Transition_Non-domestic AC.csv", "key": "LSOA21CD" },
-			"Biomass": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Biomass & energy crops (including CHP).csv", "key": "MSOA21CD" },
-			"Co-located_storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Holistic Transition_Generation Co-Location.csv", "key": "MSOA21CD" },
-			"Hydrogen": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Hydrogen fuelled generation.csv", "key": "MSOA21CD" },
-			"Large-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Non-renewable CHP (greater than=1 MW).csv", "key": "MSOA21CD" },
-			"Small-CHP-non-ren": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Non-renewable CHP (less than1 MW).csv", "key": "MSOA21CD" },
-			"Diesel": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Non-renewable engines (Diesel) (non-CHP).csv", "key": "MSOA21CD" },
-			"Gas": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Non-renewable engines (Gas) (non-CHP).csv", "key": "MSOA21CD" },
-			"CCGT": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_CCGTs (non CHP).csv", "key": "MSOA21CD" },
-			"OCGT": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_OCGTs (non CHP).csv", "key": "MSOA21CD" },
-			"wind": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Onshore wind.csv", "key": "MSOA21CD" },
-			"Other generation": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Other.csv", "key": "MSOA21CD" },
-			"Renewable_engines": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Renewable engines (Landfill gas, Sewage Gas, Biogas).csv", "key": "MSOA21CD" },
-			"large-solar": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Solar Generation (Large greater than150 kW).csv", "key": "MSOA21CD" },
-			"Storage": { "dataBy": "msoa", "file": "msoa/Distributed Storage_Holistic Transition_Standalone - Grid Services.csv", "key": "MSOA21CD" },
-			"Waste_incineration": { "dataBy": "msoa", "file": "msoa/Distributed Generation_Holistic Transition_Waste incineration (including CHP).csv", "key": "MSOA21CD" }
-			
-
-			
-		}
-	}
+  "Falling Behind": {
+    "description": "<ul><li>Business as usual scenario, does not meet the 2050 Net Zero target</li></ul>",
+    "color": "#454546",
+    "css": "falling-behind",
+    "data": {
+      "bev": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/cars_FallingBehind_BEV_Cars.csv",
+        "key": "LSOA21CD"
+      },
+      "phev": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/cars_FallingBehind_PHEV_Cars.csv",
+        "key": "LSOA21CD"
+      },
+      "Taxi": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Taxi_FallingBehind_EV_Taxis.csv",
+        "key": "LSOA21CD"
+      },
+      "bev-vans": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/vans_FallingBehind_BEV_Vans.csv",
+        "key": "LSOA21CD"
+      },
+      "phev-vans": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/vans_FallingBehind_PHEV_Vans.csv",
+        "key": "LSOA21CD"
+      },
+      "Bus": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Bus_FallingBehind_BEV_Buses.csv",
+        "key": "LSOA21CD"
+      },
+      "Coach": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Coach_FallingBehind_BEV_Coaches.csv",
+        "key": "LSOA21CD"
+      },
+      "HGV": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/HGV_FallingBehind_BEV_HGVs.csv",
+        "key": "LSOA21CD"
+      },
+      "Minibus": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Minibus_FallingBehind_BEV_Minibuses.csv",
+        "key": "LSOA21CD"
+      },
+      "Motorcycles": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/motorcycles_FallingBehind_EV_Motorcycles.csv",
+        "key": "LSOA21CD"
+      },
+      "PHV": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/PHV_FallingBehind_EV_PHVs.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Electric": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_FallingBehind_Domestic_electric_resistive_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Heat-Pump": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_FallingBehind_Domestic_heat_pump.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Hybrid-Heat-Pump": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_FallingBehind_Domestic_hybrid_heat_pump.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-District-Heat": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_District_Heat_FallingBehind_Domestic_district_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-batteries": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_batteries_FallingBehind_Domestic_battery_capacity.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-PV-capacity": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Rooftop_solar_PV_FallingBehind_Solar_Generation_(Small_rooftop_less_than_or_equal_to4kW).csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-connection-count": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_connection_counts_Medium_Domestic_connection_count.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-District-Heat": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_District_Heat_FallingBehind_Non-domestic_district_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-batteries": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_batteries_FallingBehind_I&C_battery_capacity.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-PV-capacity": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Rooftop_solar_PV_FallingBehind_Solar_Generation_(Large_rooftop_greater_than4_kW,_less_than_or_equal_to150kW).csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-connections": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_Connection_Counts_Medium_I&C_connection_count.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-AC": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_Air_Conditioning_Falling_Behind_Non-domestic_AC.csv",
+        "key": "LSOA21CD"
+      },
+      "Biomass": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Biomass_&_Energy_Crops_(including_CHP).csv",
+        "key": "GSP"
+      },
+      "Fuel_Cells": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Fuel_Cells.csv",
+        "key": "GSP"
+      },
+      "Large-CHP-non-ren": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Non-renewable_CHP.csv",
+        "key": "GSP"
+      },
+      "Micro_CHP": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Micro_CHP.csv",
+        "key": "GSP"
+      },
+      "Diesel": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Non-renewable_Engines_(Diesel)_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "Gas": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Non-renewable_Engines_(Gas)_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "CCGT": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_CCGTs_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "OCGT": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_OCGTs_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "wind": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Wind_Generation.csv",
+        "key": "GSP"
+      },
+      "Renewable_engines": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Renewable_Engines_(Landfill_Gas,_Sewage_Gas,_Biogas).csv",
+        "key": "GSP"
+      },
+      "large-solar": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Solar_Generation.csv",
+        "key": "GSP"
+      },
+      "Storage": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Storage_FallingBehind_Storage_Batteries.csv",
+        "key": "GSP"
+      },
+      "Waste_incineration": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_FallingBehind_Waste_Incineration_(including_CHP).csv",
+        "key": "GSP"
+      }
+    }
+  },
+  "Electric Engagement": {
+    "description": "<ul><li>Reaches 2050 Net Zero target thanks to widespread electrification</li></ul>",
+    "color": "#F26522",
+    "css": "electric-engagement",
+    "data": {
+      "bev": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/cars_ElectricEngagement_BEV_Cars.csv",
+        "key": "LSOA21CD"
+      },
+      "phev": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/cars_ElectricEngagement_PHEV_Cars.csv",
+        "key": "LSOA21CD"
+      },
+      "Taxi": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Taxi_ElectricEngagement_EV_Taxis.csv",
+        "key": "LSOA21CD"
+      },
+      "bev-vans": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/vans_ElectricEngagement_BEV_Vans.csv",
+        "key": "LSOA21CD"
+      },
+      "phev-vans": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/vans_ElectricEngagement_PHEV_Vans.csv",
+        "key": "LSOA21CD"
+      },
+      "Bus": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Bus_ElectricEngagement_BEV_Buses.csv",
+        "key": "LSOA21CD"
+      },
+      "Coach": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Coach_ElectricEngagement_BEV_Coaches.csv",
+        "key": "LSOA21CD"
+      },
+      "HGV": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/HGV_ElectricEngagement_BEV_HGVs.csv",
+        "key": "LSOA21CD"
+      },
+      "Minibus": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Minibus_ElectricEngagement_BEV_Minibuses.csv",
+        "key": "LSOA21CD"
+      },
+      "Motorcycles": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/motorcycles_ElectricEngagement_EV_Motorcycles.csv",
+        "key": "LSOA21CD"
+      },
+      "PHV": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/PHV_ElectricEngagement_EV_PHVs.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Electric": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_ElectricEngagement_Domestic_electric_resistive_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Heat-Pump": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_ElectricEngagement_Domestic_heat_pump.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Hybrid-Heat-Pump": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_ElectricEngagement_Domestic_hybrid_heat_pump.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-District-Heat": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_District_Heat_ElectricEngagement_Domestic_district_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-batteries": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_batteries_ElectricEngagement_Domestic_battery_capacity.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-PV-capacity": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Rooftop_solar_PV_ElectricEngagement_Solar_Generation_(Small_rooftop_less_than_or_equal_to4kW).csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-connection-count": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_connection_counts_Medium_Domestic_connection_count.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-District-Heat": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_District_Heat_ElectricEngagement_Non-domestic_district_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-batteries": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_batteries_ElectricEngagement_I&C_battery_capacity.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-PV-capacity": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Rooftop_solar_PV_ElectricEngagement_Solar_Generation_(Large_rooftop_greater_than4_kW,_less_than_or_equal_to150kW).csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-connections": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_Connection_Counts_Medium_I&C_connection_count.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-AC": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_Air_Conditioning_Electric_Engagement_Non-domestic_AC.csv",
+        "key": "LSOA21CD"
+      },
+      "Biomass": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Biomass_&_Energy_Crops_(including_CHP).csv",
+        "key": "GSP"
+      },
+      "Fuel_Cells": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Fuel_Cells.csv",
+        "key": "GSP"
+      },
+      "Large-CHP-non-ren": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Non-renewable_CHP.csv",
+        "key": "GSP"
+      },
+      "Micro_CHP": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Micro_CHP.csv",
+        "key": "GSP"
+      },
+      "Diesel": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Non-renewable_Engines_(Diesel)_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "Gas": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Non-renewable_Engines_(Gas)_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "CCGT": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_CCGTs_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "OCGT": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_OCGTs_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "wind": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Wind_Generation.csv",
+        "key": "GSP"
+      },
+      "Renewable_engines": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Renewable_Engines_(Landfill_Gas,_Sewage_Gas,_Biogas).csv",
+        "key": "GSP"
+      },
+      "large-solar": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Solar_Generation.csv",
+        "key": "GSP"
+      },
+      "Storage": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Storage_ElectricEngagement_Storage_Batteries.csv",
+        "key": "GSP"
+      },
+      "Waste_incineration": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_ElectricEngagement_Waste_Incineration_(including_CHP).csv",
+        "key": "GSP"
+      }
+    }
+  },
+  "Hydrogen Evolution": {
+    "description": "<ul><li>Reaches 2050 Net Zero target by relying on hydrogen to decarbonise the more difficult sectors of heat and heavy transport</li></ul>",
+    "color": "#0079C1",
+    "css": "hydrogen-evolution",
+    "data": {
+      "bev": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/cars_HydrogenEvolution_BEV_Cars.csv",
+        "key": "LSOA21CD"
+      },
+      "phev": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/cars_HydrogenEvolution_PHEV_Cars.csv",
+        "key": "LSOA21CD"
+      },
+      "Taxi": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Taxi_HydrogenEvolution_EV_Taxis.csv",
+        "key": "LSOA21CD"
+      },
+      "bev-vans": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/vans_HydrogenEvolution_BEV_Vans.csv",
+        "key": "LSOA21CD"
+      },
+      "phev-vans": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/vans_HydrogenEvolution_PHEV_Vans.csv",
+        "key": "LSOA21CD"
+      },
+      "Bus": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Bus_HydrogenEvolution_BEV_Buses.csv",
+        "key": "LSOA21CD"
+      },
+      "Coach": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Coach_HydrogenEvolution_BEV_Coaches.csv",
+        "key": "LSOA21CD"
+      },
+      "HGV": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/HGV_HydrogenEvolution_BEV_HGVs.csv",
+        "key": "LSOA21CD"
+      },
+      "Minibus": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Minibus_HydrogenEvolution_BEV_Minibuses.csv",
+        "key": "LSOA21CD"
+      },
+      "Motorcycles": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/motorcycles_HydrogenEvolution_EV_Motorcycles.csv",
+        "key": "LSOA21CD"
+      },
+      "PHV": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/PHV_HydrogenEvolution_EV_PHVs.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Electric": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_HydrogenEvolution_Domestic_electric_resistive_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Heat-Pump": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_HydrogenEvolution_Domestic_heat_pump.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Hybrid-Heat-Pump": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_HydrogenEvolution_Domestic_hybrid_heat_pump.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-District-Heat": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_District_Heat_HydrogenEvolution_Domestic_district_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-batteries": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_batteries_HydrogenEvolution_Domestic_battery_capacity.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-PV-capacity": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Rooftop_solar_PV_HydrogenEvolution_Solar_Generation_(Small_rooftop_less_than_or_equal_to4kW).csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-connection-count": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_connection_counts_Medium_Domestic_connection_count.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-District-Heat": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_District_Heat_HydrogenEvolution_Non-domestic_district_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-batteries": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_batteries_HydrogenEvolution_I&C_battery_capacity.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-PV-capacity": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Rooftop_solar_PV_HydrogenEvolution_Solar_Generation_(Large_rooftop_greater_than4_kW,_less_than_or_equal_to150kW).csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-connections": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_Connection_Counts_Medium_I&C_connection_count.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-AC": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_Air_Conditioning_Hydrogen_Evolution_Non-domestic_AC.csv",
+        "key": "LSOA21CD"
+      },
+      "Biomass": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Biomass_&_Energy_Crops_(including_CHP).csv",
+        "key": "GSP"
+      },
+      "Fuel_Cells": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Fuel_Cells.csv",
+        "key": "GSP"
+      },
+      "Large-CHP-non-ren": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Non-renewable_CHP.csv",
+        "key": "GSP"
+      },
+      "Micro_CHP": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Micro_CHP.csv",
+        "key": "GSP"
+      },
+      "Diesel": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Non-renewable_Engines_(Diesel)_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "Gas": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Non-renewable_Engines_(Gas)_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "CCGT": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_CCGTs_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "OCGT": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_OCGTs_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "wind": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Wind_Generation.csv",
+        "key": "GSP"
+      },
+      "Renewable_engines": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Renewable_Engines_(Landfill_Gas,_Sewage_Gas,_Biogas).csv",
+        "key": "GSP"
+      },
+      "large-solar": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Solar_Generation.csv",
+        "key": "GSP"
+      },
+      "Storage": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Storage_HydrogenEvolution_Storage_Batteries.csv",
+        "key": "GSP"
+      },
+      "Waste_incineration": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HydrogenEvolution_Waste_Incineration_(including_CHP).csv",
+        "key": "GSP"
+      }
+    }
+  },
+  "Holistic Transition": {
+    "description": "<ul><li>Achieves Net Zero by 2050 thanks to a combination of electric and hydrogen technologies</li></ul>",
+    "color": "#C2CD23",
+    "css": "holistic-transition",
+    "data": {
+      "bev": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/cars_HolisticTransition_BEV_Cars.csv",
+        "key": "LSOA21CD"
+      },
+      "phev": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/cars_HolisticTransition_PHEV_Cars.csv",
+        "key": "LSOA21CD"
+      },
+      "Taxi": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Taxi_HolisticTransition_EV_Taxis.csv",
+        "key": "LSOA21CD"
+      },
+      "bev-vans": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/vans_HolisticTransition_BEV_Vans.csv",
+        "key": "LSOA21CD"
+      },
+      "phev-vans": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/vans_HolisticTransition_PHEV_Vans.csv",
+        "key": "LSOA21CD"
+      },
+      "Bus": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Bus_HolisticTransition_BEV_Buses.csv",
+        "key": "LSOA21CD"
+      },
+      "Coach": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Coach_HolisticTransition_BEV_Coaches.csv",
+        "key": "LSOA21CD"
+      },
+      "HGV": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/HGV_HolisticTransition_BEV_HGVs.csv",
+        "key": "LSOA21CD"
+      },
+      "Minibus": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Minibus_HolisticTransition_BEV_Minibuses.csv",
+        "key": "LSOA21CD"
+      },
+      "Motorcycles": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/motorcycles_HolisticTransition_EV_Motorcycles.csv",
+        "key": "LSOA21CD"
+      },
+      "PHV": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/PHV_HolisticTransition_EV_PHVs.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Electric": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_HolisticTransition_Domestic_electric_resistive_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Heat-Pump": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_HolisticTransition_Domestic_heat_pump.csv",
+        "key": "LSOA21CD"
+      },
+      "domestic-Hybrid-Heat-Pump": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_Heating_HolisticTransition_Domestic_hybrid_heat_pump.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-District-Heat": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_District_Heat_HolisticTransition_Domestic_district_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-batteries": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_batteries_HolisticTransition_Domestic_battery_capacity.csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-PV-capacity": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Rooftop_solar_PV_HolisticTransition_Solar_Generation_(Small_rooftop_less_than_or_equal_to4kW).csv",
+        "key": "LSOA21CD"
+      },
+      "Domestic-connection-count": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Domestic_connection_counts_Medium_Domestic_connection_count.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-District-Heat": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_District_Heat_HolisticTransition_Non-domestic_district_heating.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-batteries": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_batteries_HolisticTransition_I&C_battery_capacity.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-PV-capacity": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/Rooftop_solar_PV_HolisticTransition_Solar_Generation_(Large_rooftop_greater_than4_kW,_less_than_or_equal_to150kW).csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-connections": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_Connection_Counts_Medium_I&C_connection_count.csv",
+        "key": "LSOA21CD"
+      },
+      "I&C-AC": {
+        "dataBy": "lsoa",
+        "file": "lsoa/2021-DFES/I&C_Air_Conditioning_Holistic_Transition_Non-domestic_AC.csv",
+        "key": "LSOA21CD"
+      },
+      "Biomass": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Biomass_&_Energy_Crops_(including_CHP).csv",
+        "key": "GSP"
+      },
+      "Fuel_Cells": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Fuel_Cells.csv",
+        "key": "GSP"
+      },
+      "Large-CHP-non-ren": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Non-renewable_CHP.csv",
+        "key": "GSP"
+      },
+      "Micro_CHP": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Micro_CHP.csv",
+        "key": "GSP"
+      },
+      "Diesel": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Non-renewable_Engines_(Diesel)_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "Gas": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Non-renewable_Engines_(Gas)_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "CCGT": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_CCGTs_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "OCGT": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_OCGTs_(non_CHP).csv",
+        "key": "GSP"
+      },
+      "wind": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Wind_Generation.csv",
+        "key": "GSP"
+      },
+      "Renewable_engines": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Renewable_Engines_(Landfill_Gas,_Sewage_Gas,_Biogas).csv",
+        "key": "GSP"
+      },
+      "large-solar": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Solar_Generation.csv",
+        "key": "GSP"
+      },
+      "Storage": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Storage_HolisticTransition_Storage_Batteries.csv",
+        "key": "GSP"
+      },
+      "Waste_incineration": {
+        "dataBy": "gsp",
+        "file": "gsp/Distributed_Generation_HolisticTransition_Waste_Incineration_(including_CHP).csv",
+        "key": "GSP"
+      }
+    }
+  }
 }

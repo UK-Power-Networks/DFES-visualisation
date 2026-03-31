@@ -37,7 +37,7 @@ S(document).ready(function(){
 			"key": (new Date()).getFullYear()+"",
 			"parameter": "bev",
 			"scale": "relative",
-			"years": {"min":2023,"max":2050},
+			"years": {"min":2024,"max":2050},
 			"map": {
 				"bounds": [[50.7,-1.55],[53,2]],
 				"attribution": "Vis: <a href=\"https://open-innovations.org/projects/\">Open Innovations</a>, Data: UK Power Networks",
@@ -47,8 +47,8 @@ S(document).ready(function(){
 		"mapping": {
 			"lsoa": {
 				"LSOAlayer": {},
-				"MSOAlayer": {
-					"file": "data/lsoa2msoa.json"
+				"GSPlayer": {
+					"file": "data/lsoa2gsp.json"
 				},
 				"LADlayer": {
 					"file": "data/lsoa2lad-compact.json",
@@ -115,74 +115,24 @@ S(document).ready(function(){
 					}
 				}
 			},
-			"msoa": {
+			"gsp": {
 				"LSOAlayer": {
-					"file": "data/msoa2lsoa.json"			
+					"file": "data/gsp2lsoa.json"
 				},
-				"MSOAlayer": {},
+				"GSPlayer": {
+					"file": "data/gsp2gsp.json"
+				},
 				"LADlayer": {
-					"file": "data/msoa2lad-compact.json",
-					"process": function(d){
-						// Work out mapping from MSOA to LAD
-						// Data is saved as { LAD: [MSOA1,MSOA2,MSOA3...] }
-						var a,data,i;
-						data = {};
-						for(a in d){
-							for(i = 0; i < d[a].length; i++){
-								data[d[a][i]] = {};
-								data[d[a][i]][a] = 1;
-							}
-						}
-						return data;
-					}
+					"file": "data/gsp2lad-compact.json"
 				},
 				"LEPlayer": {
-					"file": "data/msoa2lep.json",
-					"process": function(d){
-						// Work out mapping from MSOA to LAD
-						// Data is saved as { LEP: [MSOA1,MSOA2,MSOA3...] }
-						var a,data,i;
-						data = {};
-						for(a in d){
-							for(i = 0; i < d[a].length; i++){
-								data[d[a][i]] = {};
-								data[d[a][i]][a] = 1;
-							}
-						}
-						return data;
-					}
+					"file": "data/gsp2lep.json"
 				},
 				"Countylayer":{
-					"file": "data/msoa2cty.json",
-					"process": function(d){
-						// Work out mapping from MSOA to County
-						// Data is saved as { CTY: [MSOA1,MSOA2,MSOA3...] }
-						var a,data,i;
-						data = {};
-						for(a in d){
-							for(i = 0; i < d[a].length; i++){
-								data[d[a][i]] = {};
-								data[d[a][i]][a] = 1;
-							}
-						}
-						return data;
-					}
+					"file": "data/gsp2cty.json"
 				},
 				"DNOlayer":{
-					"file": "data/msoa2dno.json",
-					"process": function(d){
-						// Work out mapping from MSOA to DNO
-						// Data is saved as { DNO: [MSOA1,MSOA2,MSOA3...] }
-						var a,data,i;
-						data = {};
-						for(a in d){
-							for(i = 0; i < d[a].length; i++){
-								data[d[a][i]] = {};
-								data[d[a][i]][a] = 1;
-							}
-						}
-						return data;
-					}
+					"file": "data/gsp2dno.json"
 				}
 			}
 		},
@@ -192,10 +142,10 @@ S(document).ready(function(){
 				"key": "LSOA21CD",
 				"name": "LSOA21NM"
 			},
-			"MSOAlayer":{
-				"geojson": "data/maps/MSOA2021-super-generalised-clipped.geojson",
-				"key": "MSOA21CD",
-				"name": "MSOA21NM"
+			"GSPlayer":{
+				"geojson": "data/maps/Updated_GSPs.geojson",
+				"key": "GSPs",
+				"name": "GSPs"
 			},
 			"LADlayer":{
 				"geojson": "data/maps/LAD2022-super-generalised-clipped.geojson",
@@ -490,29 +440,29 @@ S(document).ready(function(){
 				}
 				
 			},
-			"MSOA":{
-				"title":"MSOAs",
-				"source": "msoa",
+			"GSP":{
+				"title":"Grid Supply Points",
+				"source": "gsp",
 				"layers":[{
 					"id":"LADlayer",
 					"heatmap": false,
 					"boundary":{"color":"#444444","strokeWidth":1,"opacity":0.5,"fillOpacity":0}
 				},{
-					"id": "MSOAlayer",
+					"id": "GSPlayer",
 					"heatmap": true,
 					"boundary":{"stroke":false}
 				}],
 				"popup": {
 					"text": function(attr){
-						file = 'MSOA-'+attr.properties.MSOA21CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.MSOA21NM || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The MSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						file = 'GSP-'+attr.properties.GSPs.replace(/[^A-Za-z0-9]+/g,'-').replace(/^-|-$/g,'')+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
+						return '<h3>'+(attr.properties.GSPs || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The GSP areas may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 
 						var data,c,p,key,values,l;
 						if(!attr) attr = {};
 						
-						l = 'MSOAlayer';
+						l = 'GSPlayer';
 						key = this.layers[l].key;
 
 						if(attr.id && key){
@@ -578,7 +528,7 @@ S(document).ready(function(){
 					"text": function(attr){
 						file = 'LSOA-'+attr.properties.LSOA21CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
 						console.log(this.data.scenarios[this.options.scenario].data[this.options.parameter]);
-						return '<h3>'+(attr.properties.LSOA21NM || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">'+(this.data.scenarios[this.options.scenario].data[this.options.parameter].dataBy=="msoa" ? 'The values for this parameter are provided at MSOA level so have been equally split between the LSOAs for this view.' : '')+'</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						return '<h3>'+(attr.properties.LSOA21NM || '?')+'</h3><p>'+attr.parameter.title+': '+(attr.value||0).toLocaleString()+attr.parameter.units+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">'+(this.data.scenarios[this.options.scenario].data[this.options.parameter].dataBy=="gsp" ? 'The values for this parameter are provided at GSP level so have been split across the LSOAs for this view.' : '')+'</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 
@@ -757,7 +707,7 @@ S(document).ready(function(){
 							else if(l=="Countylayer") key = "cty22nm";
 							else if(l=="LEPlayer") key = "lep20nm";
 							else if(l=="LSOAlayer") key = "LSOA21NM";
-							else if(l=="MSOAlayer") key = "MSOA21NM";
+							else if(l=="GSPlayer") key = "GSPs";
 							if(this.layers[l].geojson && this.layers[l].geojson.features && this.layers[l].key && key){
 								// If we haven't already processed this layer we do so now
 								if(!this.search._added[l]){
@@ -800,7 +750,7 @@ S(document).ready(function(){
 			e.stopPropagation();
 			var csv = "";
 			var opt = e.data.me.options;
-			var filename = ("DFES-2023--{{scenario}}--{{parameter}}--{{view}}.csv").replace(/\{\{([^\}]+)\}\}/g,function(m,p1){ return (opt[p1]||"").replace(/[ ]/g,"_") });
+			var filename = ("DFES-2024--{{scenario}}--{{parameter}}--{{view}}.csv").replace(/\{\{([^\}]+)\}\}/g,function(m,p1){ return (opt[p1]||"").replace(/[ ]/g,"_") });
 			var values,r,rs,y,v,l,layerid,p,ky,nm;
 			values = e.data.me.data.scenarios[e.data.me.options.scenario].data[e.data.me.options.parameter].layers[e.data.me.options.view].values;
 			v = e.data.me.options.view;

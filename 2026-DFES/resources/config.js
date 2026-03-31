@@ -444,10 +444,6 @@ S(document).ready(function(){
 				"title":"Grid Supply Points",
 				"source": "gsp",
 				"layers":[{
-					"id":"LADlayer",
-					"heatmap": false,
-					"boundary":{"color":"#444444","strokeWidth":1,"opacity":0.5,"fillOpacity":0}
-				},{
 					"id": "GSPlayer",
 					"heatmap": true,
 					"boundary":{"stroke":false}
